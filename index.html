@@ -1,0 +1,330 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sol Mosquera Cabañas - Tu refugio en el Valle de Calamuchita</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap');
+        body {
+            font-family: 'Poppins', sans-serif;
+        }
+    </style>
+</head>
+<body class="bg-gray-100">
+    <!-- Menú de navegación -->
+    <nav class="fixed top-0 left-0 right-0 bg-white shadow-md z-50">
+        <div class="container mx-auto px-6 py-3 flex justify-between items-center">
+            <a href="#" class="text-2xl font-bold text-green-800">Sol Mosquera Cabañas</a>
+            <div class="hidden md:flex space-x-4">
+                <a href="#inicio" class="text-gray-700 hover:text-yellow-500">Inicio</a>
+                <a href="#servicios" class="text-gray-700 hover:text-yellow-500">Servicios</a>
+                <a href="#cabanas" class="text-gray-700 hover:text-yellow-500">Cabañas</a>
+                <a href="#galeria" class="text-gray-700 hover:text-yellow-500">Galería</a>
+                <a href="#contacto" class="text-gray-700 hover:text-yellow-500">Contacto</a>
+            </div>
+            <button class="md:hidden" id="menu-toggle">
+                <i class="fas fa-bars text-2xl text-green-800"></i>
+            </button>
+        </div>
+    </nav>
+
+    <!-- Menú móvil -->
+    <div class="hidden fixed inset-0 bg-gray-800 bg-opacity-75 z-40" id="mobile-menu">
+        <div class="flex flex-col items-center justify-center h-full space-y-8">
+            <a href="#inicio" class="text-white text-2xl hover:text-yellow-500">Inicio</a>
+            <a href="#servicios" class="text-white text-2xl hover:text-yellow-500">Servicios</a>
+            <a href="#cabanas" class="text-white text-2xl hover:text-yellow-500">Cabañas</a>
+            <a href="#galeria" class="text-white text-2xl hover:text-yellow-500">Galería</a>
+            <a href="#contacto" class="text-white text-2xl hover:text-yellow-500">Contacto</a>
+        </div>
+    </div>
+
+    <!-- Banner Principal -->
+    <header id="inicio" class="relative h-screen flex items-center justify-center bg-cover bg-center" style="background-image: url('https://source.unsplash.com/1600x900/?calamuchita,landscape');">
+        <div class="absolute inset-0 bg-black opacity-50"></div>
+        <div class="relative text-center text-white z-10">
+            <h1 class="text-4xl md:text-6xl font-bold mb-4">Sol Mosquera Cabañas</h1>
+            <p class="text-xl md:text-2xl mb-8">Tu refugio en el Valle de Calamuchita</p>
+            <a href="#" class="px-6 py-3 bg-yellow-500 text-white font-bold rounded-full hover:bg-yellow-600 transition duration-300">Reservar Ahora</a>
+        </div>
+    </header>
+
+    <!-- Sección de Servicios -->
+    <section id="servicios" class="py-16 bg-white">
+        <div class="container mx-auto px-6">
+            <h2 class="text-3xl font-bold text-center text-green-800 mb-12">Nuestros Servicios</h2>
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+                <div class="text-center">
+                    <i class="fas fa-utensils text-4xl text-yellow-500 mb-4"></i>
+                    <h3 class="text-xl font-semibold mb-2">Desayuno Incluido</h3>
+                    <p class="text-gray-600">Disfruta de un delicioso desayuno casero todas las mañanas.</p>
+                </div>
+                <div class="text-center">
+                    <i class="fas fa-swimming-pool text-4xl text-yellow-500 mb-4"></i>
+                    <h3 class="text-xl font-semibold mb-2">Piscina</h3>
+                    <p class="text-gray-600">Relájate en nuestra piscina con vistas al valle.</p>
+                </div>
+                <div class="text-center">
+                    <i class="fas fa-fire text-4xl text-yellow-500 mb-4"></i>
+                    <h3 class="text-xl font-semibold mb-2">Zonas de Barbacoa</h3>
+                    <p class="text-gray-600">Prepara deliciosas comidas al aire libre en nuestras áreas de barbacoa.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Sección de Cabañas -->
+    <section id="cabanas" class="py-16 bg-gray-100">
+        <div class="container mx-auto px-6">
+            <h2 class="text-3xl font-bold text-center text-green-800 mb-12">Nuestras Cabañas</h2>
+            <div class="mb-8">
+                <label for="ubicacion" class="mr-2">Ubicación:</label>
+                <select id="ubicacion" class="border rounded p-2">
+                    <option value="todas">Todas</option>
+                    <option value="lago">Cerca del lago</option>
+                    <option value="montana">En la montaña</option>
+                </select>
+                <label for="capacidad" class="ml-4 mr-2">Capacidad:</label>
+                <select id="capacidad" class="border rounded p-2">
+                    <option value="todas">Todas</option>
+                    <option value="2">2 personas</option>
+                    <option value="4">4 personas</option>
+                    <option value="6">6 personas</option>
+                </select>
+            </div>
+            <div id="cabanas-grid" class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+                <!-- Las cabañas se cargarán dinámicamente aquí -->
+            </div>
+        </div>
+    </section>
+
+    <!-- Galería de Fotos -->
+    <section id="galeria" class="py-16 bg-white">
+        <div class="container mx-auto px-6">
+            <h2 class="text-3xl font-bold text-center text-green-800 mb-12">Galería</h2>
+            <div class="grid grid-cols-2 md:grid-cols-4 gap-4">
+                <img src="https://source.unsplash.com/400x300/?cabin" alt="Cabaña" class="w-full h-48 object-cover rounded-lg cursor-pointer hover:opacity-75 transition duration-300">
+                <img src="https://source.unsplash.com/400x300/?landscape" alt="Paisaje" class="w-full h-48 object-cover rounded-lg cursor-pointer hover:opacity-75 transition duration-300">
+                <img src="https://source.unsplash.com/400x300/?mountain" alt="Montaña" class="w-full h-48 object-cover rounded-lg cursor-pointer hover:opacity-75 transition duration-300">
+                <img src="https://source.unsplash.com/400x300/?lake" alt="Lago" class="w-full h-48 object-cover rounded-lg cursor-pointer hover:opacity-75 transition duration-300">
+                <img src="https://source.unsplash.com/400x300/?forest" alt="Bosque" class="w-full h-48 object-cover rounded-lg cursor-pointer hover:opacity-75 transition duration-300">
+                <img src="https://source.unsplash.com/400x300/?river" alt="Río" class="w-full h-48 object-cover rounded-lg cursor-pointer hover:opacity-75 transition duration-300">
+                <img src="https://source.unsplash.com/400x300/?nature" alt="Naturaleza" class="w-full h-48 object-cover rounded-lg cursor-pointer hover:opacity-75 transition duration-300">
+                <img src="https://source.unsplash.com/400x300/?sunset" alt="Atardecer" class="w-full h-48 object-cover rounded-lg cursor-pointer hover:opacity-75 transition duration-300">
+            </div>
+        </div>
+    </section>
+
+    <!-- Banner Publicitario -->
+    <section class="py-16 bg-green-800 text-white">
+        <div class="container mx-auto px-6 text-center">
+            <h2 class="text-3xl font-bold mb-4">¡Oferta Especial de Temporada!</h2>
+            <p class="text-xl mb-8">Reserva ahora y obtén un 20% de descuento en estadías de 5 noches o más.</p>
+            <a href="#" class="px-6 py-3 bg-yellow-500 text-white font-bold rounded-full hover:bg-yellow-600 transition duration-300">Ver Promociones</a>
+        </div>
+    </section>
+
+    <!-- Sección de Contacto -->
+    <section id="contacto" class="py-16 bg-gray-100">
+        <div class="container mx-auto px-6">
+            <h2 class="text-3xl font-bold text-center text-green-800 mb-12">Contáctanos</h2>
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+                <div>
+                    <h3 class="text-xl font-semibold mb-4">Información de Contacto</h3>
+                    <p class="mb-2"><i class="fas fa-user mr-2 text-yellow-500"></i> Sol Mosquera</p>
+                    <p class="mb-2"><i class="fas fa-phone mr-2 text-yellow-500"></i> +54 9 3546 40-6871</p>
+                    <p class="mb-4"><i class="fas fa-envelope mr-2 text-yellow-500"></i> info@solmosqueracabanas.com</p>
+                    <div class="mb-8">
+                        <h4 class="text-lg font-semibold mb-2">Ubicación</h4>
+                        <img src="https://source.unsplash.com/600x300/?map" alt="Mapa del Valle de Calamuchita" class="w-full rounded-lg">
+                    </div>
+                </div>
+                <div>
+                    <h3 class="text-xl font-semibold mb-4">Envíanos un Mensaje</h3>
+                    <form>
+                        <div class="mb-4">
+                            <label for="nombre" class="block text-gray-700 mb-2">Nombre</label>
+                            <input type="text" id="nombre" class="w-full px-3 py-2 border rounded-lg" required>
+                        </div>
+                        <div class="mb-4">
+                            <label for="email" class="block text-gray-700 mb-2">Email</label>
+                            <input type="email" id="email" class="w-full px-3 py-2 border rounded-lg" required>
+                        </div>
+                        <div class="mb-4">
+                            <label for="telefono" class="block text-gray-700 mb-2">Teléfono</label>
+                            <input type="tel" id="telefono" class="w-full px-3 py-2 border rounded-lg">
+                        </div>
+                        <div class="mb-4">
+                            <label for="mensaje" class="block text-gray-700 mb-2">Mensaje</label>
+                            <textarea id="mensaje" rows="4" class="w-full px-3 py-2 border rounded-lg" required></textarea>
+                        </div>
+                        <button type="submit" class="px-6 py-3 bg-yellow-500 text-white font-bold rounded-full hover:bg-yellow-600 transition duration-300">Enviar Mensaje</button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-gray-800 text-white py-12">
+        <div class="container mx-auto px-6">
+            <div class="grid grid-cols-1 md:grid-cols-4 gap-8">
+                <div>
+                    <h3 class="text-xl font-semibold mb-4">Acerca de Nosotros</h3>
+                    <p class="text-gray-400">Sol Mosquera Cabañas ofrece una experiencia única en el corazón del Valle de Calamuchita. Disfruta de la naturaleza y el confort en nuestras acogedoras cabañas.</p>
+                </div>
+                <div>
+                    <h3 class="text-xl font-semibold mb-4">Enlaces Rápidos</h3>
+                    <ul class="space-y-2">
+                        <li><a href="#inicio" class="hover:text-yellow-500">Inicio</a></li>
+                        <li><a href="#servicios" class="hover:text-yellow-500">Servicios</a></li>
+                        <li><a href="#cabanas" class="hover:text-yellow-500">Cabañas</a></li>
+                        <li><a href="#galeria" class="hover:text-yellow-500">Galería</a></li>
+                        <li><a href="#contacto" class="hover:text-yellow-500">Contacto</a></li>
+                    </ul>
+                </div>
+                <div>
+                    <h3 class="text-xl font-semibold mb-4">Redes Sociales</h3>
+                    <div class="flex space-x-4">
+                        <a href="#" class="text-2xl hover:text-yellow-500"><i class="fab fa-facebook"></i></a>
+                        <a href="#" class="text-2xl hover:text-yellow-500"><i class="fab fa-instagram"></i></a>
+                        <a href="#" class="text-2xl hover:text-yellow-500"><i class="fab fa-twitter"></i></a>
+                    </div>
+                </div>
+                <div>
+                    <h3 class="text-xl font-semibold mb-4">Información de Contacto</h3>
+                    <p class="mb-2"><i class="fas fa-map-marker-alt mr-2"></i> Valle de Calamuchita, Córdoba, Argentina</p>
+                    <p class="mb-2"><i class="fas fa-phone mr-2"></i> +54 9 3546 40-6871</p>
+                    <p><i class="fas fa-envelope mr-2"></i> info@solmosqueracabanas.com</p>
+                </div>
+            </div>
+            <div class="border-t border-gray-700 mt-8 pt-8 text-center">
+                <p>&copy; 2023 Sol Mosquera Cabañas. Todos los derechos reservados.</p>
+                <p class="mt-2">
+                    <a href="#" class="hover:text-yellow-500">Política de Privacidad</a> | 
+                    <a href="#" class="hover:text-yellow-500">Términos y Condiciones</a>
+                </p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Chat en vivo -->
+    <div class="fixed bottom-4 right-4 z-50">
+        <button id="chat-button" class="bg-yellow-500 text-white rounded-full p-4 shadow-lg hover:bg-yellow-600 transition duration-300">
+            <i class="fas fa-comments text-2xl"></i>
+        </button>
+    </div>
+
+    <!-- Modal de imagen -->
+    <div id="image-modal" class="hidden fixed inset-0 bg-black bg-opacity-75 flex items-center justify-center z-50">
+        <div class="max-w-4xl w-full">
+            <img id="modal-image" src="" alt="Imagen ampliada" class="w-full h-auto">
+            <button id="close-modal" class="absolute top-4 right-4 text-white text-3xl">&times;</button>
+        </div>
+    </div>
+
+    <script>
+        // Datos de las cabañas
+        const cabanas = [
+            { id: 1, nombre: "Cabaña del Lago", ubicacion: "lago", capacidad: 4, precio: 150, imagen: "https://source.unsplash.com/400x300/?lake,cabin" },
+            { id: 2, nombre: "Cabaña de Montaña", ubicacion: "montana", capacidad: 2, precio: 120, imagen: "https://source.unsplash.com/400x300/?mountain,cabin" },
+            { id: 3, nombre: "Cabaña Familiar", ubicacion: "lago", capacidad: 6, precio: 200, imagen: "https://source.unsplash.com/400x300/?family,cabin" },
+            { id: 4, nombre: "Cabaña Romántica", ubicacion: "montana", capacidad: 2, precio: 130, imagen: "https://source.unsplash.com/400x300/?romantic,cabin" },
+            { id: 5, nombre: "Cabaña del Bosque", ubicacion: "montana", capacidad: 4, precio: 160, imagen: "https://source.unsplash.com/400x300/?forest,cabin" },
+            { id: 6, nombre: "Cabaña Vista al Río", ubicacion: "lago", capacidad: 4, precio: 170, imagen: "https://source.unsplash.com/400x300/?river,cabin" }
+        ];
+
+        // Función para mostrar las cabañas
+        function mostrarCabanas(cabanasFiltradas = cabanas) {
+            const cabanasGrid = document.getElementById('cabanas-grid');
+            cabanasGrid.innerHTML = '';
+
+            cabanasFiltradas.forEach(cabana => {
+                const cabanaElement = document.createElement('div');
+                cabanaElement.className = 'bg-white rounded-lg shadow-md overflow-hidden';
+                cabanaElement.innerHTML = `
+                    <img src="${cabana.imagen}" alt="${cabana.nombre}" class="w-full h-48 object-cover">
+                    <div class="p-4">
+                        <h3 class="text-xl font-semibold mb-2">${cabana.nombre}</h3>
+                        <p class="text-gray-600 mb-2">Ubicación: ${cabana.ubicacion === 'lago' ? 'Cerca del lago' : 'En la montaña'}</p>
+                        <p class="text-gray-600 mb-2">Capacidad: ${cabana.capacidad} personas</p>
+                        <p class="text-gray-600 mb-4">Precio: $${cabana.precio} por noche</p>
+                        <button class="px-4 py-2 bg-yellow-500 text-white rounded hover:bg-yellow-600 transition duration-300">Ver Detalles</button>
+                    </div>
+                `;
+                cabanasGrid.appendChild(cabanaElement);
+            });
+        }
+
+        // Inicializar la visualización de cabañas
+        mostrarCabanas();
+
+        // Filtrar cabañas
+        const ubicacionSelect = document.getElementById('ubicacion');
+        const capacidadSelect = document.getElementById('capacidad');
+
+        function filtrarCabanas() {
+            const ubicacionFiltro = ubicacionSelect.value;
+            const capacidadFiltro = capacidadSelect.value;
+
+            const cabanasFiltradas = cabanas.filter(cabana => {
+                return (ubicacionFiltro === 'todas' || cabana.ubicacion === ubicacionFiltro) &&
+                       (capacidadFiltro === 'todas' || cabana.capacidad.toString() === capacidadFiltro);
+            });
+
+            mostrarCabanas(cabanasFiltradas);
+        }
+
+        ubicacionSelect.addEventListener('change', filtrarCabanas);
+        capacidadSelect.addEventListener('change', filtrarCabanas);
+
+        // Menú móvil
+        const menuToggle = document.getElementById('menu-toggle');
+        const mobileMenu = document.getElementById('mobile-menu');
+
+        menuToggle.addEventListener('click', () => {
+            mobileMenu.classList.toggle('hidden');
+        });
+
+        // Cerrar menú móvil al hacer clic en un enlace
+        const mobileMenuLinks = mobileMenu.querySelectorAll('a');
+        mobileMenuLinks.forEach(link => {
+            link.addEventListener('click', () => {
+                mobileMenu.classList.add('hidden');
+            });
+        });
+
+        // Modal de imagen
+        const gallery = document.getElementById('galeria');
+        const imageModal = document.getElementById('image-modal');
+        const modalImage = document.getElementById('modal-image');
+        const closeModal = document.getElementById('close-modal');
+
+        gallery.addEventListener('click', (e) => {
+            if (e.target.tagName === 'IMG') {
+                modalImage.src = e.target.src;
+                imageModal.classList.remove('hidden');
+            }
+        });
+
+        closeModal.addEventListener('click', () => {
+            imageModal.classList.add('hidden');
+        });
+
+        imageModal.addEventListener('click', (e) => {
+            if (e.target === imageModal) {
+                imageModal.classList.add('hidden');
+            }
+        });
+
+        // Chat en vivo (simulado)
+        const chatButton = document.getElementById('chat-button');
+        chatButton.addEventListener('click', () => {
+            alert('¡Gracias por contactarnos! En breve un representante se pondrá en contacto contigo.');
+        });
+    </script>
+</body>
+</html>
