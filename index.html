@@ -12,7 +12,7 @@
     <meta name="theme-color" content="#1F2937">
     <meta property="og:title" content="Sol Mosquera Cabañas - Alquileres en el Valle de Calamuchita">
     <meta property="og:description" content="Disfruta de unas vacaciones inolvidables en nuestras hermosas cabañas en el Valle de Calamuchita. Ubicaciones en Villa del Dique, Villa Rumipal, El Torreón y Santa Rosa.">
-    <meta property="og:image" content="https://example.com/og-image.jpg">
+    <meta property="og:image" content="https://source.unsplash.com/1200x630/?cabin,mountains">
     <meta property="og:url" content="https://www.solmosqueracabanas.com">
     <meta property="og:type" content="website">
     <script src="https://cdn.tailwindcss.com"></script>
@@ -178,36 +178,36 @@
     <section id="galeria" class="py-16 bg-white">
         <div class="container mx-auto px-6">
             <h2 class="text-3xl font-bold text-center text-green-800 mb-12">Galería</h2>
-            <div class="mb-8 flex justify-center">
-                <button class="filtro-galeria px-4 py-2 bg-yellow-500 text-white rounded mr-2 hover:bg-yellow-600 transition duration-300" data-filter="todas">Todas</button>
-                <button class="filtro-galeria px-4 py-2 bg-gray-300 text-gray-700 rounded mr-2 hover:bg-gray-400 transition duration-300" data-filter="cabanas">Cabañas</button>
-                <button class="filtro-galeria px-4 py-2 bg-gray-300 text-gray-700 rounded mr-2 hover:bg-gray-400 transition duration-300" data-filter="paisajes">Paisajes</button>
+            <div class="mb-8 flex flex-wrap justify-center gap-4">
+                <button class="filtro-galeria px-4 py-2 bg-yellow-500 text-white rounded hover:bg-yellow-600 transition duration-300" data-filter="todas">Todas</button>
+                <button class="filtro-galeria px-4 py-2 bg-gray-300 text-gray-700 rounded hover:bg-gray-400 transition duration-300" data-filter="cabanas">Cabañas</button>
+                <button class="filtro-galeria px-4 py-2 bg-gray-300 text-gray-700 rounded hover:bg-gray-400 transition duration-300" data-filter="paisajes">Paisajes</button>
                 <button class="filtro-galeria px-4 py-2 bg-gray-300 text-gray-700 rounded hover:bg-gray-400 transition duration-300" data-filter="actividades">Actividades</button>
             </div>
-            <div class="grid grid-cols-2 md:grid-cols-4 gap-4" id="galeria-grid">
+            <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-4" id="galeria-grid">
                 <div class="galeria-item" data-categoria="cabanas">
-                    <img src="https://source.unsplash.com/400x300/?cabin" alt="Cabaña" class="w-full h-48 object-cover rounded-lg cursor-pointer hover:opacity-75 transition duration-300">
+                    <img src="https://source.unsplash.com/800x600/?cabin,interior" alt="Interior de cabaña" class="w-full h-48 object-cover rounded-lg cursor-pointer hover:opacity-75 transition duration-300">
                 </div>
                 <div class="galeria-item" data-categoria="paisajes">
-                    <img src="https://source.unsplash.com/400x300/?landscape" alt="Paisaje" class="w-full h-48 object-cover rounded-lg cursor-pointer hover:opacity-75 transition duration-300">
-                </div>
-                <div class="galeria-item" data-categoria="paisajes">
-                    <img src="https://source.unsplash.com/400x300/?mountain" alt="Montaña" class="w-full h-48 object-cover rounded-lg cursor-pointer hover:opacity-75 transition duration-300">
-                </div>
-                <div class="galeria-item" data-categoria="paisajes">
-                    <img src="https://source.unsplash.com/400x300/?lake" alt="Lago" class="w-full h-48 object-cover rounded-lg cursor-pointer hover:opacity-75 transition duration-300">
-                </div>
-                <div class="galeria-item" data-categoria="paisajes">
-                    <img src="https://source.unsplash.com/400x300/?forest" alt="Bosque" class="w-full h-48 object-cover rounded-lg cursor-pointer hover:opacity-75 transition duration-300">
+                    <img src="https://source.unsplash.com/800x600/?calamuchita,landscape" alt="Paisaje de Calamuchita" class="w-full h-48 object-cover rounded-lg cursor-pointer hover:opacity-75 transition duration-300">
                 </div>
                 <div class="galeria-item" data-categoria="actividades">
-                    <img src="https://source.unsplash.com/400x300/?hiking" alt="Senderismo" class="w-full h-48 object-cover rounded-lg cursor-pointer hover:opacity-75 transition duration-300">
+                    <img src="https://source.unsplash.com/800x600/?hiking,mountains" alt="Senderismo" class="w-full h-48 object-cover rounded-lg cursor-pointer hover:opacity-75 transition duration-300">
                 </div>
                 <div class="galeria-item" data-categoria="cabanas">
-                    <img src="https://source.unsplash.com/400x300/?cabin,interior" alt="Interior de cabaña" class="w-full h-48 object-cover rounded-lg cursor-pointer hover:opacity-75 transition duration-300">
+                    <img src="https://source.unsplash.com/800x600/?cabin,exterior" alt="Exterior de cabaña" class="w-full h-48 object-cover rounded-lg cursor-pointer hover:opacity-75 transition duration-300">
+                </div>
+                <div class="galeria-item" data-categoria="paisajes">
+                    <img src="https://source.unsplash.com/800x600/?lake,forest" alt="Lago y bosque" class="w-full h-48 object-cover rounded-lg cursor-pointer hover:opacity-75 transition duration-300">
                 </div>
                 <div class="galeria-item" data-categoria="actividades">
-                    <img src="https://source.unsplash.com/400x300/?campfire" alt="Fogata" class="w-full h-48 object-cover rounded-lg cursor-pointer hover:opacity-75 transition duration-300">
+                    <img src="https://source.unsplash.com/800x600/?kayak,river" alt="Kayak en el río" class="w-full h-48 object-cover rounded-lg cursor-pointer hover:opacity-75 transition duration-300">
+                </div>
+                <div class="galeria-item" data-categoria="cabanas">
+                    <img src="https://source.unsplash.com/800x600/?cabin,fireplace" alt="Chimenea en cabaña" class="w-full h-48 object-cover rounded-lg cursor-pointer hover:opacity-75 transition duration-300">
+                </div>
+                <div class="galeria-item" data-categoria="paisajes">
+                    <img src="https://source.unsplash.com/800x600/?sunset,mountains" alt="Atardecer en las montañas" class="w-full h-48 object-cover rounded-lg cursor-pointer hover:opacity-75 transition duration-300">
                 </div>
             </div>
         </div>
@@ -321,6 +321,13 @@
                             <input type="tel" id="telefono" name="telefono" class="w-full px-3 py-2 border rounded-lg">
                         </div>
                         <div class="mb-4">
+                            <label for="cabana" class="block text-gray-700 mb-2">Cabaña de Interés</label>
+                            <select id="cabana" name="cabana" class="w-full px-3 py-2 border rounded-lg">
+                                <option value="">Selecciona una cabaña</option>
+                                <!-- Las opciones se cargarán dinámicamente -->
+                            </select>
+                        </div>
+                        <div class="mb-4">
                             <label for="mensaje" class="block text-gray-700 mb-2">Mensaje</label>
                             <textarea id="mensaje" name="mensaje" rows="4" class="w-full px-3 py-2 border rounded-lg" required></textarea>
                         </div>
@@ -372,7 +379,9 @@
                 </div>
                 <div>
                     <h3 class="text-xl font-semibold mb-4">Información de Contacto</h3>
-                    <p class="mb-2"><i class="fas fa-map-marker-alt mr-2"></i> Valle de Calamuchita, Córdoba, Argentina</p>
+                    <p class="mb-2"><i class="fas fa-map-marker-alt mr-2"></i> Valle de Calam
+
+uchita, Córdoba, Argentina</p>
                     <p class="mb-2"><i class="fas fa-phone mr-2"></i> +54 9 3546 40-6871</p>
                     <p><i class="fas fa-envelope mr-2"></i> info@solmosqueracabanas.com</p>
                 </div>
@@ -391,11 +400,29 @@
 
     <!-- Modal para detalles de cabaña -->
     <div id="cabana-modal" class="fixed inset-0 bg-black bg-opacity-50 hidden items-center justify-center z-50">
-        <div class="bg-white p-8 rounded-lg max-w-2xl w-full mx-4">
+        <div class="bg-white p-8 rounded-lg max-w-2xl w-full mx-4 max-h-90vh overflow-y-auto">
             <h3 id="modal-title" class="text-2xl font-bold mb-4"></h3>
             <img id="modal-image" src="" alt="Cabaña" class="w-full h-64 object-cover rounded-lg mb-4">
             <p id="modal-description" class="text-gray-600 mb-4"></p>
             <div id="modal-amenities" class="flex flex-wrap gap-2 mb-4"></div>
+            <div id="modal-details" class="grid grid-cols-2 gap-4 mb-4">
+                <div>
+                    <h4 class="font-semibold">Capacidad:</h4>
+                    <p id="modal-capacity"></p>
+                </div>
+                <div>
+                    <h4 class="font-semibold">Ubicación:</h4>
+                    <p id="modal-location"></p>
+                </div>
+                <div>
+                    <h4 class="font-semibold">Precio por noche:</h4>
+                    <p id="modal-price"></p>
+                </div>
+                <div>
+                    <h4 class="font-semibold">Tamaño:</h4>
+                    <p id="modal-size"></p>
+                </div>
+            </div>
             <button id="close-modal" class="px-4 py-2 bg-yellow-500 text-white rounded hover:bg-yellow-600 transition duration-300">Cerrar</button>
         </div>
     </div>
@@ -408,36 +435,44 @@
                 nombre: "Cabaña del Bosque",
                 ubicacion: "villa-del-dique",
                 capacidad: 4,
-                descripcion: "Hermosa cabaña rodeada de bosque nativo, ideal para familias.",
+                descripcion: "Hermosa cabaña rodeada de bosque nativo, ideal para familias. Disfruta de la tranquilidad y la naturaleza en este acogedor espacio.",
                 imagen: "https://source.unsplash.com/800x600/?cabin,forest",
-                amenities: ["wifi", "estacionamiento", "cocina", "aire-acondicionado"]
+                amenities: ["wifi", "estacionamiento", "cocina", "aire-acondicionado", "calefacción", "tv"],
+                precio: "$15,000",
+                tamaño: "80 m²"
             },
             {
                 id: 2,
                 nombre: "Cabaña del Lago",
                 ubicacion: "villa-rumipal",
                 capacidad: 2,
-                descripcion: "Romántica cabaña con vista al lago, perfecta para parejas.",
+                descripcion: "Romántica cabaña con vista al lago, perfecta para parejas. Ideal para una escapada romántica con vistas impresionantes.",
                 imagen: "https://source.unsplash.com/800x600/?cabin,lake",
-                amenities: ["wifi", "jacuzzi", "cocina", "terraza"]
+                amenities: ["wifi", "jacuzzi", "cocina", "terraza", "aire-acondicionado", "calefacción"],
+                precio: "$12,000",
+                tamaño: "60 m²"
             },
             {
                 id: 3,
                 nombre: "Cabaña de la Montaña",
                 ubicacion: "el-torreon",
                 capacidad: 6,
-                descripcion: "Espaciosa cabaña con vistas panorámicas a las montañas.",
+                descripcion: "Espaciosa cabaña con vistas panorámicas a las montañas. Perfecta para grupos grandes o familias que buscan una experiencia de montaña.",
                 imagen: "https://source.unsplash.com/800x600/?cabin,mountain",
-                amenities: ["wifi", "estacionamiento", "cocina", "chimenea", "aire-acondicionado"]
+                amenities: ["wifi", "estacionamiento", "cocina", "chimenea", "aire-acondicionado", "terraza", "parrilla"],
+                precio: "$20,000",
+                tamaño: "120 m²"
             },
             {
                 id: 4,
                 nombre: "Cabaña del Río",
                 ubicacion: "santa-rosa",
                 capacidad: 4,
-                descripcion: "Acogedora cabaña junto al río, ideal para pescadores y amantes de la naturaleza.",
+                descripcion: "Acogedora cabaña junto al río, ideal para pescadores y amantes de la naturaleza. Disfruta del sonido del río y de actividades al aire libre.",
                 imagen: "https://source.unsplash.com/800x600/?cabin,river",
-                amenities: ["wifi", "estacionamiento", "cocina", "parrilla"]
+                amenities: ["wifi", "estacionamiento", "cocina", "parrilla", "aire-acondicionado", "calefacción"],
+                precio: "$14,000",
+                tamaño: "75 m²"
             }
         ];
 
@@ -455,7 +490,7 @@
                         <h3 class="text-xl font-semibold mb-2">${cabana.nombre}</h3>
                         <p class="text-gray-600 mb-2">Capacidad: ${cabana.capacidad} personas</p>
                         <div class="flex flex-wrap gap-2 mb-4">
-                            ${cabana.amenities.map(amenity => `
+                            ${cabana.amenities.slice(0, 4).map(amenity => `
                                 <span class="bg-gray-200 text-gray-700 px-2 py-1 rounded text-sm">
                                     <i class="fas fa-${getAmenityIcon(amenity)} mr-1"></i>${amenity}
                                 </span>
@@ -487,7 +522,9 @@
                 'jacuzzi': 'hot-tub',
                 'terraza': 'umbrella-beach',
                 'chimenea': 'fire',
-                'parrilla': 'fire-alt'
+                'parrilla': 'fire-alt',
+                'tv': 'tv',
+                'calefacción': 'temperature-high'
             };
             return icons[amenity] || 'check';
         }
@@ -499,6 +536,10 @@
             const image = document.getElementById('modal-image');
             const description = document.getElementById('modal-description');
             const amenities = document.getElementById('modal-amenities');
+            const capacity = document.getElementById('modal-capacity');
+            const location = document.getElementById('modal-location');
+            const price = document.getElementById('modal-price');
+            const size = document.getElementById('modal-size');
 
             title.textContent = cabana.nombre;
             image.src = cabana.imagen;
@@ -510,6 +551,11 @@
                     <i class="fas fa-${getAmenityIcon(amenity)} mr-1"></i>${amenity}
                 </span>
             `).join('');
+
+            capacity.textContent = `${cabana.capacidad} personas`;
+            location.textContent = cabana.ubicacion.replace(/-/g, ' ').replace(/\b\w/g, l => l.toUpperCase());
+            price.textContent = cabana.precio;
+            size.textContent = cabana.tamaño;
 
             modal.classList.remove('hidden');
             modal.classList.add('flex');
@@ -628,10 +674,11 @@
             const nombre = document.getElementById('nombre').value;
             const email = document.getElementById('email').value;
             const telefono = document.getElementById('telefono').value;
+            const cabana = document.getElementById('cabana').value;
             const mensaje = document.getElementById('mensaje').value;
 
             // Construir el mensaje para WhatsApp
-            const whatsappMessage = `Hola, soy ${nombre}. Mi email es ${email} y mi teléfono es ${telefono}. Mi mensaje: ${mensaje}`;
+            const whatsappMessage = `Hola, soy ${nombre}. Mi email es ${email} y mi teléfono es ${telefono}. Estoy interesado/a en la cabaña: ${cabana}. Mi mensaje: ${mensaje}`;
             const whatsappUrl = `https://wa.me/5493546406871?text=${encodeURIComponent(whatsappMessage)}`;
 
             // Abrir WhatsApp en una nueva pestaña
@@ -657,10 +704,22 @@
             this.reset();
         });
 
+        // Función para cargar las opciones de cabañas en el formulario de contacto
+        function cargarOpcionesCabanas() {
+            const selectCabana = document.getElementById('cabana');
+            cabanas.forEach(cabana => {
+                const option = document.createElement('option');
+                option.value = cabana.nombre;
+                option.textContent = cabana.nombre;
+                selectCabana.appendChild(option);
+            });
+        }
+
         // Inicializar la página
         document.addEventListener('DOMContentLoaded', () => {
             mostrarCabanas();
             initGaleria();
+            cargarOpcionesCabanas();
         });
     </script>
 </body>
