@@ -6,16 +6,39 @@
     <title>Sol Mosquera Cabañas - Tu refugio en el Valle de Calamuchita</title>
     <script src="https://cdn.tailwindcss.com"></script>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@8/swiper-bundle.min.css" />
+    <script src="https://cdn.jsdelivr.net/npm/swiper@8/swiper-bundle.min.js"></script>
     <style>
         @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap');
         body {
             font-family: 'Poppins', sans-serif;
         }
+        .swiper-pagination-bullet-active {
+            background-color: #F59E0B !important;
+        }
     </style>
 </head>
 <body class="bg-gray-100">
+    <!-- Top Banner -->
+    <div class="bg-green-800 text-white py-2 px-4">
+        <div class="container mx-auto flex justify-between items-center">
+            <div class="swiper top-banner-swiper w-2/3">
+                <div class="swiper-wrapper">
+                    <div class="swiper-slide">¡Bienvenidos a Sol Mosquera Cabañas!</div>
+                    <div class="swiper-slide">Disfruta de la naturaleza en el Valle de Calamuchita</div>
+                    <div class="swiper-slide">Reserva ahora y obtén un 10% de descuento</div>
+                </div>
+            </div>
+            <div class="flex space-x-4">
+                <a href="#" class="hover:text-yellow-500 transition duration-300"><i class="fab fa-facebook"></i></a>
+                <a href="#" class="hover:text-yellow-500 transition duration-300"><i class="fab fa-instagram"></i></a>
+                <a href="#" class="hover:text-yellow-500 transition duration-300"><i class="fab fa-twitter"></i></a>
+            </div>
+        </div>
+    </div>
+
     <!-- Menú de navegación -->
-    <nav class="fixed top-0 left-0 right-0 bg-white shadow-md z-50">
+    <nav class="bg-white shadow-md sticky top-0 z-50">
         <div class="container mx-auto px-6 py-3 flex justify-between items-center">
             <a href="#" class="text-2xl font-bold text-green-800">Sol Mosquera Cabañas</a>
             <div class="hidden md:flex space-x-4">
@@ -23,6 +46,7 @@
                 <a href="#servicios" class="text-gray-700 hover:text-yellow-500">Servicios</a>
                 <a href="#cabanas" class="text-gray-700 hover:text-yellow-500">Cabañas</a>
                 <a href="#galeria" class="text-gray-700 hover:text-yellow-500">Galería</a>
+                <a href="#resenas" class="text-gray-700 hover:text-yellow-500">Reseñas</a>
                 <a href="#contacto" class="text-gray-700 hover:text-yellow-500">Contacto</a>
             </div>
             <button class="md:hidden" id="menu-toggle">
@@ -38,17 +62,47 @@
             <a href="#servicios" class="text-white text-2xl hover:text-yellow-500">Servicios</a>
             <a href="#cabanas" class="text-white text-2xl hover:text-yellow-500">Cabañas</a>
             <a href="#galeria" class="text-white text-2xl hover:text-yellow-500">Galería</a>
+            <a href="#resenas" class="text-white text-2xl hover:text-yellow-500">Reseñas</a>
             <a href="#contacto" class="text-white text-2xl hover:text-yellow-500">Contacto</a>
         </div>
     </div>
 
     <!-- Banner Principal -->
-    <header id="inicio" class="relative h-screen flex items-center justify-center bg-cover bg-center" style="background-image: url('https://source.unsplash.com/1600x900/?calamuchita,landscape');">
-        <div class="absolute inset-0 bg-black opacity-50"></div>
-        <div class="relative text-center text-white z-10">
-            <h1 class="text-4xl md:text-6xl font-bold mb-4">Sol Mosquera Cabañas</h1>
-            <p class="text-xl md:text-2xl mb-8">Tu refugio en el Valle de Calamuchita</p>
-            <a href="#" class="px-6 py-3 bg-yellow-500 text-white font-bold rounded-full hover:bg-yellow-600 transition duration-300">Reservar Ahora</a>
+    <header id="inicio" class="relative h-screen">
+        <div class="swiper hero-swiper h-full">
+            <div class="swiper-wrapper">
+                <div class="swiper-slide bg-cover bg-center" style="background-image: url('https://source.unsplash.com/1600x900/?calamuchita,landscape');">
+                    <div class="absolute inset-0 bg-black opacity-50"></div>
+                    <div class="relative h-full flex items-center justify-center text-center text-white z-10">
+                        <div>
+                            <h1 class="text-4xl md:text-6xl font-bold mb-4">Sol Mosquera Cabañas</h1>
+                            <p class="text-xl md:text-2xl mb-8">Tu refugio en el Valle de Calamuchita</p>
+                            <a href="#" class="px-6 py-3 bg-yellow-500 text-white font-bold rounded-full hover:bg-yellow-600 transition duration-300">Reservar Ahora</a>
+                        </div>
+                    </div>
+                </div>
+                <div class="swiper-slide bg-cover bg-center" style="background-image: url('https://source.unsplash.com/1600x900/?mountain,cabin');">
+                    <div class="absolute inset-0 bg-black opacity-50"></div>
+                    <div class="relative h-full flex items-center justify-center text-center text-white z-10">
+                        <div>
+                            <h2 class="text-4xl md:text-6xl font-bold mb-4">Naturaleza y Confort</h2>
+                            <p class="text-xl md:text-2xl mb-8">Disfruta de la belleza natural de Calamuchita</p>
+                            <a href="#" class="px-6 py-3 bg-yellow-500 text-white font-bold rounded-full hover:bg-yellow-600 transition duration-300">Explora Nuestras Cabañas</a>
+                        </div>
+                    </div>
+                </div>
+                <div class="swiper-slide bg-cover bg-center" style="background-image: url('https://source.unsplash.com/1600x900/?lake,forest');">
+                    <div class="absolute inset-0 bg-black opacity-50"></div>
+                    <div class="relative h-full flex items-center justify-center text-center text-white z-10">
+                        <div>
+                            <h2 class="text-4xl md:text-6xl font-bold mb-4">Experiencias Inolvidables</h2>
+                            <p class="text-xl md:text-2xl mb-8">Crea recuerdos duraderos en nuestras cabañas</p>
+                            <a href="#" class="px-6 py-3 bg-yellow-500 text-white font-bold rounded-full hover:bg-yellow-600 transition duration-300">Descubre Más</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="swiper-pagination"></div>
         </div>
     </header>
 
@@ -80,20 +134,29 @@
     <section id="cabanas" class="py-16 bg-gray-100">
         <div class="container mx-auto px-6">
             <h2 class="text-3xl font-bold text-center text-green-800 mb-12">Nuestras Cabañas</h2>
-            <div class="mb-8">
-                <label for="ubicacion" class="mr-2">Ubicación:</label>
-                <select id="ubicacion" class="border rounded p-2">
-                    <option value="todas">Todas</option>
-                    <option value="lago">Cerca del lago</option>
-                    <option value="montana">En la montaña</option>
-                </select>
-                <label for="capacidad" class="ml-4 mr-2">Capacidad:</label>
-                <select id="capacidad" class="border rounded p-2">
-                    <option value="todas">Todas</option>
-                    <option value="2">2 personas</option>
-                    <option value="4">4 personas</option>
-                    <option value="6">6 personas</option>
-                </select>
+            <div class="mb-8 flex flex-wrap justify-center gap-4">
+                <div>
+                    <label for="ubicacion" class="mr-2 font-semibold">Ubicación:</label>
+                    <select id="ubicacion" class="border rounded p-2">
+                        <option value="todas">Todas</option>
+                        <option value="lago">Cerca del lago</option>
+                        <option value="montana">En la montaña</option>
+                    </select>
+                </div>
+                <div>
+                    <label for="capacidad" class="mr-2 font-semibold">Capacidad:</label>
+                    <select id="capacidad" class="border rounded p-2">
+                        <option value="todas">Todas</option>
+                        <option value="2">2 personas</option>
+                        <option value="4">4 personas</option>
+                        <option value="6">6 personas</option>
+                    </select>
+                </div>
+                <div>
+                    <label for="precio" class="mr-2 font-semibold">Precio máximo:</label>
+                    <input type="range" id="precio" min="100" max="300" step="10" value="300" class="w-48">
+                    <span id="precio-valor" class="ml-2">$300</span>
+                </div>
             </div>
             <div id="cabanas-grid" class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
                 <!-- Las cabañas se cargarán dinámicamente aquí -->
@@ -105,15 +168,103 @@
     <section id="galeria" class="py-16 bg-white">
         <div class="container mx-auto px-6">
             <h2 class="text-3xl font-bold text-center text-green-800 mb-12">Galería</h2>
-            <div class="grid grid-cols-2 md:grid-cols-4 gap-4">
-                <img src="https://source.unsplash.com/400x300/?cabin" alt="Cabaña" class="w-full h-48 object-cover rounded-lg cursor-pointer hover:opacity-75 transition duration-300">
-                <img src="https://source.unsplash.com/400x300/?landscape" alt="Paisaje" class="w-full h-48 object-cover rounded-lg cursor-pointer hover:opacity-75 transition duration-300">
-                <img src="https://source.unsplash.com/400x300/?mountain" alt="Montaña" class="w-full h-48 object-cover rounded-lg cursor-pointer hover:opacity-75 transition duration-300">
-                <img src="https://source.unsplash.com/400x300/?lake" alt="Lago" class="w-full h-48 object-cover rounded-lg cursor-pointer hover:opacity-75 transition duration-300">
-                <img src="https://source.unsplash.com/400x300/?forest" alt="Bosque" class="w-full h-48 object-cover rounded-lg cursor-pointer hover:opacity-75 transition duration-300">
-                <img src="https://source.unsplash.com/400x300/?river" alt="Río" class="w-full h-48 object-cover rounded-lg cursor-pointer hover:opacity-75 transition duration-300">
-                <img src="https://source.unsplash.com/400x300/?nature" alt="Naturaleza" class="w-full h-48 object-cover rounded-lg cursor-pointer hover:opacity-75 transition duration-300">
-                <img src="https://source.unsplash.com/400x300/?sunset" alt="Atardecer" class="w-full h-48 object-cover rounded-lg cursor-pointer hover:opacity-75 transition duration-300">
+            <div class="mb-8 flex justify-center">
+                <button class="filtro-galeria px-4 py-2 bg-yellow-500 text-white rounded mr-2 hover:bg-yellow-600 transition duration-300" data-filter="todas">Todas</button>
+                <button class="filtro-galeria px-4 py-2 bg-gray-300 text-gray-700 rounded mr-2 hover:bg-gray-400 transition duration-300" data-filter="cabanas">Cabañas</button>
+                <button class="filtro-galeria px-4 py-2 bg-gray-300 text-gray-700 rounded mr-2 hover:bg-gray-400 transition duration-300" data-filter="paisajes">Paisajes</button>
+                <button class="filtro-galeria px-4 py-2 bg-gray-300 text-gray-700 rounded hover:bg-gray-400 transition duration-300" data-filter="actividades">Actividades</button>
+            </div>
+            <div class="grid grid-cols-2 md:grid-cols-4 gap-4" id="galeria-grid">
+                <div class="galeria-item" data-categoria="cabanas">
+                    <img src="https://source.unsplash.com/400x300/?cabin" alt="Cabaña" class="w-full h-48 object-cover rounded-lg cursor-pointer hover:opacity-75 transition duration-300">
+                </div>
+                <div class="galeria-item" data-categoria="paisajes">
+                    <img src="https://source.unsplash.com/400x300/?landscape" alt="Paisaje" class="w-full h-48 object-cover rounded-lg cursor-pointer hover:opacity-75 transition duration-300">
+                </div>
+                <div class="galeria-item" data-categoria="paisajes">
+                    <img src="https://source.unsplash.com/400x300/?mountain" alt="Montaña" class="w-full h-48 object-cover rounded-lg cursor-pointer hover:opacity-75 transition duration-300">
+                </div>
+                <div class="galeria-item" data-categoria="paisajes">
+                    <img src="https://source.unsplash.com/400x300/?lake" alt="Lago" class="w-full h-48 object-cover rounded-lg cursor-pointer hover:opacity-75 transition duration-300">
+                </div>
+                <div class="galeria-item" data-categoria="paisajes">
+                    <img src="https://source.unsplash.com/400x300/?forest" alt="Bosque" class="w-full h-48 object-cover rounded-lg cursor-pointer hover:opacity-75 transition duration-300">
+                </div>
+                <div class="galeria-item" data-categoria="actividades">
+                    <img src="https://source.unsplash.com/400x300/?hiking" alt="Senderismo" class="w-full h-48 object-cover rounded-lg cursor-pointer hover:opacity-75 transition duration-300">
+                </div>
+                <div class="galeria-item" data-categoria="cabanas">
+                    <img src="https://source.unsplash.com/400x300/?cabin,interior" alt="Interior de cabaña" class="w-full h-48 object-cover rounded-lg cursor-pointer hover:opacity-75 transition duration-300">
+                </div>
+                <div class="galeria-item" data-categoria="actividades">
+                    <img src="https://source.unsplash.com/400x300/?campfire" alt="Fogata" class="w-full h-48 object-cover rounded-lg cursor-pointer hover:opacity-75 transition duration-300">
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Sección de Reseñas -->
+    <section id="resenas" class="py-16 bg-gray-100">
+        <div class="container mx-auto px-6">
+            <h2 class="text-3xl font-bold text-center text-green-800 mb-12">Lo que dicen nuestros huéspedes</h2>
+            <div class="swiper resenas-swiper">
+                <div class="swiper-wrapper">
+                    <div class="swiper-slide">
+                        <div class="bg-white p-6 rounded-lg shadow-md">
+                            <div class="flex items-center mb-4">
+                                <img src="https://source.unsplash.com/50x50/?portrait" alt="Cliente" class="w-12 h-12 rounded-full mr-4">
+                                <div>
+                                    <h3 class="font-semibold">María García</h3>
+                                    <div class="text-yellow-500">
+                                        <i class="fas fa-star"></i>
+                                        <i class="fas fa-star"></i>
+                                        <i class="fas fa-star"></i>
+                                        <i class="fas fa-star"></i>
+                                        <i class="fas fa-star"></i>
+                                    </div>
+                                </div>
+                            </div>
+                            <p class="text-gray-600">"Una experiencia inolvidable. Las cabañas son hermosas y el entorno natural es impresionante. Volveremos seguro."</p>
+                        </div>
+                    </div>
+                    <div class="swiper-slide">
+                        <div class="bg-white p-6 rounded-lg shadow-md">
+                            <div class="flex items-center mb-4">
+                                <img src="https://source.unsplash.com/51x51/?portrait" alt="Cliente" class="w-12 h-12 rounded-full mr-4">
+                                <div>
+                                    <h3 class="font-semibold">Juan Pérez</h3>
+                                    <div class="text-yellow-500">
+                                        <i class="fas fa-star"></i>
+                                        <i class="fas fa-star"></i>
+                                        <i class="fas fa-star"></i>
+                                        <i class="fas fa-star"></i>
+                                        <i class="far fa-star"></i>
+                                    </div>
+                                </div>
+                            </div>
+                            <p class="text-gray-600">"Excelente atención y cabañas muy cómodas. El desayuno es delicioso. Recomendado para familias."</p>
+                        </div>
+                    </div>
+                    <div class="swiper-slide">
+                        <div class="bg-white p-6 rounded-lg shadow-md">
+                            <div class="flex items-center mb-4">
+                                <img src="https://source.unsplash.com/52x52/?portrait" alt="Cliente" class="w-12 h-12 rounded-full mr-4">
+                                <div>
+                                    <h3 class="font-semibold">Laura Rodríguez</h3>
+                                    <div class="text-yellow-500">
+                                        <i class="fas fa-star"></i>
+                                        <i class="fas fa-star"></i>
+                                        <i class="fas fa-star"></i>
+                                        <i class="fas fa-star"></i>
+                                        <i class="fas fa-star-half-alt"></i>
+                                    </div>
+                                </div>
+                            </div>
+                            <p class="text-gray-600">"Un lugar perfecto para desconectar y disfrutar de la naturaleza. Las cabañas son muy acogedoras y el personal es muy amable."</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="swiper-pagination"></div>
             </div>
         </div>
     </section>
@@ -139,7 +290,9 @@
                     <p class="mb-4"><i class="fas fa-envelope mr-2 text-yellow-500"></i> info@solmosqueracabanas.com</p>
                     <div class="mb-8">
                         <h4 class="text-lg font-semibold mb-2">Ubicación</h4>
-                        <img src="https://source.unsplash.com/600x300/?map" alt="Mapa del Valle de Calamuchita" class="w-full rounded-lg">
+                        <div id="mapa" class="w-full h-64 rounded-lg overflow-hidden">
+                            <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d108971.40657274954!2d-64.6437641665548!3d-32.15763492418316!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x95d2c9c7b3d39acb%3A0x2e7a4a2acbf1e1a4!2sValle%20de%20Calamuchita%2C%20C%C3%B3rdoba!5e0!3m2!1ses-419!2sar!4v1652401234567!5m2!1ses-419!2sar" width="100%" height="100%" style="border:0;" allowfullscreen="" loading="lazy"></iframe>
+                        </div>
                     </div>
                 </div>
                 <div>
@@ -183,6 +336,7 @@
                         <li><a href="#servicios" class="hover:text-yellow-500">Servicios</a></li>
                         <li><a href="#cabanas" class="hover:text-yellow-500">Cabañas</a></li>
                         <li><a href="#galeria" class="hover:text-yellow-500">Galería</a></li>
+                        <li><a href="#resenas" class="hover:text-yellow-500">Reseñas</a></li>
                         <li><a href="#contacto" class="hover:text-yellow-500">Contacto</a></li>
                     </ul>
                 </div>
@@ -226,15 +380,108 @@
         </div>
     </div>
 
+    <!-- Modal de cabaña -->
+    <div id="cabana-modal" class="hidden fixed inset-0 bg-black bg-opacity-75 flex items-center justify-center z-50">
+        <div class="bg-white rounded-lg p-8 max-w-2xl w-full max-h-[90vh] overflow-y-auto">
+            <h3 id="cabana-modal-title" class="text-2xl font-bold mb-4"></h3>
+            <div id="cabana-modal-content"></div>
+            <button id="close-cabana-modal" class="mt-6 px-4 py-2 bg-yellow-500 text-white rounded hover:bg-yellow-600 transition duration-300">Cerrar</button>
+        </div>
+    </div>
+
     <script>
         // Datos de las cabañas
         const cabanas = [
-            { id: 1, nombre: "Cabaña del Lago", ubicacion: "lago", capacidad: 4, precio: 150, imagen: "https://source.unsplash.com/400x300/?lake,cabin" },
-            { id: 2, nombre: "Cabaña de Montaña", ubicacion: "montana", capacidad: 2, precio: 120, imagen: "https://source.unsplash.com/400x300/?mountain,cabin" },
-            { id: 3, nombre: "Cabaña Familiar", ubicacion: "lago", capacidad: 6, precio: 200, imagen: "https://source.unsplash.com/400x300/?family,cabin" },
-            { id: 4, nombre: "Cabaña Romántica", ubicacion: "montana", capacidad: 2, precio: 130, imagen: "https://source.unsplash.com/400x300/?romantic,cabin" },
-            { id: 5, nombre: "Cabaña del Bosque", ubicacion: "montana", capacidad: 4, precio: 160, imagen: "https://source.unsplash.com/400x300/?forest,cabin" },
-            { id: 6, nombre: "Cabaña Vista al Río", ubicacion: "lago", capacidad: 4, precio: 170, imagen: "https://source.unsplash.com/400x300/?river,cabin" }
+            { 
+                id: 1, 
+                nombre: "Cabaña del Lago", 
+                ubicacion: "lago", 
+                capacidad: 4, 
+                precio: 150, 
+                imagen: "https://source.unsplash.com/400x300/?lake,cabin",
+                amenidades: ["wifi", "piscina", "estacionamiento", "aire-acondicionado"],
+                descripcion: "Hermosa cabaña con vista al lago, perfecta para familias o grupos de amigos. Disfruta de la tranquilidad y la naturaleza en este acogedor espacio.",
+                imagenes: [
+                    "https://source.unsplash.com/400x300/?lake,cabin",
+                    "https://source.unsplash.com/400x300/?cabin,interior",
+                    "https://source.unsplash.com/400x300/?cabin,bedroom"
+                ]
+            },
+            { 
+                id: 2, 
+                nombre: "Cabaña de Montaña", 
+                ubicacion: "montana", 
+                capacidad: 2, 
+                precio: 120, 
+                imagen: "https://source.unsplash.com/400x300/?mountain,cabin",
+                amenidades: ["wifi", "chimenea", "cocina", "terraza"],
+                descripcion: "Acogedora cabaña de montaña ideal para parejas. Disfruta de impresionantes vistas y momentos románticos junto a la chimenea.",
+                imagenes: [
+                    "https://source.unsplash.com/400x300/?mountain,cabin",
+                    "https://source.unsplash.com/400x300/?cabin,fireplace",
+                    "https://source.unsplash.com/400x300/?cabin,view"
+                ]
+            },
+            { 
+                id: 3, 
+                nombre: "Cabaña Familiar", 
+                ubicacion: "lago", 
+                capacidad: 6, 
+                precio: 200, 
+                imagen: "https://source.unsplash.com/400x300/?family,cabin",
+                amenidades: ["wifi", "piscina", "barbacoa", "juegos-infantiles"],
+                descripcion: "Espaciosa cabaña familiar con todas las comodidades. Perfecta para unas vacaciones en familia con actividades para todas las edades.",
+                imagenes: [
+                    "https://source.unsplash.com/400x300/?family,cabin",
+                    "https://source.unsplash.com/400x300/?cabin,living-room",
+                    "https://source.unsplash.com/400x300/?cabin,playground"
+                ]
+            },
+            { 
+                id: 4, 
+                nombre: "Cabaña Romántica", 
+                ubicacion: "montana", 
+                capacidad: 2, 
+                precio: 130, 
+                imagen: "https://source.unsplash.com/400x300/?romantic,cabin",
+                amenidades: ["wifi", "jacuzzi", "vista-panoramica", "desayuno-incluido"],
+                descripcion: "Cabaña romántica con jacuzzi privado y vistas panorámicas. El lugar perfecto para una escapada en pareja.",
+                imagenes: [
+                    "https://source.unsplash.com/400x300/?romantic,cabin",
+                    "https://source.unsplash.com/400x300/?cabin,jacuzzi",
+                    "https://source.unsplash.com/400x300/?cabin,sunset"
+                ]
+            },
+            { 
+                id: 5, 
+                nombre: "Cabaña del Bosque", 
+                ubicacion: "montana", 
+                capacidad: 4, 
+                precio: 160, 
+                imagen: "https://source.unsplash.com/400x300/?forest,cabin",
+                amenidades: ["wifi", "senderos", "fogata", "observacion-aves"],
+                descripcion: "Cabaña rodeada de bosque, ideal para los amantes de la naturaleza. Disfruta de senderos, observación de aves y noches estrelladas.",
+                imagenes: [
+                    "https://source.unsplash.com/400x300/?forest,cabin",
+                    "https://source.unsplash.com/400x300/?cabin,trail",
+                    "https://source.unsplash.com/400x300/?cabin,campfire"
+                ]
+            },
+            { 
+                id: 6, 
+                nombre: "Cabaña Vista al Río", 
+                ubicacion: "lago", 
+                capacidad: 4, 
+                precio: 170, 
+                imagen: "https://source.unsplash.com/400x300/?river,cabin",
+                amenidades: ["wifi", "pesca", "kayak", "terraza"],
+                descripcion: "Cabaña con hermosa vista al río y acceso directo al agua. Perfecta para los amantes de la pesca y los deportes acuáticos.",
+                imagenes: [
+                    "https://source.unsplash.com/400x300/?river,cabin",
+                    "https://source.unsplash.com/400x300/?cabin,fishing",
+                    "https://source.unsplash.com/400x300/?cabin,kayak"
+                ]
+            }
         ];
 
         // Función para mostrar las cabañas
@@ -252,11 +499,105 @@
                         <p class="text-gray-600 mb-2">Ubicación: ${cabana.ubicacion === 'lago' ? 'Cerca del lago' : 'En la montaña'}</p>
                         <p class="text-gray-600 mb-2">Capacidad: ${cabana.capacidad} personas</p>
                         <p class="text-gray-600 mb-4">Precio: $${cabana.precio} por noche</p>
-                        <button class="px-4 py-2 bg-yellow-500 text-white rounded hover:bg-yellow-600 transition duration-300">Ver Detalles</button>
+                        <div class="flex flex-wrap gap-2 mb-4">
+                            ${cabana.amenidades.map(amenidad => `
+                                <span class="bg-gray-200 text-gray-700 px-2 py-1 rounded text-sm">
+                                    <i class="fas fa-${getAmenidadIcon(amenidad)} mr-1"></i>${formatAmenidad(amenidad)}
+                                </span>
+                            `).join('')}
+                        </div>
+                        <button class="ver-mas px-4 py-2 bg-yellow-500 text-white rounded hover:bg-yellow-600 transition duration-300" data-id="${cabana.id}">Ver más</button>
                     </div>
                 `;
                 cabanasGrid.appendChild(cabanaElement);
             });
+
+            // Agregar event listeners a los botones "Ver más"
+            document.querySelectorAll('.ver-mas').forEach(button => {
+                button.addEventListener('click', (e) => {
+                    const cabanaId = e.target.getAttribute('data-id');
+                    mostrarModalCabana(cabanaId);
+                });
+            });
+        }
+
+        // Función para mostrar el modal de cabaña
+        function mostrarModalCabana(cabanaId) {
+            const cabana = cabanas.find(c => c.id === parseInt(cabanaId));
+            const modal = document.getElementById('cabana-modal');
+            const title = document.getElementById('cabana-modal-title');
+            const content = document.getElementById('cabana-modal-content');
+
+            title.textContent = cabana.nombre;
+            content.innerHTML = `
+                <div class="swiper cabana-swiper mb-4">
+                    <div class="swiper-wrapper">
+                        ${cabana.imagenes.map(img => `
+                            <div class="swiper-slide">
+                                <img src="${img}" alt="${cabana.nombre}" class="w-full h-64 object-cover rounded">
+                            </div>
+                        `).join('')}
+                    </div>
+                    <div class="swiper-pagination"></div>
+                </div>
+                <p class="mb-4">${cabana.descripcion}</p>
+                <p class="mb-2"><strong>Ubicación:</strong> ${cabana.ubicacion === 'lago' ? 'Cerca del lago' : 'En la montaña'}</p>
+                <p class="mb-2"><strong>Capacidad:</strong> ${cabana.capacidad} personas</p>
+                <p class="mb-2"><strong>Precio:</strong> $${cabana.precio} por noche</p>
+                <div class="mt-4">
+                    <h4 class="font-semibold mb-2">Amenidades:</h4>
+                    <div class="flex flex-wrap gap-2">
+                        ${cabana.amenidades.map(amenidad => `
+                            <span class="bg-gray-200 text-gray-700 px-2 py-1 rounded text-sm">
+                                <i class="fas fa-${getAmenidadIcon(amenidad)} mr-1"></i>${formatAmenidad(amenidad)}
+                            </span>
+                        `).join('')}
+                    </div>
+                </div>
+            `;
+
+            modal.classList.remove('hidden');
+
+            // Inicializar el Swiper para las imágenes de la cabaña
+            new Swiper('.cabana-swiper', {
+                pagination: {
+                    el: '.swiper-pagination',
+                },
+            });
+        }
+
+        // Función para cerrar el modal de cabaña
+        document.getElementById('close-cabana-modal').addEventListener('click', () => {
+            document.getElementById('cabana-modal').classList.add('hidden');
+        });
+
+        // Función para obtener el icono de la amenidad
+        function getAmenidadIcon(amenidad) {
+            const iconos = {
+                'wifi': 'wifi',
+                'piscina': 'swimming-pool',
+                'estacionamiento': 'parking',
+                'aire-acondicionado': 'snowflake',
+                'chimenea': 'fire',
+                'cocina': 'utensils',
+                'terraza': 'umbrella-beach',
+                'barbacoa': 'drumstick-bite',
+                'juegos-infantiles': 'child',
+                'jacuzzi': 'hot-tub',
+                'vista-panoramica': 'mountain',
+                'desayuno-incluido': 'coffee',
+                'senderos': 'hiking',
+                'fogata': 'fire-alt',
+                'observacion-aves': 'binoculars',
+                'pesca': 'fish',
+                'kayak': 'water'
+            };
+            return iconos[amenidad] || 'check';
+        }
+
+        // Función para formatear el nombre de la amenidad
+        function formatAmenidad(amenidad) {
+            return amenidad.split('-').map(word => word.charAt(0).toUpperCase() + word.slice(1)).join(' ');
         }
 
         // Inicializar la visualización de cabañas
@@ -265,14 +606,18 @@
         // Filtrar cabañas
         const ubicacionSelect = document.getElementById('ubicacion');
         const capacidadSelect = document.getElementById('capacidad');
+        const precioRange = document.getElementById('precio');
+        const precioValor = document.getElementById('precio-valor');
 
         function filtrarCabanas() {
             const ubicacionFiltro = ubicacionSelect.value;
             const capacidadFiltro = capacidadSelect.value;
+            const precioMaximo = parseInt(precioRange.value);
 
             const cabanasFiltradas = cabanas.filter(cabana => {
                 return (ubicacionFiltro === 'todas' || cabana.ubicacion === ubicacionFiltro) &&
-                       (capacidadFiltro === 'todas' || cabana.capacidad.toString() === capacidadFiltro);
+                       (capacidadFiltro === 'todas' || cabana.capacidad.toString() === capacidadFiltro) &&
+                       cabana.precio <= precioMaximo;
             });
 
             mostrarCabanas(cabanasFiltradas);
@@ -280,6 +625,10 @@
 
         ubicacionSelect.addEventListener('change', filtrarCabanas);
         capacidadSelect.addEventListener('change', filtrarCabanas);
+        precioRange.addEventListener('input', () => {
+            precioValor.textContent = `$${precioRange.value}`;
+            filtrarCabanas();
+        });
 
         // Menú móvil
         const menuToggle = document.getElementById('menu-toggle');
@@ -297,7 +646,7 @@
             });
         });
 
-        // Modal de imagen
+        // Galería de fotos
         const gallery = document.getElementById('galeria');
         const imageModal = document.getElementById('image-modal');
         const modalImage = document.getElementById('modal-image');
@@ -320,10 +669,78 @@
             }
         });
 
+        // Filtro de galería
+        const filtrosGaleria = document.querySelectorAll('.filtro-galeria');
+        const galeriaItems = document.querySelectorAll('.galeria-item');
+
+        filtrosGaleria.forEach(filtro => {
+            filtro.addEventListener('click', () => {
+                const categoria = filtro.getAttribute('data-filter');
+
+                // Actualizar estilos de los botones de filtro
+                filtrosGaleria.forEach(f => f.classList.remove('bg-yellow-500', 'text-white'));
+                filtrosGaleria.forEach(f => f.classList.add('bg-gray-300', 'text-gray-700'));
+                filtro.classList.remove('bg-gray-300', 'text-gray-700');
+                filtro.classList.add('bg-yellow-500', 'text-white');
+
+                // Filtrar elementos de la galería
+                galeriaItems.forEach(item => {
+                    if (categoria === 'todas' || item.getAttribute('data-categoria') === categoria) {
+                        item.style.display = 'block';
+                    } else {
+                        item.style.display = 'none';
+                    }
+                });
+            });
+        });
+
         // Chat en vivo (simulado)
         const chatButton = document.getElementById('chat-button');
         chatButton.addEventListener('click', () => {
             alert('¡Gracias por contactarnos! En breve un representante se pondrá en contacto contigo.');
+        });
+
+        // Inicializar Swiper para el banner superior
+        new Swiper('.top-banner-swiper', {
+            direction: 'horizontal',
+            loop: true,
+            autoplay: {
+                delay: 5000,
+            },
+        });
+
+        // Inicializar Swiper para el héroe
+        new Swiper('.hero-swiper', {
+            direction: 'horizontal',
+            loop: true,
+            autoplay: {
+                delay: 5000,
+            },
+            pagination: {
+                el: '.swiper-pagination',
+            },
+        });
+
+        // Inicializar Swiper para las reseñas
+        new Swiper('.resenas-swiper', {
+            slidesPerView: 1,
+            spaceBetween: 30,
+            loop: true,
+            autoplay: {
+                delay: 5000,
+            },
+            pagination: {
+                el: '.swiper-pagination',
+                clickable: true,
+            },
+            breakpoints: {
+                640: {
+                    slidesPerView: 2,
+                },
+                1024: {
+                    slidesPerView: 3,
+                },
+            },
         });
     </script>
 </body>
