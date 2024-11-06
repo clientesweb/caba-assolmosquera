@@ -3,7 +3,18 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Sol Mosquera Cabañas - Tu refugio en el Valle de Calamuchita</title>
+    <title>Sol Mosquera Cabañas - Alquileres en el Valle de Calamuchita</title>
+    <meta name="description" content="Disfruta de unas vacaciones inolvidables en nuestras hermosas cabañas en el Valle de Calamuchita. Ubicaciones en Villa del Dique, Villa Rumipal, El Torreón y Santa Rosa.">
+    <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
+    <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
+    <link rel="manifest" href="/site.webmanifest">
+    <meta name="theme-color" content="#1F2937">
+    <meta property="og:title" content="Sol Mosquera Cabañas - Alquileres en el Valle de Calamuchita">
+    <meta property="og:description" content="Disfruta de unas vacaciones inolvidables en nuestras hermosas cabañas en el Valle de Calamuchita. Ubicaciones en Villa del Dique, Villa Rumipal, El Torreón y Santa Rosa.">
+    <meta property="og:image" content="https://example.com/og-image.jpg">
+    <meta property="og:url" content="https://www.solmosqueracabanas.com">
+    <meta property="og:type" content="website">
     <script src="https://cdn.tailwindcss.com"></script>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@8/swiper-bundle.min.css" />
@@ -12,6 +23,8 @@
         @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap');
         body {
             font-family: 'Poppins', sans-serif;
+            background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='100' height='100' viewBox='0 0 100 100'%3E%3Cpath d='M50 0 L100 50 L50 100 L0 50 Z' fill='%23f3f4f6' fill-opacity='0.4'/%3E%3Cpath d='M50 10 L90 50 L50 90 L10 50 Z' fill='%23e5e7eb' fill-opacity='0.4'/%3E%3C/svg%3E");
+            background-attachment: fixed;
         }
         .swiper-pagination-bullet-active {
             background-color: #F59E0B !important;
@@ -76,7 +89,7 @@
                     <div class="relative h-full flex items-center justify-center text-center text-white z-10">
                         <div>
                             <h1 class="text-4xl md:text-6xl font-bold mb-4">Sol Mosquera Cabañas</h1>
-                            <p class="text-xl md:text-2xl mb-8">Tu refugio en el Valle de Calamuchita</p>
+                            <p class="text-xl md:text-2xl mb-8">Alquileres en el Valle de Calamuchita</p>
                             <a href="#" class="px-6 py-3 bg-yellow-500 text-white font-bold rounded-full hover:bg-yellow-600 transition duration-300">Reservar Ahora</a>
                         </div>
                     </div>
@@ -139,8 +152,10 @@
                     <label for="ubicacion" class="mr-2 font-semibold">Ubicación:</label>
                     <select id="ubicacion" class="border rounded p-2">
                         <option value="todas">Todas</option>
-                        <option value="lago">Cerca del lago</option>
-                        <option value="montana">En la montaña</option>
+                        <option value="villa-del-dique">Villa del Dique</option>
+                        <option value="villa-rumipal">Villa Rumipal</option>
+                        <option value="el-torreon">El Torreón</option>
+                        <option value="santa-rosa">Santa Rosa</option>
                     </select>
                 </div>
                 <div>
@@ -151,11 +166,6 @@
                         <option value="4">4 personas</option>
                         <option value="6">6 personas</option>
                     </select>
-                </div>
-                <div>
-                    <label for="precio" class="mr-2 font-semibold">Precio máximo:</label>
-                    <input type="range" id="precio" min="100" max="300" step="10" value="300" class="w-48">
-                    <span id="precio-valor" class="ml-2">$300</span>
                 </div>
             </div>
             <div id="cabanas-grid" class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
@@ -297,27 +307,39 @@
                 </div>
                 <div>
                     <h3 class="text-xl font-semibold mb-4">Envíanos un Mensaje</h3>
-                    <form>
+                    <form id="contactForm">
                         <div class="mb-4">
                             <label for="nombre" class="block text-gray-700 mb-2">Nombre</label>
-                            <input type="text" id="nombre" class="w-full px-3 py-2 border rounded-lg" required>
+                            <input type="text" id="nombre" name="nombre" class="w-full px-3 py-2 border rounded-lg" required>
                         </div>
                         <div class="mb-4">
                             <label for="email" class="block text-gray-700 mb-2">Email</label>
-                            <input type="email" id="email" class="w-full px-3 py-2 border rounded-lg" required>
+                            <input type="email" id="email" name="email" class="w-full px-3 py-2 border rounded-lg" required>
                         </div>
                         <div class="mb-4">
                             <label for="telefono" class="block text-gray-700 mb-2">Teléfono</label>
-                            <input type="tel" id="telefono" class="w-full px-3 py-2 border rounded-lg">
+                            <input type="tel" id="telefono" name="telefono" class="w-full px-3 py-2 border rounded-lg">
                         </div>
                         <div class="mb-4">
                             <label for="mensaje" class="block text-gray-700 mb-2">Mensaje</label>
-                            <textarea id="mensaje" rows="4" class="w-full px-3 py-2 border rounded-lg" required></textarea>
+                            <textarea id="mensaje" name="mensaje" rows="4" class="w-full px-3 py-2 border rounded-lg" required></textarea>
                         </div>
                         <button type="submit" class="px-6 py-3 bg-yellow-500 text-white font-bold rounded-full hover:bg-yellow-600 transition duration-300">Enviar Mensaje</button>
                     </form>
                 </div>
             </div>
+        </div>
+    </section>
+
+    <!-- Boletín Informativo -->
+    <section class="py-16 bg-green-800 text-white">
+        <div class="container mx-auto px-6 text-center">
+            <h2 class="text-3xl font-bold mb-4">Suscríbete a nuestro Boletín</h2>
+            <p class="text-xl mb-8">Recibe nuestras últimas ofertas y novedades directamente en tu WhatsApp.</p>
+            <form id="newsletterForm" class="flex flex-col sm:flex-row justify-center items-center">
+                <input type="tel" id="whatsapp" name="whatsapp" placeholder="Tu número de WhatsApp" class="px-4 py-2 rounded-l-full w-full sm:w-64 mb-4 sm:mb-0 text-gray-800" required>
+                <button type="submit" class="bg-yellow-500 text-white font-bold py-2 px-6 rounded-r-full hover:bg-yellow-600 transition duration-300">Suscribirse</button>
+            </form>
         </div>
     </section>
 
@@ -356,131 +378,66 @@
                 </div>
             </div>
             <div class="border-t border-gray-700 mt-8 pt-8 text-center">
-                <p>&copy; 2023 Sol Mosquera Cabañas. Todos los derechos reservados.</p>
-                <p class="mt-2">
-                    <a href="#" class="hover:text-yellow-500">Política de Privacidad</a> | 
-                    <a href="#" class="hover:text-yellow-500">Términos y Condiciones</a>
-                </p>
+                <p>&copy; 2024 Sol Mosquera Cabañas. Todos los derechos reservados.</p>
+                <p class="mt-2">Powered by <a href="https://dualitydomain.com" target="_blank" rel="noopener noreferrer" class="text-yellow-500 hover:underline">Duality Domain</a></p>
             </div>
         </div>
     </footer>
 
-    <!-- Chat en vivo -->
-    <div class="fixed bottom-4 right-4 z-50">
-        <button id="chat-button" class="bg-yellow-500 text-white rounded-full p-4 shadow-lg hover:bg-yellow-600 transition duration-300">
-            <i class="fas fa-comments text-2xl"></i>
-        </button>
-    </div>
+    <!-- Botón flotante de WhatsApp -->
+    <a href="https://wa.me/5493546406871" target="_blank" rel="noopener noreferrer" class="fixed bottom-4 right-4 bg-green-500 text-white rounded-full p-3 shadow-lg hover:bg-green-600 transition duration-300">
+        <i class="fab fa-whatsapp text-3xl"></i>
+    </a>
 
-    <!-- Modal de imagen -->
-    <div id="image-modal" class="hidden fixed inset-0 bg-black bg-opacity-75 flex items-center justify-center z-50">
-        <div class="max-w-4xl w-full">
-            <img id="modal-image" src="" alt="Imagen ampliada" class="w-full h-auto">
-            <button id="close-modal" class="absolute top-4 right-4 text-white text-3xl">&times;</button>
-        </div>
-    </div>
-
-    <!-- Modal de cabaña -->
-    <div id="cabana-modal" class="hidden fixed inset-0 bg-black bg-opacity-75 flex items-center justify-center z-50">
-        <div class="bg-white rounded-lg p-8 max-w-2xl w-full max-h-[90vh] overflow-y-auto">
-            <h3 id="cabana-modal-title" class="text-2xl font-bold mb-4"></h3>
-            <div id="cabana-modal-content"></div>
-            <button id="close-cabana-modal" class="mt-6 px-4 py-2 bg-yellow-500 text-white rounded hover:bg-yellow-600 transition duration-300">Cerrar</button>
+    <!-- Modal para detalles de cabaña -->
+    <div id="cabana-modal" class="fixed inset-0 bg-black bg-opacity-50 hidden items-center justify-center z-50">
+        <div class="bg-white p-8 rounded-lg max-w-2xl w-full mx-4">
+            <h3 id="modal-title" class="text-2xl font-bold mb-4"></h3>
+            <img id="modal-image" src="" alt="Cabaña" class="w-full h-64 object-cover rounded-lg mb-4">
+            <p id="modal-description" class="text-gray-600 mb-4"></p>
+            <div id="modal-amenities" class="flex flex-wrap gap-2 mb-4"></div>
+            <button id="close-modal" class="px-4 py-2 bg-yellow-500 text-white rounded hover:bg-yellow-600 transition duration-300">Cerrar</button>
         </div>
     </div>
 
     <script>
         // Datos de las cabañas
         const cabanas = [
-            { 
-                id: 1, 
-                nombre: "Cabaña del Lago", 
-                ubicacion: "lago", 
-                capacidad: 4, 
-                precio: 150, 
-                imagen: "https://source.unsplash.com/400x300/?lake,cabin",
-                amenidades: ["wifi", "piscina", "estacionamiento", "aire-acondicionado"],
-                descripcion: "Hermosa cabaña con vista al lago, perfecta para familias o grupos de amigos. Disfruta de la tranquilidad y la naturaleza en este acogedor espacio.",
-                imagenes: [
-                    "https://source.unsplash.com/400x300/?lake,cabin",
-                    "https://source.unsplash.com/400x300/?cabin,interior",
-                    "https://source.unsplash.com/400x300/?cabin,bedroom"
-                ]
+            {
+                id: 1,
+                nombre: "Cabaña del Bosque",
+                ubicacion: "villa-del-dique",
+                capacidad: 4,
+                descripcion: "Hermosa cabaña rodeada de bosque nativo, ideal para familias.",
+                imagen: "https://source.unsplash.com/800x600/?cabin,forest",
+                amenities: ["wifi", "estacionamiento", "cocina", "aire-acondicionado"]
             },
-            { 
-                id: 2, 
-                nombre: "Cabaña de Montaña", 
-                ubicacion: "montana", 
-                capacidad: 2, 
-                precio: 120, 
-                imagen: "https://source.unsplash.com/400x300/?mountain,cabin",
-                amenidades: ["wifi", "chimenea", "cocina", "terraza"],
-                descripcion: "Acogedora cabaña de montaña ideal para parejas. Disfruta de impresionantes vistas y momentos románticos junto a la chimenea.",
-                imagenes: [
-                    "https://source.unsplash.com/400x300/?mountain,cabin",
-                    "https://source.unsplash.com/400x300/?cabin,fireplace",
-                    "https://source.unsplash.com/400x300/?cabin,view"
-                ]
+            {
+                id: 2,
+                nombre: "Cabaña del Lago",
+                ubicacion: "villa-rumipal",
+                capacidad: 2,
+                descripcion: "Romántica cabaña con vista al lago, perfecta para parejas.",
+                imagen: "https://source.unsplash.com/800x600/?cabin,lake",
+                amenities: ["wifi", "jacuzzi", "cocina", "terraza"]
             },
-            { 
-                id: 3, 
-                nombre: "Cabaña Familiar", 
-                ubicacion: "lago", 
-                capacidad: 6, 
-                precio: 200, 
-                imagen: "https://source.unsplash.com/400x300/?family,cabin",
-                amenidades: ["wifi", "piscina", "barbacoa", "juegos-infantiles"],
-                descripcion: "Espaciosa cabaña familiar con todas las comodidades. Perfecta para unas vacaciones en familia con actividades para todas las edades.",
-                imagenes: [
-                    "https://source.unsplash.com/400x300/?family,cabin",
-                    "https://source.unsplash.com/400x300/?cabin,living-room",
-                    "https://source.unsplash.com/400x300/?cabin,playground"
-                ]
+            {
+                id: 3,
+                nombre: "Cabaña de la Montaña",
+                ubicacion: "el-torreon",
+                capacidad: 6,
+                descripcion: "Espaciosa cabaña con vistas panorámicas a las montañas.",
+                imagen: "https://source.unsplash.com/800x600/?cabin,mountain",
+                amenities: ["wifi", "estacionamiento", "cocina", "chimenea", "aire-acondicionado"]
             },
-            { 
-                id: 4, 
-                nombre: "Cabaña Romántica", 
-                ubicacion: "montana", 
-                capacidad: 2, 
-                precio: 130, 
-                imagen: "https://source.unsplash.com/400x300/?romantic,cabin",
-                amenidades: ["wifi", "jacuzzi", "vista-panoramica", "desayuno-incluido"],
-                descripcion: "Cabaña romántica con jacuzzi privado y vistas panorámicas. El lugar perfecto para una escapada en pareja.",
-                imagenes: [
-                    "https://source.unsplash.com/400x300/?romantic,cabin",
-                    "https://source.unsplash.com/400x300/?cabin,jacuzzi",
-                    "https://source.unsplash.com/400x300/?cabin,sunset"
-                ]
-            },
-            { 
-                id: 5, 
-                nombre: "Cabaña del Bosque", 
-                ubicacion: "montana", 
-                capacidad: 4, 
-                precio: 160, 
-                imagen: "https://source.unsplash.com/400x300/?forest,cabin",
-                amenidades: ["wifi", "senderos", "fogata", "observacion-aves"],
-                descripcion: "Cabaña rodeada de bosque, ideal para los amantes de la naturaleza. Disfruta de senderos, observación de aves y noches estrelladas.",
-                imagenes: [
-                    "https://source.unsplash.com/400x300/?forest,cabin",
-                    "https://source.unsplash.com/400x300/?cabin,trail",
-                    "https://source.unsplash.com/400x300/?cabin,campfire"
-                ]
-            },
-            { 
-                id: 6, 
-                nombre: "Cabaña Vista al Río", 
-                ubicacion: "lago", 
-                capacidad: 4, 
-                precio: 170, 
-                imagen: "https://source.unsplash.com/400x300/?river,cabin",
-                amenidades: ["wifi", "pesca", "kayak", "terraza"],
-                descripcion: "Cabaña con hermosa vista al río y acceso directo al agua. Perfecta para los amantes de la pesca y los deportes acuáticos.",
-                imagenes: [
-                    "https://source.unsplash.com/400x300/?river,cabin",
-                    "https://source.unsplash.com/400x300/?cabin,fishing",
-                    "https://source.unsplash.com/400x300/?cabin,kayak"
-                ]
+            {
+                id: 4,
+                nombre: "Cabaña del Río",
+                ubicacion: "santa-rosa",
+                capacidad: 4,
+                descripcion: "Acogedora cabaña junto al río, ideal para pescadores y amantes de la naturaleza.",
+                imagen: "https://source.unsplash.com/800x600/?cabin,river",
+                amenities: ["wifi", "estacionamiento", "cocina", "parrilla"]
             }
         ];
 
@@ -496,209 +453,115 @@
                     <img src="${cabana.imagen}" alt="${cabana.nombre}" class="w-full h-48 object-cover">
                     <div class="p-4">
                         <h3 class="text-xl font-semibold mb-2">${cabana.nombre}</h3>
-                        <p class="text-gray-600 mb-2">Ubicación: ${cabana.ubicacion === 'lago' ? 'Cerca del lago' : 'En la montaña'}</p>
                         <p class="text-gray-600 mb-2">Capacidad: ${cabana.capacidad} personas</p>
-                        <p class="text-gray-600 mb-4">Precio: $${cabana.precio} por noche</p>
                         <div class="flex flex-wrap gap-2 mb-4">
-                            ${cabana.amenidades.map(amenidad => `
+                            ${cabana.amenities.map(amenity => `
                                 <span class="bg-gray-200 text-gray-700 px-2 py-1 rounded text-sm">
-                                    <i class="fas fa-${getAmenidadIcon(amenidad)} mr-1"></i>${formatAmenidad(amenidad)}
+                                    <i class="fas fa-${getAmenityIcon(amenity)} mr-1"></i>${amenity}
                                 </span>
                             `).join('')}
                         </div>
-                        <button class="ver-mas px-4 py-2 bg-yellow-500 text-white rounded hover:bg-yellow-600 transition duration-300" data-id="${cabana.id}">Ver más</button>
+                        <button class="ver-detalles px-4 py-2 bg-yellow-500 text-white rounded hover:bg-yellow-600 transition duration-300" data-id="${cabana.id}">Ver Detalles</button>
                     </div>
                 `;
                 cabanasGrid.appendChild(cabanaElement);
             });
 
-            // Agregar event listeners a los botones "Ver más"
-            document.querySelectorAll('.ver-mas').forEach(button => {
+            // Agregar event listeners a los botones "Ver Detalles"
+            document.querySelectorAll('.ver-detalles').forEach(button => {
                 button.addEventListener('click', (e) => {
                     const cabanaId = e.target.getAttribute('data-id');
-                    mostrarModalCabana(cabanaId);
+                    const cabana = cabanas.find(c => c.id === parseInt(cabanaId));
+                    mostrarModal(cabana);
                 });
             });
         }
 
-        // Función para mostrar el modal de cabaña
-        function mostrarModalCabana(cabanaId) {
-            const cabana = cabanas.find(c => c.id === parseInt(cabanaId));
+        // Función para obtener el icono de amenidad
+        function getAmenityIcon(amenity) {
+            const icons = {
+                'wifi': 'wifi',
+                'estacionamiento': 'car',
+                'cocina': 'utensils',
+                'aire-acondicionado': 'snowflake',
+                'jacuzzi': 'hot-tub',
+                'terraza': 'umbrella-beach',
+                'chimenea': 'fire',
+                'parrilla': 'fire-alt'
+            };
+            return icons[amenity] || 'check';
+        }
+
+        // Función para mostrar el modal
+        function mostrarModal(cabana) {
             const modal = document.getElementById('cabana-modal');
-            const title = document.getElementById('cabana-modal-title');
-            const content = document.getElementById('cabana-modal-content');
+            const title = document.getElementById('modal-title');
+            const image = document.getElementById('modal-image');
+            const description = document.getElementById('modal-description');
+            const amenities = document.getElementById('modal-amenities');
 
             title.textContent = cabana.nombre;
-            content.innerHTML = `
-                <div class="swiper cabana-swiper mb-4">
-                    <div class="swiper-wrapper">
-                        ${cabana.imagenes.map(img => `
-                            <div class="swiper-slide">
-                                <img src="${img}" alt="${cabana.nombre}" class="w-full h-64 object-cover rounded">
-                            </div>
-                        `).join('')}
-                    </div>
-                    <div class="swiper-pagination"></div>
-                </div>
-                <p class="mb-4">${cabana.descripcion}</p>
-                <p class="mb-2"><strong>Ubicación:</strong> ${cabana.ubicacion === 'lago' ? 'Cerca del lago' : 'En la montaña'}</p>
-                <p class="mb-2"><strong>Capacidad:</strong> ${cabana.capacidad} personas</p>
-                <p class="mb-2"><strong>Precio:</strong> $${cabana.precio} por noche</p>
-                <div class="mt-4">
-                    <h4 class="font-semibold mb-2">Amenidades:</h4>
-                    <div class="flex flex-wrap gap-2">
-                        ${cabana.amenidades.map(amenidad => `
-                            <span class="bg-gray-200 text-gray-700 px-2 py-1 rounded text-sm">
-                                <i class="fas fa-${getAmenidadIcon(amenidad)} mr-1"></i>${formatAmenidad(amenidad)}
-                            </span>
-                        `).join('')}
-                    </div>
-                </div>
-            `;
+            image.src = cabana.imagen;
+            image.alt = cabana.nombre;
+            description.textContent = cabana.descripcion;
+
+            amenities.innerHTML = cabana.amenities.map(amenity => `
+                <span class="bg-gray-200 text-gray-700 px-2 py-1 rounded text-sm">
+                    <i class="fas fa-${getAmenityIcon(amenity)} mr-1"></i>${amenity}
+                </span>
+            `).join('');
 
             modal.classList.remove('hidden');
-
-            // Inicializar el Swiper para las imágenes de la cabaña
-            new Swiper('.cabana-swiper', {
-                pagination: {
-                    el: '.swiper-pagination',
-                },
-            });
+            modal.classList.add('flex');
         }
 
-        // Función para cerrar el modal de cabaña
-        document.getElementById('close-cabana-modal').addEventListener('click', () => {
+        // Event listener para cerrar el modal
+        document.getElementById('close-modal').addEventListener('click', () => {
             document.getElementById('cabana-modal').classList.add('hidden');
+            document.getElementById('cabana-modal').classList.remove('flex');
         });
 
-        // Función para obtener el icono de la amenidad
-        function getAmenidadIcon(amenidad) {
-            const iconos = {
-                'wifi': 'wifi',
-                'piscina': 'swimming-pool',
-                'estacionamiento': 'parking',
-                'aire-acondicionado': 'snowflake',
-                'chimenea': 'fire',
-                'cocina': 'utensils',
-                'terraza': 'umbrella-beach',
-                'barbacoa': 'drumstick-bite',
-                'juegos-infantiles': 'child',
-                'jacuzzi': 'hot-tub',
-                'vista-panoramica': 'mountain',
-                'desayuno-incluido': 'coffee',
-                'senderos': 'hiking',
-                'fogata': 'fire-alt',
-                'observacion-aves': 'binoculars',
-                'pesca': 'fish',
-                'kayak': 'water'
-            };
-            return iconos[amenidad] || 'check';
-        }
-
-        // Función para formatear el nombre de la amenidad
-        function formatAmenidad(amenidad) {
-            return amenidad.split('-').map(word => word.charAt(0).toUpperCase() + word.slice(1)).join(' ');
-        }
-
-        // Inicializar la visualización de cabañas
-        mostrarCabanas();
-
         // Filtrar cabañas
-        const ubicacionSelect = document.getElementById('ubicacion');
-        const capacidadSelect = document.getElementById('capacidad');
-        const precioRange = document.getElementById('precio');
-        const precioValor = document.getElementById('precio-valor');
-
         function filtrarCabanas() {
-            const ubicacionFiltro = ubicacionSelect.value;
-            const capacidadFiltro = capacidadSelect.value;
-            const precioMaximo = parseInt(precioRange.value);
+            const ubicacion = document.getElementById('ubicacion').value;
+            const capacidad = document.getElementById('capacidad').value;
 
             const cabanasFiltradas = cabanas.filter(cabana => {
-                return (ubicacionFiltro === 'todas' || cabana.ubicacion === ubicacionFiltro) &&
-                       (capacidadFiltro === 'todas' || cabana.capacidad.toString() === capacidadFiltro) &&
-                       cabana.precio <= precioMaximo;
+                return (ubicacion === 'todas' || cabana.ubicacion === ubicacion) &&
+                       (capacidad === 'todas' || cabana.capacidad === parseInt(capacidad));
             });
 
             mostrarCabanas(cabanasFiltradas);
         }
 
-        ubicacionSelect.addEventListener('change', filtrarCabanas);
-        capacidadSelect.addEventListener('change', filtrarCabanas);
-        precioRange.addEventListener('input', () => {
-            precioValor.textContent = `$${precioRange.value}`;
-            filtrarCabanas();
-        });
+        // Event listeners para los filtros
+        document.getElementById('ubicacion').addEventListener('change', filtrarCabanas);
+        document.getElementById('capacidad').addEventListener('change', filtrarCabanas);
 
-        // Menú móvil
-        const menuToggle = document.getElementById('menu-toggle');
-        const mobileMenu = document.getElementById('mobile-menu');
+        // Inicializar la galería
+        function initGaleria() {
+            const botonesFilter = document.querySelectorAll('.filtro-galeria');
+            const itemsGaleria = document.querySelectorAll('.galeria-item');
 
-        menuToggle.addEventListener('click', () => {
-            mobileMenu.classList.toggle('hidden');
-        });
+            botonesFilter.forEach(boton => {
+                boton.addEventListener('click', () => {
+                    const filtro = boton.getAttribute('data-filter');
 
-        // Cerrar menú móvil al hacer clic en un enlace
-        const mobileMenuLinks = mobileMenu.querySelectorAll('a');
-        mobileMenuLinks.forEach(link => {
-            link.addEventListener('click', () => {
-                mobileMenu.classList.add('hidden');
-            });
-        });
+                    botonesFilter.forEach(b => b.classList.remove('bg-yellow-500', 'text-white'));
+                    botonesFilter.forEach(b => b.classList.add('bg-gray-300', 'text-gray-700'));
+                    boton.classList.remove('bg-gray-300', 'text-gray-700');
+                    boton.classList.add('bg-yellow-500', 'text-white');
 
-        // Galería de fotos
-        const gallery = document.getElementById('galeria');
-        const imageModal = document.getElementById('image-modal');
-        const modalImage = document.getElementById('modal-image');
-        const closeModal = document.getElementById('close-modal');
-
-        gallery.addEventListener('click', (e) => {
-            if (e.target.tagName === 'IMG') {
-                modalImage.src = e.target.src;
-                imageModal.classList.remove('hidden');
-            }
-        });
-
-        closeModal.addEventListener('click', () => {
-            imageModal.classList.add('hidden');
-        });
-
-        imageModal.addEventListener('click', (e) => {
-            if (e.target === imageModal) {
-                imageModal.classList.add('hidden');
-            }
-        });
-
-        // Filtro de galería
-        const filtrosGaleria = document.querySelectorAll('.filtro-galeria');
-        const galeriaItems = document.querySelectorAll('.galeria-item');
-
-        filtrosGaleria.forEach(filtro => {
-            filtro.addEventListener('click', () => {
-                const categoria = filtro.getAttribute('data-filter');
-
-                // Actualizar estilos de los botones de filtro
-                filtrosGaleria.forEach(f => f.classList.remove('bg-yellow-500', 'text-white'));
-                filtrosGaleria.forEach(f => f.classList.add('bg-gray-300', 'text-gray-700'));
-                filtro.classList.remove('bg-gray-300', 'text-gray-700');
-                filtro.classList.add('bg-yellow-500', 'text-white');
-
-                // Filtrar elementos de la galería
-                galeriaItems.forEach(item => {
-                    if (categoria === 'todas' || item.getAttribute('data-categoria') === categoria) {
-                        item.style.display = 'block';
-                    } else {
-                        item.style.display = 'none';
-                    }
+                    itemsGaleria.forEach(item => {
+                        if (filtro === 'todas' || item.getAttribute('data-categoria') === filtro) {
+                            item.style.display = 'block';
+                        } else {
+                            item.style.display = 'none';
+                        }
+                    });
                 });
             });
-        });
-
-        // Chat en vivo (simulado)
-        const chatButton = document.getElementById('chat-button');
-        chatButton.addEventListener('click', () => {
-            alert('¡Gracias por contactarnos! En breve un representante se pondrá en contacto contigo.');
-        });
+        }
 
         // Inicializar Swiper para el banner superior
         new Swiper('.top-banner-swiper', {
@@ -709,7 +572,7 @@
             },
         });
 
-        // Inicializar Swiper para el héroe
+        // Inicializar Swiper para el hero
         new Swiper('.hero-swiper', {
             direction: 'horizontal',
             loop: true,
@@ -718,6 +581,7 @@
             },
             pagination: {
                 el: '.swiper-pagination',
+                clickable: true,
             },
         });
 
@@ -741,6 +605,62 @@
                     slidesPerView: 3,
                 },
             },
+        });
+
+        // Manejar el menú móvil
+        const menuToggle = document.getElementById('menu-toggle');
+        const mobileMenu = document.getElementById('mobile-menu');
+
+        menuToggle.addEventListener('click', () => {
+            mobileMenu.classList.toggle('hidden');
+        });
+
+        // Cerrar el menú móvil al hacer clic en un enlace
+        document.querySelectorAll('#mobile-menu a').forEach(link => {
+            link.addEventListener('click', () => {
+                mobileMenu.classList.add('hidden');
+            });
+        });
+
+        // Manejar el formulario de contacto
+        document.getElementById('contactForm').addEventListener('submit', function(e) {
+            e.preventDefault();
+            const nombre = document.getElementById('nombre').value;
+            const email = document.getElementById('email').value;
+            const telefono = document.getElementById('telefono').value;
+            const mensaje = document.getElementById('mensaje').value;
+
+            // Construir el mensaje para WhatsApp
+            const whatsappMessage = `Hola, soy ${nombre}. Mi email es ${email} y mi teléfono es ${telefono}. Mi mensaje: ${mensaje}`;
+            const whatsappUrl = `https://wa.me/5493546406871?text=${encodeURIComponent(whatsappMessage)}`;
+
+            // Abrir WhatsApp en una nueva pestaña
+            window.open(whatsappUrl, '_blank');
+
+            // Limpiar el formulario
+            this.reset();
+        });
+
+        // Manejar el formulario de boletín
+        document.getElementById('newsletterForm').addEventListener('submit', function(e) {
+            e.preventDefault();
+            const whatsapp = document.getElementById('whatsapp').value;
+
+            // Construir el mensaje para WhatsApp
+            const whatsappMessage = `Hola, me gustaría suscribirme al boletín de Sol Mosquera Cabañas. Mi número de WhatsApp es ${whatsapp}.`;
+            const whatsappUrl = `https://wa.me/5493546406871?text=${encodeURIComponent(whatsappMessage)}`;
+
+            // Abrir WhatsApp en una nueva pestaña
+            window.open(whatsappUrl, '_blank');
+
+            // Limpiar el formulario
+            this.reset();
+        });
+
+        // Inicializar la página
+        document.addEventListener('DOMContentLoaded', () => {
+            mostrarCabanas();
+            initGaleria();
         });
     </script>
 </body>
