@@ -145,19 +145,19 @@ body {
 
 /* Footer styles */
 .footer {
-  background-color: var(--secondary);
-  color: #fff;
+  background-color: var(--accent);
+  color: var(--secondary);
   padding: 3rem 0;
 }
 
 .footer a {
-  color: var(--accent);
+  color: var(--primary);
   text-decoration: none;
   transition: color 0.3s ease;
 }
 
 .footer a:hover {
-  color: var(--primary);
+  color: var(--primary-dark);
 }
 
 /* WhatsApp button styles */
