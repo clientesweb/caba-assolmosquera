@@ -4,7 +4,7 @@ let cabanas = [];
 // Función para cargar los datos de las cabañas desde el JSON
 async function cargarCabanas() {
     try {
-        const response = await fetch('data/cabanas.json');
+        const response = await fetch('cabanas.json');
         cabanas = await response.json();
         mostrarCabanas();
     } catch (error) {
