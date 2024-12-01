@@ -1,0 +1,58 @@
+[
+    {
+        "id": 1,
+        "nombre": "Cabaña del Bosque",
+        "ubicacion": "villa-del-dique",
+        "capacidad": 4,
+        "descripcion": "Hermosa cabaña rodeada de bosque nativo, ideal para familias.",
+        "imagen": "https://source.unsplash.com/800x600/?cabin,forest",
+        "amenities": ["wifi", "estacionamiento", "cocina", "aire-acondicionado"],
+        "precio": "$15,000",
+        "tamaño": "80 m²"
+    },
+    {
+        "id": 2,
+        "nombre": "Cabaña del Lago",
+        "ubicacion": "villa-rumipal",
+        "capacidad": 6,
+        "descripcion": "Espaciosa cabaña con vista al lago, perfecta para grupos grandes.",
+        "imagen": "https://source.unsplash.com/800x600/?cabin,lake",
+        "amenities": ["wifi", "estacionamiento", "cocina", "aire-acondicionado", "parrilla"],
+        "precio": "$20,000",
+        "tamaño": "100 m²"
+    },
+    {
+        "id": 3,
+        "nombre": "Cabaña de Montaña",
+        "ubicacion": "el-torreon",
+        "capacidad": 2,
+        "descripcion": "Acogedora cabaña para parejas con vistas panorámicas a las montañas.",
+        "imagen": "https://source.unsplash.com/800x600/?cabin,mountain",
+        "amenities": ["wifi", "chimenea", "cocina", "jacuzzi"],
+        "precio": "$12,000",
+        "tamaño": "60 m²"
+    },
+    {
+        "id": 4,
+        "nombre": "Cabaña Familiar",
+        "ubicacion": "santa-rosa",
+        "capacidad": 8,
+        "descripcion": "Gran cabaña para reuniones familiares o grupos de amigos.",
+        "imagen": "https://source.unsplash.com/800x600/?cabin,family",
+        "amenities": ["wifi", "estacionamiento", "cocina", "aire-acondicionado", "parrilla", "piscina"],
+        "precio": "$25,000",
+        "tamaño": "120 m²"
+    },
+    {
+        "id": 5,
+        "nombre": "Cabaña Romántica",
+        "ubicacion": "villa-del-dique",
+        "capacidad": 2,
+        "descripcion": "Cabaña íntima con jacuzzi privado, ideal para parejas.",
+        "imagen": "https://source.unsplash.com/800x600/?cabin,romantic",
+        "amenities": ["wifi", "chimenea", "cocina", "jacuzzi", "aire-acondicionado"],
+        "precio": "$18,000",
+        "tamaño": "50 m²"
+    }
+]
+
