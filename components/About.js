@@ -7,7 +7,7 @@ function About() {
                     <div class="space-y-6">
                         <div class="inline-block">
                             <span class="bg-primary/10 text-primary px-4 py-2 rounded-full text-sm font-semibold">
-                                10+ Años de Experiencia
+                                3+ Años de Experiencia
                             </span>
                         </div>
                         <h2 class="text-3xl md:text-4xl lg:text-5xl font-bold font-serif">
@@ -16,7 +16,7 @@ function About() {
                         </h2>
                         <div class="space-y-4">
                             <p class="text-lg text-gray-700 leading-relaxed">
-                                Bienvenidos a Sol Mosquera Cabañas, tu destino de confianza para disfrutar de unas vacaciones inolvidables en el Valle de Calamuchita. Desde hace más de una década, nos dedicamos a brindar experiencias únicas en alojamiento turístico.
+                                Bienvenidos a Sol Mosquera Cabañas, tu destino de confianza para disfrutar de unas vacaciones inolvidables en el Valle de Calamuchita. Desde hace más de tres años, nos dedicamos a brindar experiencias únicas en alojamiento turístico.
                             </p>
                             <p class="text-lg text-gray-700 leading-relaxed">
                                 Nuestras cabañas están estratégicamente ubicadas en los puntos más hermosos del valle, ofreciendo una combinación perfecta de confort, naturaleza y tranquilidad para nuestros huéspedes.
@@ -28,7 +28,7 @@ function About() {
                                 <div class="text-gray-600">Ubicaciones</div>
                             </div>
                             <div class="text-center p-4 bg-white rounded-xl shadow-lg hover:shadow-xl transition-shadow duration-300">
-                                <div class="text-primary text-2xl font-bold">500+</div>
+                                <div class="text-primary text-2xl font-bold">300+</div>
                                 <div class="text-gray-600">Huéspedes Felices</div>
                             </div>
                             <div class="text-center p-4 bg-white rounded-xl shadow-lg hover:shadow-xl transition-shadow duration-300">
@@ -54,7 +54,7 @@ function About() {
                 <div class="relative">
                     <div class="relative">
                         <div class="absolute inset-0 bg-gradient-to-t from-primary/20 to-transparent rounded-3xl"></div>
-                        <img src="/placeholder.svg?height=743&width=988" 
+                        <img src="images/sol-mosquera.jpg" 
                              alt="Cabañas en el Valle de Calamuchita" 
                              class="rounded-3xl shadow-2xl w-full h-auto max-w-full relative z-10 transform hover:-rotate-2 transition-transform duration-500">
                     </div>
