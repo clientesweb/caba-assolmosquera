@@ -34,18 +34,7 @@ function AppDownload() {
                         <div class="absolute inset-0 bg-gradient-to-t from-primary/20 to-transparent rounded-3xl"></div>
                         <img src="https://images.unsplash.com/photo-1499696010180-025ef6e1a8f9?auto=format&fit=crop&q=80" 
                              alt="Guía del Valle de Calamuchita" 
-                             class="relative z-10 mx-auto transform hover:-rotate-2 transition-transform duration-500 max-w-sm rounded-3xl">
-                    </div>
-                    <div class="absolute -bottom-6 -right-6 bg-primary/10 backdrop-blur-sm rounded-xl p-6 shadow-xl">
-                        <div class="flex items-center space-x-4">
-                            <div class="bg-primary rounded-full p-3">
-                                <i class="fas fa-map-signs text-white text-xl"></i>
-                            </div>
-                            <div>
-                                <p class="font-bold text-gray-800">Guía Completa</p>
-                                <p class="text-sm text-gray-600">Actualizada mensualmente</p>
-                            </div>
-                        </div>
+                             class="relative z-10 w-full h-auto rounded-3xl shadow-lg transform hover:-rotate-2 transition-transform duration-500">
                     </div>
                 </div>
             </div>
