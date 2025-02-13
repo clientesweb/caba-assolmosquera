@@ -1,23 +1,22 @@
 document.addEventListener("DOMContentLoaded", () => {
   const app = document.getElementById("app")
   app.innerHTML = `
-    ${TopBanner()}
-    ${Header()}
-    <main>
-        ${Hero()}
-        ${About()}
-        ${FeaturedProperties()}
-        ${Services()}
-        ${ConstructionProgress()}
-        ${OnlineMagazine()}
-        ${Playlists()}
-        ${Contact()}
-        ${AppDownload()}
-    </main>
-    ${Footer()}
-    ${BottomNavigation()}
-    ${WhatsAppButton()}
-  `
+        ${Header()}
+        <main>
+            ${Hero()}
+            ${About()}
+            ${FeaturedProperties()}
+            ${Services()}
+            ${ConstructionProgress()}
+            ${OnlineMagazine()}
+            ${Playlists()}
+            ${Contact()}
+            ${AppDownload()} // Using AppDownload function
+        </main>
+        ${Footer()}
+        ${BottomNavigation()}
+        ${WhatsAppButton()}
+    `
 
   // Top Banner Animation
   const topBanner = document.querySelector(".animate-marquee")
@@ -70,35 +69,11 @@ document.addEventListener("DOMContentLoaded", () => {
     })
   })
 
-  // Mobile Menu Functionality
-  const menuButton = document.getElementById("menuButton")
-  const closeButton = document.getElementById("closeButton")
-  const mobileMenu = document.getElementById("mobileMenu")
-  const mobileLinks = document.querySelectorAll(".mobile-link")
-
-  function toggleMenu() {
-    const mobileMenu = document.getElementById("mobileMenu")
-    mobileMenu.classList.toggle("hidden")
-    mobileMenu.classList.toggle("menu-hidden")
-    mobileMenu.classList.toggle("menu-visible")
-    document.body.classList.toggle("overflow-hidden")
-    const isOpen = mobileMenu.classList.contains("menu-visible")
-    menuButton.setAttribute("aria-expanded", isOpen)
-  }
-
-  if (menuButton && closeButton && mobileMenu) {
-    menuButton.addEventListener("click", toggleMenu)
-    closeButton.addEventListener("click", toggleMenu)
-
-    mobileLinks.forEach((link) => {
-      link.addEventListener("click", toggleMenu)
-    })
-
-    document.addEventListener("keydown", (e) => {
-      if (e.key === "Escape" && !mobileMenu.classList.contains("hidden")) {
-        toggleMenu()
-      }
-    })
+  // Instagram Embed
+  if (window.instgrm) {
+    window.instgrm.Embeds.process()
+  } else {
+    console.warn("Instagram embed script not loaded")
   }
 
   // Bottom Navigation active state
@@ -129,33 +104,25 @@ document.addEventListener("DOMContentLoaded", () => {
     contactForm.addEventListener("submit", async (e) => {
       e.preventDefault()
       const formData = new FormData(contactForm)
-      const name = formData.get("name")
-      const email = formData.get("email")
-      const phone = formData.get("phone")
-      const message = formData.get("message")
+      const whatsappMessage =
+        `*Nueva Consulta de Reserva*%0A%0A` +
+        `*Nombre:* ${formData.get("name")}%0A` +
+        `*Email:* ${formData.get("email")}%0A` +
+        `*Teléfono:* ${formData.get("phone")}%0A` +
+        `*Check-in:* ${formData.get("check-in")}%0A` +
+        `*Check-out:* ${formData.get("check-out")}%0A` +
+        `*Ubicación:* ${formData.get("location")}%0A` +
+        `*Huéspedes:* ${formData.get("guests")}%0A` +
+        `*Mensaje:* ${formData.get("message")}`
 
-      // Construir el mensaje para WhatsApp
-      const whatsappMessage = `Nombre: ${name}%0AEmail: ${email}%0ATeléfono: ${phone}%0AMensaje: ${message}`
-      const whatsappUrl = `https://wa.me/593987167782?text=${whatsappMessage}`
-
-      // Abrir WhatsApp en una nueva ventana
-      window.open(whatsappUrl, "_blank")
-
-      // Opcional: Limpiar el formulario después del envío
+      window.open(`https://wa.me/593987167782?text=${whatsappMessage}`, "_blank")
       contactForm.reset()
     })
+  } else {
+    console.error("Contact form not found")
   }
 
   // Load playlist videos
-  if (typeof loadPlaylistVideos === "function") {
-    loadPlaylistVideos()
-  }
-
-  // Instagram Embed
-  if (window.instgrm) {
-    window.instgrm.Embeds.process()
-  } else {
-    console.warn("Instagram embed script not loaded")
-  }
+  loadPlaylistVideos()
 })
 
