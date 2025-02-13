@@ -6,7 +6,7 @@ function BottomNavigation() {
           <i class="fas fa-concierge-bell text-xl"></i>
           <span class="text-xs mt-1">Servicios</span>
         </a>
-        <a href="property-listing.html" class="flex flex-col items-center text-gray-600 hover:text-primary">
+        <a href="https://www.xn--cabaassolmosquera-ixb.com/propiedades.html" class="flex flex-col items-center text-gray-600 hover:text-primary">
           <i class="fas fa-home text-xl"></i>
           <span class="text-xs mt-1">Propiedades</span>
         </a>
