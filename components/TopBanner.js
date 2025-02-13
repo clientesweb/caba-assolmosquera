@@ -1,16 +1,13 @@
 function TopBanner() {
   return `
     <div class="bg-primary text-white py-2 overflow-hidden">
-      <div class="animate-marquee whitespace-nowrap">
-        <span class="mx-4">¡Bienvenidos a Janneth Aguirre Bienes Raíces!</span>
-        <span class="mx-4">Descubre las mejores propiedades en Ecuador</span>
-        <span class="mx-4">Llámanos al +593 98 716 7782</span>
-        <span class="mx-4">Visita nuestra oficina en Samborondón</span>
-      </div>
+        <div class="animate-marquee whitespace-nowrap">
+            <span class="mx-4">¡Bienvenidos a Sol Mosquera Cabañas!</span>
+            <span class="mx-4">Descubre el Valle de Calamuchita</span>
+            <span class="mx-4">Reserva al +54 9 3546 406871</span>
+            <span class="mx-4">¡Ofertas especiales para estadías largas!</span>
+        </div>
     </div>
   `
 }
-
-// Exportar la función TopBanner
-window.TopBanner = TopBanner
 
