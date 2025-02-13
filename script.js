@@ -115,7 +115,7 @@ document.addEventListener("DOMContentLoaded", () => {
         `*Huéspedes:* ${formData.get("guests")}%0A` +
         `*Mensaje:* ${formData.get("message")}`
 
-      window.open(`https://wa.me/593987167782?text=${whatsappMessage}`, "_blank")
+      window.open(`https://wa.me/5493546406871?text=${whatsappMessage}`, "_blank")
       contactForm.reset()
     })
   } else {
