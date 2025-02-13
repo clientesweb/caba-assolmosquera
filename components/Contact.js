@@ -71,7 +71,7 @@ function Contact() {
                               </div>
                               <div>
                                   <h3 class="font-bold text-lg">Experiencia Comprobada</h3>
-                                  <p class="text-white/90">10+ años brindando experiencias inolvidables</p>
+                                  <p class="text-white/90">3+ años brindando experiencias inolvidables</p>
                               </div>
                           </div>
                           <div class="space-y-4">
