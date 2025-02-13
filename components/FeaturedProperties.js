@@ -142,7 +142,7 @@ function FeaturedProperties() {
         </div>
 
         <div class="mt-12 text-center">
-          <a href="#todas-cabanas" 
+          <a href="https://cabañassolmosquera.com/propiedades.html" 
              class="inline-flex items-center justify-center bg-primary hover:bg-primary/90 text-white font-bold py-4 px-8 rounded-full transition-all duration-300 group">
             Ver Todas las Cabañas
             <i class="fas fa-arrow-right ml-2 transform group-hover:translate-x-1 transition-transform duration-300"></i>
