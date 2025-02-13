@@ -1,337 +1,221 @@
 function PropertyDetails() {
-  // Property data remains the same
-  const property = {
-    id: 1,
-    title: "Departamentos Exclusivos En Samborondón",
-    price: "$99,900",
-    location: "Vía Samborondón, Ciudad Celeste – Sector Batán",
+  // Simulamos obtener el ID de la cabaña de la URL
+  const cabinId = getCabinIdFromUrl()
+
+  // Datos de ejemplo para una cabaña (en un caso real, estos datos vendrían de una API o base de datos)
+  const cabin = {
+    id: "vista-al-lago",
+    title: "Cabaña Vista al Lago",
+    location: "Villa del Dique, Valle de Calamuchita",
+    price: "Desde $15,000/noche",
     description:
-      "Departamentos modernos y funcionales en un desarrollo residencial que combina confort, seguridad y excelente ubicación. Disponibles: 1 dormitorio - 60m² $99.900,00 | 2 dormitorios - 90m² 129.900,00. El desarrollo consta de 80 locales comerciales, oficinas y residencias con acceso a exclusivas amenidades. Plan de pago flexible con financiamiento bancario o directo. Reserva con solo $500 y personaliza tu plan de pago",
-    features: [
-      "1 y 2 habitaciones disponibles",
-      "2 baños",
-      "Desde 60 m²",
-      "Estacionamiento privado",
-      "Piscina y jacuzzi",
-      "Gimnasio equipado",
-      "Guardianía 24/7",
-      "Áreas verdes y juegos infantiles"
+      "Disfrute de unas vacaciones inolvidables en nuestra hermosa cabaña con vista panorámica al lago. Ideal para familias o parejas que buscan tranquilidad y conexión con la naturaleza. Esta acogedora cabaña ofrece todo lo necesario para una estadía confortable, combinando rusticidad y modernidad en un entorno natural incomparable.",
+    images: [
+      "/placeholder.svg?height=600&width=800",
+      "/placeholder.svg?height=600&width=800",
+      "/placeholder.svg?height=600&width=800",
+      "/placeholder.svg?height=600&width=800",
     ],
-    images: ["images/departamentos-exclusivos-en-samborondon.jpg", "images/habitacion-departamento-exlusivo-samborodon.jpg", "images/sala-departamento-exlusivo-samborodon.jpg", "images/baño-departamento-exlusivo-samborodon.jpg"],
-    agent: {
-      name: "Janneth Aguirre",
-      phone: "+593 98 716 7782",
-      email: "info@jannethaguirrebienesraices.com",
+    amenities: [
+      { icon: "fa-wifi", name: "Wi-Fi gratis" },
+      { icon: "fa-snowflake", name: "Aire acondicionado" },
+      { icon: "fa-fire", name: "Calefacción" },
+      { icon: "fa-utensils", name: "Cocina equipada" },
+      { icon: "fa-tv", name: "TV Smart" },
+      { icon: "fa-parking", name: "Estacionamiento privado" },
+      { icon: "fa-mountain", name: "Vista al lago" },
+      { icon: "fa-umbrella-beach", name: "Acceso a la playa" },
+    ],
+    details: {
+      bedrooms: 2,
+      bathrooms: 1,
+      capacity: 4,
+      size: "80 m²",
     },
-    status: "En Venta",
-    type: "Departamento",
+    features: [
+      "Dormitorio principal con cama matrimonial y vista al lago",
+      "Segunda habitación con dos camas individuales",
+      "Sala de estar con sofá cama y chimenea",
+      "Cocina totalmente equipada con electrodomésticos modernos",
+      "Baño completo con ducha",
+      "Terraza privada con parrilla y muebles de exterior",
+      "Ropa de cama y toallas incluidas",
+      "Productos de limpieza y aseo personal",
+    ],
+    nearby: [
+      "A 5 minutos a pie de la playa",
+      "Restaurantes y comercios a 10 minutos en auto",
+      "Actividades de aventura y excursiones disponibles en la zona",
+      "Alquiler de kayaks y botes a 15 minutos",
+    ],
   }
 
-  const template = `
-    <main class="min-h-screen bg-gradient-to-br from-gray-50 to-white py-16">
+  return `
+    <main class="pt-16 pb-24 bg-gradient-to-br from-primary/5 via-white to-transparent">
       <div class="container mx-auto px-4">
-        <nav class="flex items-center space-x-2 text-sm mb-8">
-          <a href="index.html" class="text-gray-600 hover:text-primary transition-colors duration-300">Inicio</a>
+        <!-- Breadcrumbs -->
+        <nav class="flex items-center space-x-2 text-sm mb-8" aria-label="Breadcrumb">
+          <a href="/" class="text-gray-600 hover:text-primary transition-colors duration-300">Inicio</a>
           <span class="text-gray-400">/</span>
-          <a href="property-listing.html" class="text-gray-600 hover:text-primary transition-colors duration-300">Propiedades</a>
+          <a href="/cabanas" class="text-gray-600 hover:text-primary transition-colors duration-300">Cabañas</a>
           <span class="text-gray-400">/</span>
-          <span class="text-primary">${property.title}</span>
+          <span class="text-primary">${cabin.title}</span>
         </nav>
 
-        <div class="grid grid-cols-1 lg:grid-cols-3 gap-8">
-          <div class="lg:col-span-2">
-            <div class="bg-white rounded-2xl shadow-lg overflow-hidden mb-8">
-              <div class="relative">
-                <div class="aspect-w-16 aspect-h-9">
-                  <img src="${property.images[0]}" 
-                       alt="${property.title}" 
-                       id="mainImage"
-                       class="w-full h-full object-cover cursor-pointer"
-                       onclick="openImageModal(this.src)">
-                </div>
-                <div class="absolute top-4 left-4 flex gap-2">
-                  <span class="bg-primary/90 text-white px-3 py-1 rounded-full text-sm">
-                    ${property.status}
-                  </span>
-                  <span class="bg-white/90 text-primary px-3 py-1 rounded-full text-sm">
-                    ${property.type}
-                  </span>
-                </div>
-              </div>
+        <!-- Cabin Title and Location -->
+        <div class="mb-8">
+          <h1 class="text-4xl md:text-5xl font-serif font-bold mb-2">${cabin.title}</h1>
+          <p class="text-xl text-gray-600">
+            <i class="fas fa-map-marker-alt text-primary mr-2"></i>${cabin.location}
+          </p>
+        </div>
 
-              <div class="p-6">
-                <div class="flex flex-wrap items-start justify-between gap-4 mb-6">
-                  <div>
-                    <h1 class="text-2xl md:text-3xl font-bold mb-2">${property.title}</h1>
-                    <p class="flex items-center text-gray-600">
-                      <i class="fas fa-map-marker-alt text-primary mr-2"></i>
-                      ${property.location}
-                    </p>
-                  </div>
-                  <div class="text-right">
-                    <div class="text-3xl font-bold text-primary mb-2">${property.price}</div>
-                    <div class="text-sm text-gray-600">Precio de Venta</div>
-                  </div>
-                </div>
-
-                <div class="grid grid-cols-3 gap-4 py-6 border-t border-b border-gray-100">
-                  <div class="text-center">
-                    <i class="fas fa-bed text-primary text-2xl mb-2"></i>
-                    <p class="text-sm text-gray-600">1 Dormitorio</p>
-                  </div>
-                  <div class="text-center">
-                    <i class="fas fa-bath text-primary text-2xl mb-2"></i>
-                    <p class="text-sm text-gray-600">1 Baño</p>
-                  </div>
-                  <div class="text-center">
-                    <i class="fas fa-vector-square text-primary text-2xl mb-2"></i>
-                    <p class="text-sm text-gray-600">60 m²</p>
-                  </div>
-                </div>
-
-                <div class="mt-6">
-                  <h2 class="text-xl font-bold mb-4">Descripción</h2>
-                  <p class="text-gray-600 leading-relaxed mb-6">${property.description}</p>
-                  
-                  <h2 class="text-xl font-bold mb-4">Características</h2>
-                  <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
-                    ${property.features
-                      .map(
-                        (feature) => `
-                      <div class="flex items-center">
-                        <i class="fas fa-check-circle text-primary mr-2"></i>
-                        <span class="text-gray-600">${feature}</span>
-                      </div>
-                    `,
-                      )
-                      .join("")}
-                  </div>
-                </div>
-              </div>
+        <!-- Image Gallery -->
+        <div class="grid grid-cols-1 md:grid-cols-2 gap-4 mb-12">
+          <div class="md:col-span-2">
+            <img src="${cabin.images[0]}" alt="${cabin.title}" class="w-full h-96 object-cover rounded-lg shadow-lg">
+          </div>
+          ${cabin.images
+            .slice(1)
+            .map(
+              (image, index) => `
+            <div>
+              <img src="${image}" alt="${cabin.title} - Imagen ${index + 2}" class="w-full h-48 object-cover rounded-lg shadow-md">
             </div>
+          `,
+            )
+            .join("")}
+        </div>
 
-            <div class="grid grid-cols-4 gap-4">
-              ${property.images
+        <!-- Cabin Details -->
+        <div class="grid grid-cols-1 md:grid-cols-3 gap-8 mb-12">
+          <div class="md:col-span-2">
+            <h2 class="text-2xl font-serif font-bold mb-4">Descripción</h2>
+            <p class="text-gray-700 mb-6">${cabin.description}</p>
+            
+            <h3 class="text-xl font-serif font-bold mb-3">Características principales</h3>
+            <ul class="list-disc list-inside mb-6 space-y-2">
+              ${cabin.features
                 .map(
-                  (img, index) => `
-                <div class="relative rounded-lg overflow-hidden cursor-pointer group" 
-                     onclick="openImageModal('${img}')">
-                  <img src="${img}" 
-                       alt="Imagen ${index + 1}" 
-                       class="w-full h-24 object-cover">
-                  <div class="absolute inset-0 bg-black/40 group-hover:bg-black/20 transition-colors duration-300"></div>
-                </div>
+                  (feature) => `
+                <li class="text-gray-700">${feature}</li>
               `,
                 )
                 .join("")}
-            </div>
+            </ul>
+
+            <h3 class="text-xl font-serif font-bold mb-3">En los alrededores</h3>
+            <ul class="list-disc list-inside mb-6 space-y-2">
+              ${cabin.nearby
+                .map(
+                  (item) => `
+                <li class="text-gray-700">${item}</li>
+              `,
+                )
+                .join("")}
+            </ul>
           </div>
 
-          <div class="lg:col-span-1">
-            <div class="bg-white rounded-2xl shadow-lg overflow-hidden sticky top-24">
-              <div class="p-6">
-                <div class="flex items-center gap-4 mb-6">
-                  <img src="images/premio-janneth.png" 
-                       alt="${property.agent.name}" 
-                       class="w-16 h-16 rounded-full object-cover">
-                  <div>
-                    <h3 class="font-bold text-lg">${property.agent.name}</h3>
-                    <p class="text-gray-600 text-sm">14+ años de experiencia</p>
-                  </div>
+          <div>
+            <div class="bg-white rounded-lg shadow-lg p-6 sticky top-24">
+              <p class="text-3xl font-bold text-primary mb-4">${cabin.price}</p>
+              <div class="grid grid-cols-2 gap-4 mb-6">
+                <div class="text-center">
+                  <i class="fas fa-bed text-primary text-2xl mb-2"></i>
+                  <p class="text-sm text-gray-600">${cabin.details.bedrooms} Dormitorios</p>
                 </div>
-
-                <div class="space-y-4 mb-6">
-                  <div class="flex items-center gap-2 text-gray-600">
-                    <i class="fas fa-award text-primary"></i>
-                    <span>Asesora Inmobiliaria Certificada</span>
-                  </div>
-                  <div class="flex items-center gap-2 text-gray-600">
-                    <i class="fas fa-phone text-primary"></i>
-                    <span>${property.agent.phone}</span>
-                  </div>
-                  <div class="flex items-center gap-2 text-gray-600">
-                    <i class="fas fa-envelope text-primary"></i>
-                    <span>${property.agent.email}</span>
-                  </div>
+                <div class="text-center">
+                  <i class="fas fa-bath text-primary text-2xl mb-2"></i>
+                  <p class="text-sm text-gray-600">${cabin.details.bathrooms} Baños</p>
                 </div>
-
-                <form id="contact-agent-form" class="space-y-4" data-property-title="${property.title}" data-property-price="${property.price}" data-property-location="${property.location}">
-                  <input type="text" 
-                         name="name"
-                         placeholder="Nombre" 
-                         class="w-full px-4 py-3 rounded-lg border border-gray-200 focus:ring-2 focus:ring-primary focus:border-transparent transition duration-300"
-                         required>
-                  <input type="email" 
-                         name="email"
-                         placeholder="Email" 
-                         class="w-full px-4 py-3 rounded-lg border border-gray-200 focus:ring-2 focus:ring-primary focus:border-transparent transition duration-300"
-                         required>
-                  <input type="tel" 
-                         name="phone"
-                         placeholder="Teléfono" 
-                         class="w-full px-4 py-3 rounded-lg border border-gray-200 focus:ring-2 focus:ring-primary focus:border-transparent transition duration-300"
-                         required>
-                  <textarea name="message"
-                          placeholder="Mensaje" 
-                          rows="4" 
-                          class="w-full px-4 py-3 rounded-lg border border-gray-200 focus:ring-2 focus:ring-primary focus:border-transparent transition duration-300"
-                          required></textarea>
-                  <button type="submit" 
-                          class="w-full bg-primary hover:bg-primary/90 text-white font-bold py-3 px-6 rounded-lg transition-colors duration-300 flex items-center justify-center gap-2">
-                    <i class="fas fa-paper-plane"></i>
-                    Enviar Mensaje
-                  </button>
-                </form>
-
-                <div class="flex justify-center space-x-4 mt-6">
-                  <button onclick="window.open('https://wa.me/593987167782', '_blank')"
-                          class="flex-1 bg-green-500 hover:bg-green-600 text-white font-bold py-3 px-4 rounded-lg transition-colors duration-300 flex items-center justify-center gap-2">
-                    <i class="fab fa-whatsapp"></i>
-                    WhatsApp
-                  </button>
-                  <button id="shareButton"
-                          class="flex-1 bg-blue-500 hover:bg-blue-600 text-white font-bold py-3 px-4 rounded-lg transition-colors duration-300 flex items-center justify-center gap-2">
-                    <i class="fas fa-share-alt"></i>
-                    Compartir
-                  </button>
+                <div class="text-center">
+                  <i class="fas fa-users text-primary text-2xl mb-2"></i>
+                  <p class="text-sm text-gray-600">Hasta ${cabin.details.capacity} personas</p>
+                </div>
+                <div class="text-center">
+                  <i class="fas fa-vector-square text-primary text-2xl mb-2"></i>
+                  <p class="text-sm text-gray-600">${cabin.details.size}</p>
                 </div>
               </div>
+              <a href="#reserva" class="block w-full bg-primary hover:bg-primary/90 text-white text-center font-bold py-3 px-4 rounded-lg transition duration-300 mb-4">
+                Reservar ahora
+              </a>
+              <a href="https://wa.me/5493546406871?text=Hola,%20me%20interesa%20la%20cabaña%20${encodeURIComponent(cabin.title)}" target="_blank" rel="noopener noreferrer" class="block w-full bg-green-500 hover:bg-green-600 text-white text-center font-bold py-3 px-4 rounded-lg transition duration-300">
+                <i class="fab fa-whatsapp mr-2"></i>Consultar por WhatsApp
+              </a>
             </div>
           </div>
         </div>
-      </div>
 
-      <!-- Modal para ver imágenes en tamaño completo -->
-      <div id="imageModal" class="fixed inset-0 bg-black bg-opacity-90 flex items-center justify-center z-50 hidden">
-        <div class="max-w-4xl w-full mx-4">
-          <img id="modalImage" src="/placeholder.svg" alt="Imagen en tamaño completo" class="w-full h-auto rounded-lg">
-          <button onclick="closeImageModal()" 
-                  class="absolute top-4 right-4 w-10 h-10 bg-white/10 rounded-full flex items-center justify-center text-white hover:bg-white/20 transition-colors duration-300">
-            <i class="fas fa-times"></i>
-          </button>
+        <!-- Amenities -->
+        <div class="mb-12">
+          <h2 class="text-2xl font-serif font-bold mb-6">Comodidades</h2>
+          <div class="grid grid-cols-2 md:grid-cols-4 gap-4">
+            ${cabin.amenities
+              .map(
+                (amenity) => `
+              <div class="flex items-center space-x-3">
+                <i class="fas ${amenity.icon} text-primary text-xl"></i>
+                <span class="text-gray-700">${amenity.name}</span>
+              </div>
+            `,
+              )
+              .join("")}
+          </div>
+        </div>
+
+        <!-- Booking Form -->
+        <div id="reserva" class="bg-white rounded-lg shadow-lg p-8">
+          <h2 class="text-2xl font-serif font-bold mb-6">Reserva tu estadía</h2>
+          <form class="grid grid-cols-1 md:grid-cols-2 gap-6">
+            <div>
+              <label for="check-in" class="block text-sm font-medium text-gray-700 mb-2">Fecha de llegada</label>
+              <input type="date" id="check-in" name="check-in" required class="w-full px-4 py-2 rounded-lg border border-gray-300 focus:ring-2 focus:ring-primary focus:border-primary">
+            </div>
+            <div>
+              <label for="check-out" class="block text-sm font-medium text-gray-700 mb-2">Fecha de salida</label>
+              <input type="date" id="check-out" name="check-out" required class="w-full px-4 py-2 rounded-lg border border-gray-300 focus:ring-2 focus:ring-primary focus:border-primary">
+            </div>
+            <div>
+              <label for="guests" class="block text-sm font-medium text-gray-700 mb-2">Número de huéspedes</label>
+              <select id="guests" name="guests" required class="w-full px-4 py-2 rounded-lg border border-gray-300 focus:ring-2 focus:ring-primary focus:border-primary">
+                <option value="">Seleccionar</option>
+                <option value="1">1 persona</option>
+                <option value="2">2 personas</option>
+                <option value="3">3 personas</option>
+                <option value="4">4 personas</option>
+              </select>
+            </div>
+            <div>
+              <label for="name" class="block text-sm font-medium text-gray-700 mb-2">Nombre completo</label>
+              <input type="text" id="name" name="name" required class="w-full px-4 py-2 rounded-lg border border-gray-300 focus:ring-2 focus:ring-primary focus:border-primary">
+            </div>
+            <div class="md:col-span-2">
+              <label for="email" class="block text-sm font-medium text-gray-700 mb-2">Correo electrónico</label>
+              <input type="email" id="email" name="email" required class="w-full px-4 py-2 rounded-lg border border-gray-300 focus:ring-2 focus:ring-primary focus:border-primary">
+            </div>
+            <div class="md:col-span-2">
+              <label for="message" class="block text-sm font-medium text-gray-700 mb-2">Mensaje (opcional)</label>
+              <textarea id="message" name="message" rows="4" class="w-full px-4 py-2 rounded-lg border border-gray-300 focus:ring-2 focus:ring-primary focus:border-primary"></textarea>
+            </div>
+            <div class="md:col-span-2">
+              <button type="submit" class="w-full bg-primary hover:bg-primary/90 text-white font-bold py-3 px-4 rounded-lg transition duration-300">
+                Solicitar reserva
+              </button>
+            </div>
+          </form>
         </div>
       </div>
     </main>
   `
-
-  return template
 }
 
-// Helper functions
-function openImageModal(src) {
-  const modal = document.getElementById("imageModal")
-  const modalImage = document.getElementById("modalImage")
-  if (modal && modalImage) {
-    modalImage.src = src
-    modal.classList.remove("hidden")
-  }
+// Función auxiliar para obtener el ID de la cabaña de la URL (simulada)
+function getCabinIdFromUrl() {
+  // En un caso real, esto obtendría el ID de la URL
+  return "vista-al-lago"
 }
 
-function closeImageModal() {
-  const modal = document.getElementById("imageModal")
-  if (modal) {
-    modal.classList.add("hidden")
-  }
-}
-
-function fallbackShare() {
-  const tempInput = document.createElement("input")
-  tempInput.value = window.location.href
-  document.body.appendChild(tempInput)
-  tempInput.select()
-  document.execCommand("copy")
-  document.body.removeChild(tempInput)
-
-  const toast = document.createElement("div")
-  toast.className =
-    "fixed bottom-4 left-1/2 transform -translate-x-1/2 bg-gray-800 text-white px-6 py-3 rounded-lg shadow-lg z-50"
-  toast.textContent = "¡Enlace copiado al portapapeles!"
-  document.body.appendChild(toast)
-
-  setTimeout(() => {
-    toast.remove()
-  }, 3000)
-}
-
-// Initialize all functionality
-function initializePropertyDetails() {
-  console.log("Initializing property details...")
-
-  // Form submission handler
-  const form = document.getElementById("contact-agent-form")
-  if (form) {
-    console.log("Form found, attaching submit handler...")
-    form.addEventListener("submit", function (e) {
-      e.preventDefault()
-      console.log("Form submitted")
-
-      const formData = new FormData(this)
-      const propertyTitle = this.dataset.propertyTitle
-      const propertyPrice = this.dataset.propertyPrice
-      const propertyLocation = this.dataset.propertyLocation
-
-      const message = `*Consulta sobre propiedad*%0A%0A*Propiedad:* ${propertyTitle}%0A*Precio:* ${propertyPrice}%0A*Ubicación:* ${propertyLocation}%0A%0A*Datos del interesado:*%0A*Nombre:* ${formData.get("name")}%0A*Email:* ${formData.get("email")}%0A*Teléfono:* ${formData.get("phone")}%0A*Mensaje:* ${formData.get("message")}`
-
-      window.open(`https://wa.me/593987167782?text=${message}`, "_blank")
-      form.reset()
-    })
-  }
-
-  // Share button handler
-  const shareButton = document.getElementById("shareButton")
-  if (shareButton) {
-    console.log("Share button found, attaching click handler...")
-    shareButton.addEventListener("click", () => {
-      console.log("Share button clicked")
-
-      if (navigator.share) {
-        navigator
-          .share({
-            title: document.title,
-            text: document.querySelector("h1").textContent,
-            url: window.location.href,
-          })
-          .then(() => console.log("Contenido compartido exitosamente"))
-          .catch((error) => {
-            console.log("Error compartiendo:", error)
-            fallbackShare()
-          })
-      } else {
-        fallbackShare()
-      }
-    })
-  }
-
-  // Image modal handlers
-  const images = document.querySelectorAll('[onclick*="openImageModal"]')
-  images.forEach((img) => {
-    img.addEventListener("click", function (e) {
-      e.preventDefault()
-      const src = this.src || this.querySelector("img").src
-      openImageModal(src)
-    })
-  })
-
-  // Close modal button
-  const closeModalBtn = document.querySelector('[onclick*="closeImageModal"]')
-  if (closeModalBtn) {
-    closeModalBtn.addEventListener("click", (e) => {
-      e.preventDefault()
-      closeImageModal()
-    })
-  }
-}
-
-// Export functions to window object
+// Exportar la función PropertyDetails
 window.PropertyDetails = PropertyDetails
-window.initializePropertyDetails = initializePropertyDetails
-window.openImageModal = openImageModal
-window.closeImageModal = closeImageModal
 
-// Auto-initialize when DOM is ready
-document.addEventListener("DOMContentLoaded", () => {
-  console.log("DOM loaded, checking for property details...")
-  if (document.getElementById("contact-agent-form")) {
-    initializePropertyDetails()
-  }
-})
