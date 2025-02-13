@@ -4,57 +4,67 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Sol Mosquera Cabañas - Alquileres en el Valle de Calamuchita</title>
-  <meta name="description" content="Disfruta de unas vacaciones inolvidables en nuestras hermosas cabañas en el Valle de Calamuchita. Ubicaciones en Villa del Dique, Villa Rumipal, El Torreón y Santa Rosa.">
+  <meta name="description" content="Disfruta de unas vacaciones inolvidables en nuestras hermosas cabañas en el Valle de Calamuchita. Ubicaciones en Villa del Dique, Villa Rumipal, El Torreón y Santa Rosa">
   <meta name="keywords" content="cabañas, alquiler, Villa del Dique, Villa Rumipal, El Torreón, Santa Rosa, Valle de Calamuchita, vacaciones, turismo">
   <meta name="author" content="Sol Mosquera">
-  <link rel="canonical" href="https://xn--cabaassolmosquera-ixb.com/">
+  <link rel="canonical" href="https://www.xn--cabaassolmosquera-ixb.com/">
 
   <!-- Favicons -->
+  <link rel="apple-touch-icon" sizes="57x57" href="images/apple-icon-57x57.png">
+  <link rel="apple-touch-icon" sizes="60x60" href="images/apple-icon-60x60.png">
+  <link rel="apple-touch-icon" sizes="72x72" href="images/apple-icon-72x72.png">
+  <link rel="apple-touch-icon" sizes="76x76" href="images/apple-icon-76x76.png">
+  <link rel="apple-touch-icon" sizes="114x114" href="images/apple-icon-114x114.png">
+  <link rel="apple-touch-icon" sizes="120x120" href="images/apple-icon-120x120.png">
+  <link rel="apple-touch-icon" sizes="144x144" href="images/apple-icon-144x144.png">
+  <link rel="apple-touch-icon" sizes="152x152" href="images/apple-icon-152x152.png">
+  <link rel="apple-touch-icon" sizes="180x180" href="images/apple-icon-180x180.png">
+  <link rel="icon" type="image/png" sizes="192x192"  href="images/android-icon-192x192.png">
   <link rel="icon" type="image/png" sizes="32x32" href="images/favicon-32x32.png">
   <link rel="icon" type="image/png" sizes="96x96" href="images/favicon-96x96.png">
   <link rel="icon" type="image/png" sizes="16x16" href="images/favicon-16x16.png">
+  <link rel="manifest" href="/manifest.json">
+  <meta name="msapplication-TileColor" content="#FF9B9B">
+  <meta name="msapplication-TileImage" content="images/ms-icon-144x144.png">
   <meta name="theme-color" content="#FF9B9B">
 
   <!-- Open Graph / Facebook -->
   <meta property="og:type" content="website">
-  <meta property="og:url" content="https://xn--cabaassolmosquera-ixb.com/">
+  <meta property="og:url" content="https://www.xn--cabaassolmosquera-ixb.com/">
   <meta property="og:title" content="Sol Mosquera Cabañas - Alquileres en el Valle de Calamuchita">
-  <meta property="og:description" content="Disfruta de unas vacaciones inolvidables en nuestras hermosas cabañas en el Valle de Calamuchita.">
-  <meta property="og:image" content="https://xn--cabaassolmosquera-ixb.com/og-image.jpg">
+  <meta property="og:description" content="Disfruta de unas vacaciones inolvidables en nuestras hermosas cabañas en el Valle de Calamuchita. Ubicaciones en Villa del Dique, Villa Rumipal, El Torreón y Santa Rosa">
+  <meta property="og:image" content="https://www.xn--cabaassolmosquera-ixb.com/og-image.jpg">
 
   <!-- Twitter -->
   <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:url" content="https://www.xn--cabaassolmosquera-ixb.com/">
   <meta name="twitter:title" content="Sol Mosquera Cabañas - Alquileres en el Valle de Calamuchita">
-  <meta name="twitter:description" content="Disfruta de unas vacaciones inolvidables en nuestras cabañas en el Valle de Calamuchita.">
-  <meta name="twitter:image" content="https://xn--cabaassolmosquera-ixb.com/og-image.jpg">
+  <meta name="twitter:description" content="Disfruta de unas vacaciones inolvidables en nuestras hermosas cabañas en el Valle de Calamuchita. Ubicaciones en Villa del Dique, Villa Rumipal, El Torreón y Santa Rosa">
+  <meta name="twitter:image" content="https://www.xn--cabaassolmosquera-ixb.com/og-image.jpg">
 
-  <!-- Tailwind CSS -->
   <script src="https://cdn.tailwindcss.com"></script>
   <script>
       tailwind.config = {
           theme: {
               extend: {
                   colors: {
-                      primary: '#FF9B9B',
-                      secondary: '#000000',
-                      accent: '#FFE5E5',
+                      primary: '#FF9B9B',    // Rosa salmón del logo
+                      secondary: '#000000',   // Negro del logo
+                      accent: '#FFE5E5',      // Version más clara del primary para acentos
                   },
                   fontFamily: {
                       sans: ['Montserrat', 'sans-serif'],
                       serif: ['Playfair Display', 'serif'],
-                      script: ['Dancing Script', 'cursive'],
+                      script: ['Dancing Script', 'cursive'], // Para la firma del logo
                   },
               }
           }
       }
   </script>
-
-  <!-- Google Fonts -->
   <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;600;700&family=Playfair+Display:wght@400;600;700&display=swap" rel="stylesheet">
   <link href="https://fonts.googleapis.com/css2?family=Dancing+Script:wght@400;700&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
-
-  <!-- Estilos Personalizados -->
+  
   <style>
       body {
           font-family: 'Montserrat', sans-serif;
@@ -68,26 +78,97 @@
           background-repeat: no-repeat;
           background-size: cover;
       }
+      .text-shadow {
+          text-shadow: 2px 2px 4px rgba(0,0,0,0.5);
+      }
+      .logo-slider {
+          animation: slide 30s linear infinite;
+      }
+      @keyframes slide {
+          0% {
+              transform: translateX(0);
+          }
+          100% {
+              transform: translateX(-100%);
+          }
+      }
+      .animate-marquee {
+          animation: marquee 30s linear infinite;
+      }
+      @keyframes marquee {
+          0% { transform: translateX(100%); }
+          100% { transform: translateX(-100%); }
+      }
+      .scrollbar-hide::-webkit-scrollbar {
+          display: none;
+      }
+      .scrollbar-hide {
+          -ms-overflow-style: none;
+          scrollbar-width: none;
+      }
+
+      @keyframes float {
+          0% {
+            transform: translateY(0px);
+          }
+          50% {
+            transform: translateY(-10px);
+          }
+          100% {
+            transform: translateY(0px);
+          }
+        }
+
+      .float {
+          animation: float 3s ease-in-out infinite;
+      }
   </style>
+  <script src="components/TopBanner.js"></script>
 </head>
 <body class="bg-white text-gray-800">
   <div id="app">
       <!-- Los componentes se insertarán aquí -->
   </div>
+  <script>
+    document.getElementById('app').innerHTML = `
+      ${TopBanner()}
+      ${Header()}
+      <main>
+          ${Hero()}
+          ${About()}
+          ${FeaturedProperties()}
+          ${Services()}
+          ${OnlineMagazine()}
+          ${Playlists()}
+          ${Contact()}
+          ${AppDownload()}
+      </main>
+      ${Footer()}
+      ${BottomNavigation()}
+      ${WhatsAppButton()}
+    `;
+  </script>
 
-  <script defer src="components/TopBanner.js"></script>
-  <script defer src="components/Header.js"></script>
-  <script defer src="components/Hero.js"></script>
-  <script defer src="components/About.js"></script>
-  <script defer src="components/Services.js"></script>
-  <script defer src="components/FeaturedProperties.js"></script>
-  <script defer src="components/Playlists.js"></script>
-  <script defer src="components/Contact.js"></script>
-  <script defer src="components/AppDownload.js"></script>
-  <script defer src="components/Footer.js"></script>
-  <script defer src="components/BottomNavigation.js"></script>
-  <script defer src="components/WhatsAppButton.js"></script>
-  <script defer src="script.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/js/all.min.js"></script>
+  <script async src="//www.instagram.com/embed.js"></script>
+  <script src="components/Header.js"></script>
+  <script src="components/Hero.js"></script>
+  <script src="components/About.js"></script>
+  <script src="components/Services.js"></script>
+  <script src="components/FeaturedProperties.js"></script>
+  <script src="components/Playlists.js"></script>
+  <script src="components/Contact.js"></script>
+  <script src="components/AppDownload.js"></script>
+  <script src="components/Footer.js"></script>
+  <script src="components/BottomNavigation.js"></script>
+  <script src="components/PropertyDetails.js"></script>
+  <script src="components/PropertyListing.js"></script>
+  <script src="components/WhatsAppButton.js"></script>
+  <script src="script.js"></script>
+  <script src="components/OnlineMagazine.js"></script>
+
+  <script data-cfasync="false" src="/cdn-cgi/scripts/5c5dd728/cloudflare-static/email-decode.min.js"></script>
+  
 
   <!-- Structured Data for Local Business -->
   <script type="application/ld+json">
@@ -95,10 +176,9 @@
     "@context": "https://schema.org",
     "@type": "LodgingBusiness",
     "name": "Sol Mosquera Cabañas",
-    "image": "https://xn--cabaassolmosquera-ixb.com/images/logo.png",
-    "url": "https://xn--cabaassolmosquera-ixb.com",
+    "image": "https://cabañassolmosquera.com/images/logo.png",
+    "url": "https://cabañassolmosquera.com",
     "telephone": "+5493546406871",
-    "priceRange": "$50 - $150 USD",
     "address": {
       "@type": "PostalAddress",
       "streetAddress": "Valle de Calamuchita",
@@ -115,7 +195,13 @@
     "openingHoursSpecification": {
       "@type": "OpeningHoursSpecification",
       "dayOfWeek": [
-        "Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday", "Sunday"
+        "Monday",
+        "Tuesday",
+        "Wednesday",
+        "Thursday",
+        "Friday",
+        "Saturday",
+        "Sunday"
       ],
       "opens": "00:00",
       "closes": "23:59"
