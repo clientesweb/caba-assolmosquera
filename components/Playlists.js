@@ -19,39 +19,26 @@ function Playlists() {
                 <div id="video-slider" class="flex overflow-x-auto snap-x snap-mandatory scrollbar-hide space-x-4 pb-6 justify-center">
                     <div class="snap-start flex-shrink-0 w-full sm:w-1/2 lg:w-1/3">
                         <div class="aspect-w-16 aspect-h-9">
-                            <iframe src="https://www.youtube.com/embed/3JfBBp35gpY" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen class="rounded-lg shadow-lg"></iframe>
+                            <iframe src="https://www.youtube.com/embed/9fsP1FVspYQ" title="El Torreón, Córdoba Argentina" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen class="rounded-lg shadow-lg"></iframe>
                         </div>
-                        <h3 class="text-xl font-bold mt-4 mb-2">Villa del Dique: Paraíso Serrano</h3>
-                        <p class="text-gray-600">Descubre la belleza natural y las actividades que ofrece Villa del Dique.</p>
+                        <h3 class="text-xl font-bold mt-4 mb-2 text-center">El Torreón: Historia y Paisajes</h3>
+                        <p class="text-gray-600 text-center">Descubre la belleza natural y la rica historia de El Torreón.</p>
                     </div>
                     <div class="snap-start flex-shrink-0 w-full sm:w-1/2 lg:w-1/3">
                         <div class="aspect-w-16 aspect-h-9">
-                            <iframe src="https://www.youtube.com/embed/VIDEO_ID_2" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen class="rounded-lg shadow-lg"></iframe>
+                            <iframe src="https://www.youtube.com/embed/TupNYur9gQA" title="Santa Rosa de Calamuchita" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen class="rounded-lg shadow-lg"></iframe>
                         </div>
-                        <h3 class="text-xl font-bold mt-4 mb-2">Villa Rumipal: Aventura y Naturaleza</h3>
-                        <p class="text-gray-600">Explora las maravillas naturales y deportes acuáticos en Villa Rumipal.</p>
+                        <h3 class="text-xl font-bold mt-4 mb-2 text-center">Santa Rosa: Tradición y Modernidad</h3>
+                        <p class="text-gray-600 text-center">Explora la perfecta mezcla de tradición y modernidad en Santa Rosa.</p>
                     </div>
                     <div class="snap-start flex-shrink-0 w-full sm:w-1/2 lg:w-1/3">
                         <div class="aspect-w-16 aspect-h-9">
-                            <iframe src="https://www.youtube.com/embed/VIDEO_ID_3" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen class="rounded-lg shadow-lg"></iframe>
+                            <iframe src="https://www.youtube.com/embed/lC0gwQeiuXA" title="Embalse de Río Tercero" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen class="rounded-lg shadow-lg"></iframe>
                         </div>
-                        <h3 class="text-xl font-bold mt-4 mb-2">El Torreón: Historia y Paisajes</h3>
-                        <p class="text-gray-600">Sumérgete en la rica historia y los impresionantes paisajes de El Torreón.</p>
+                        <h3 class="text-xl font-bold mt-4 mb-2 text-center">Embalse: Diversión Acuática</h3>
+                        <p class="text-gray-600 text-center">Disfruta de las múltiples actividades acuáticas en el Embalse.</p>
                     </div>
-                    <div class="snap-start flex-shrink-0 w-full sm:w-1/2 lg:w-1/3">
-                        <div class="aspect-w-16 aspect-h-9">
-                            <iframe src="https://www.youtube.com/embed/VIDEO_ID_4" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen class="rounded-lg shadow-lg"></iframe>
-                        </div>
-                        <h3 class="text-xl font-bold mt-4 mb-2">Santa Rosa: Tradición y Modernidad</h3>
-                        <p class="text-gray-600">Conoce la perfecta mezcla de tradición y modernidad en Santa Rosa de Calamuchita.</p>
-                    </div>
-                    <div class="snap-start flex-shrink-0 w-full sm:w-1/2 lg:w-1/3">
-                        <div class="aspect-w-16 aspect-h-9">
-                            <iframe src="https://www.youtube.com/embed/VIDEO_ID_5" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen class="rounded-lg shadow-lg"></iframe>
-                        </div>
-                        <h3 class="text-xl font-bold mt-4 mb-2">Embalse: Diversión Acuática</h3>
-                        <p class="text-gray-600">Disfruta de las múltiples actividades acuáticas que ofrece el Embalse de Río Tercero.</p>
-                    </div>
+                    
                 </div>
             </div>
 
