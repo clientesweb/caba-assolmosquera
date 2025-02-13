@@ -167,7 +167,7 @@ function Footer() {
 
         <!-- Botón Volver Arriba -->
         <button id="scrollToTopBtn" 
-                class="fixed bottom-24 right-4 bg-primary text-white w-10 h-10 rounded-full hidden items-center justify-center shadow-lg hover:bg-primary/90 transition-all duration-300 z-50"
+                class="fixed bottom-24 left-4 bg-primary text-white w-10 h-10 rounded-full hidden items-center justify-center shadow-lg hover:bg-primary/90 transition-all duration-300 z-50"
                 onclick="window.scrollTo({top: 0, behavior: 'smooth'})"
                 aria-label="Volver arriba">
             <i class="fas fa-arrow-up"></i>
@@ -177,5 +177,5 @@ function Footer() {
 }
 
 // Exportar la función Footer
-window.Footer = Footer;
+window.Footer = Footer
 
