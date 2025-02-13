@@ -16,7 +16,7 @@ function Playlists() {
             </div>
 
             <div class="relative overflow-hidden">
-                <div id="video-slider" class="flex overflow-x-auto snap-x snap-mandatory scrollbar-hide space-x-4 pb-6">
+                <div id="video-slider" class="flex overflow-x-auto snap-x snap-mandatory scrollbar-hide space-x-4 pb-6 justify-center">
                     <div class="snap-start flex-shrink-0 w-full sm:w-1/2 lg:w-1/3">
                         <div class="aspect-w-16 aspect-h-9">
                             <iframe src="https://www.youtube.com/embed/VIDEO_ID_1" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen class="rounded-lg shadow-lg"></iframe>
