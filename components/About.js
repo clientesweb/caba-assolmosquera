@@ -7,46 +7,46 @@ function About() {
                     <div class="space-y-6">
                         <div class="inline-block">
                             <span class="bg-primary/10 text-primary px-4 py-2 rounded-full text-sm font-semibold">
-                                14+ Años de Experiencia
+                                10+ Años de Experiencia
                             </span>
                         </div>
                         <h2 class="text-3xl md:text-4xl lg:text-5xl font-bold font-serif">
                             <span class="text-primary">Sobre</span>
-                            <span class="text-gray-800"> Janneth Aguirre</span>
+                            <span class="text-gray-800"> Sol Mosquera Cabañas</span>
                         </h2>
                         <div class="space-y-4">
                             <p class="text-lg text-gray-700 leading-relaxed">
-                                Janneth Aguirre se ha consolidado como una líder indiscutible en el sector inmobiliario ecuatoriano. Su éxito se basa en la satisfacción de sus clientes y en la prestación de servicios inmobiliarios de alta calidad.
+                                Bienvenidos a Sol Mosquera Cabañas, tu destino de confianza para disfrutar de unas vacaciones inolvidables en el Valle de Calamuchita. Desde hace más de una década, nos dedicamos a brindar experiencias únicas en alojamiento turístico.
                             </p>
                             <p class="text-lg text-gray-700 leading-relaxed">
-                                Nuestro compromiso es brindar un servicio personalizado y de excelencia, asegurando que cada cliente encuentre la propiedad perfecta o logre la mejor inversión posible en el mercado inmobiliario.
+                                Nuestras cabañas están estratégicamente ubicadas en los puntos más hermosos del valle, ofreciendo una combinación perfecta de confort, naturaleza y tranquilidad para nuestros huéspedes.
                             </p>
                         </div>
                         <div class="grid grid-cols-2 md:grid-cols-4 gap-6 pt-6">
                             <div class="text-center p-4 bg-white rounded-xl shadow-lg hover:shadow-xl transition-shadow duration-300">
+                                <div class="text-primary text-2xl font-bold">4+</div>
+                                <div class="text-gray-600">Ubicaciones</div>
+                            </div>
+                            <div class="text-center p-4 bg-white rounded-xl shadow-lg hover:shadow-xl transition-shadow duration-300">
                                 <div class="text-primary text-2xl font-bold">500+</div>
-                                <div class="text-gray-600">Propiedades Vendidas</div>
+                                <div class="text-gray-600">Huéspedes Felices</div>
                             </div>
                             <div class="text-center p-4 bg-white rounded-xl shadow-lg hover:shadow-xl transition-shadow duration-300">
-                                <div class="text-primary text-2xl font-bold">1000+</div>
-                                <div class="text-gray-600">Clientes Satisfechos</div>
-                            </div>
-                            <div class="text-center p-4 bg-white rounded-xl shadow-lg hover:shadow-xl transition-shadow duration-300">
-                                <div class="text-primary text-2xl font-bold">14+</div>
+                                <div class="text-primary text-2xl font-bold">10+</div>
                                 <div class="text-gray-600">Años de Experiencia</div>
                             </div>
                             <div class="text-center p-4 bg-white rounded-xl shadow-lg hover:shadow-xl transition-shadow duration-300">
                                 <div class="text-primary text-2xl font-bold">95%</div>
-                                <div class="text-gray-600">Tasa de Satisfacción</div>
+                                <div class="text-gray-600">Satisfacción</div>
                             </div>
                         </div>
                         <div class="flex flex-col sm:flex-row gap-4 pt-6">
                             <a href="#contacto" class="inline-flex items-center justify-center bg-primary text-white hover:bg-primary/90 transition-colors duration-300 font-bold py-3 px-8 rounded-full text-center group">
-                                Contáctanos
+                                Reservar Ahora
                                 <i class="fas fa-arrow-right ml-2 transform group-hover:translate-x-1 transition-transform duration-300"></i>
                             </a>
                             <a href="#servicios" class="inline-flex items-center justify-center bg-white text-primary border-2 border-primary hover:bg-primary hover:text-white transition-colors duration-300 font-bold py-3 px-8 rounded-full text-center">
-                                Nuestros Servicios
+                                Nuestras Cabañas
                             </a>
                         </div>
                     </div>
@@ -54,8 +54,8 @@ function About() {
                 <div class="lg:w-1/2 relative">
                     <div class="relative">
                         <div class="absolute inset-0 bg-gradient-to-t from-primary/20 to-transparent rounded-3xl"></div>
-                        <img src="images/premio-janneth.png" 
-                             alt="Janneth Aguirre" 
+                        <img src="/placeholder.svg?height=743&width=988" 
+                             alt="Cabañas en el Valle de Calamuchita" 
                              class="rounded-3xl shadow-2xl w-full relative z-10 transform hover:-rotate-2 transition-transform duration-500">
                     </div>
                     <div class="absolute -bottom-6 -right-6 bg-white/90 backdrop-blur-sm p-6 rounded-xl shadow-xl max-w-xs">
@@ -64,8 +64,8 @@ function About() {
                                 <i class="fas fa-award text-white text-xl"></i>
                             </div>
                             <div>
-                                <p class="font-bold text-gray-800">Reconocida Excelencia</p>
-                                <p class="text-sm text-gray-600">Premiada por su destacada trayectoria en el sector inmobiliario</p>
+                                <p class="font-bold text-gray-800">Excelencia en Servicio</p>
+                                <p class="text-sm text-gray-600">Reconocidos por nuestra atención personalizada</p>
                             </div>
                         </div>
                     </div>
@@ -74,23 +74,33 @@ function About() {
             
             <div class="mt-20 md:mt-24">
                 <h3 class="text-2xl md:text-3xl font-bold mb-10 text-center">
-                    <span class="text-primary">Nuestros</span> Colaboradores y Aliados
+                    <span class="text-primary">Nuestros</span> Servicios Destacados
                 </h3>
                 <div class="flex flex-wrap justify-center items-center gap-8 md:gap-12">
-                    <img src="images/logo-c1.png" alt="Logo Colaborador 1" 
-                         class="h-16 md:h-20 w-auto object-contain filter hover:brightness-75 transition-all duration-300 transform hover:scale-105">
-                    <img src="images/logo-c2.png" alt="Logo Colaborador 2" 
-                         class="h-16 md:h-20 w-auto object-contain filter hover:brightness-75 transition-all duration-300 transform hover:scale-105">
-                    <img src="images/logo-c3.png" alt="Logo Colaborador 3" 
-                         class="h-16 md:h-20 w-auto object-contain filter hover:brightness-75 transition-all duration-300 transform hover:scale-105">
-                    <img src="images/logo-c4.png" alt="Logo Colaborador 4" 
-                         class="h-16 md:h-20 w-auto object-contain filter hover:brightness-75 transition-all duration-300 transform hover:scale-105">
-                    <img src="images/logo-c5.png" alt="Logo Colaborador 5" 
-                         class="h-16 md:h-20 w-auto object-contain filter hover:brightness-75 transition-all duration-300 transform hover:scale-105">
+                    <div class="text-center">
+                        <i class="fas fa-wifi text-4xl text-primary mb-2"></i>
+                        <p class="text-gray-600">WiFi Gratis</p>
+                    </div>
+                    <div class="text-center">
+                        <i class="fas fa-parking text-4xl text-primary mb-2"></i>
+                        <p class="text-gray-600">Estacionamiento</p>
+                    </div>
+                    <div class="text-center">
+                        <i class="fas fa-swimming-pool text-4xl text-primary mb-2"></i>
+                        <p class="text-gray-600">Piscina</p>
+                    </div>
+                    <div class="text-center">
+                        <i class="fas fa-utensils text-4xl text-primary mb-2"></i>
+                        <p class="text-gray-600">Parrilla</p>
+                    </div>
+                    <div class="text-center">
+                        <i class="fas fa-tv text-4xl text-primary mb-2"></i>
+                        <p class="text-gray-600">Smart TV</p>
+                    </div>
                 </div>
             </div>
         </div>
     </section>
-    `
+  `
 }
 
