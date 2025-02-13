@@ -54,17 +54,30 @@ function PropertyListing() {
     },
   ]
 
-  const script = `
-  <script>
-    document.getElementById('backButton').addEventListener('click', function() {
-      window.history.back();
-    });
-  </script>
-`
+  function initializeBackButton() {
+    const backButton = document.getElementById("backButton")
+    if (backButton) {
+      backButton.addEventListener("click", () => {
+        window.history.back()
+      })
+    }
+  }
+
+  // Llamar a esta función después de que el contenido se haya insertado en el DOM
+  setTimeout(initializeBackButton, 0)
 
   return `
     <section id="cabanas-destacadas" class="py-16 md:py-24 bg-gradient-to-br from-primary/5 via-white to-transparent">
       <div class="container mx-auto px-4">
+        <div class="mb-6">
+          <button
+            id="backButton"
+            class="inline-flex items-center justify-center bg-primary hover:bg-primary/90 text-white font-bold py-2 px-4 rounded-full transition-all duration-300"
+          >
+            <i class="fas fa-arrow-left mr-2"></i>
+            Volver
+          </button>
+        </div>
         <div class="text-center max-w-3xl mx-auto mb-16">
           <span class="bg-primary/10 text-primary px-4 py-2 rounded-full text-sm font-semibold inline-block mb-4">
             Nuestras Cabañas
@@ -76,16 +89,6 @@ function PropertyListing() {
           <p class="text-gray-600 text-lg">
             Explora nuestras hermosas cabañas en las mejores ubicaciones del Valle de Calamuchita. Cada una ofrece una experiencia única y confortable para tus vacaciones.
           </p>
-        </div>
-
-        <div class="mb-6">
-          <button
-            id="backButton"
-            class="inline-flex items-center justify-center bg-primary hover:bg-primary/90 text-white font-bold py-2 px-4 rounded-full transition-all duration-300"
-          >
-            <i class="fas fa-arrow-left mr-2"></i>
-            Volver
-          </button>
         </div>
 
         <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
@@ -163,7 +166,6 @@ function PropertyListing() {
         </div>
       </div>
     </section>
-    ${script}
   `
 }
 
