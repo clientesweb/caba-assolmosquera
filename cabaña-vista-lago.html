@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Detalles de la Cabaña - Sol Mosquera Cabañas</title>
+    <meta name="description" content="Descubre los detalles de esta hermosa cabaña en el Valle de Calamuchita. Disfruta de unas vacaciones inolvidables con Sol Mosquera Cabañas.">
+    <meta name="keywords" content="cabaña, Valle de Calamuchita, alquiler vacacional, Sol Mosquera, Villa del Dique, Villa Rumipal">
+    <link rel="canonical" href="https://www.solmosqueracabanas.com/cabin-details.html">
+    
+    <!-- Favicon -->
+    <link rel="icon" type="image/png" sizes="32x32" href="/images/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="/images/favicon-16x16.png">
+    <link rel="apple-touch-icon" sizes="180x180" href="/images/apple-touch-icon.png">
+    <link rel="manifest" href="/manifest.json">
+    <meta name="theme-color" content="#FF9B9B">
+
+    <!-- Open Graph / Facebook -->
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://www.solmosqueracabanas.com/cabin-details.html">
+    <meta property="og:title" content="Detalles de la Cabaña - Sol Mosquera Cabañas">
+    <meta property="og:description" content="Descubre los detalles de esta hermosa cabaña en el Valle de Calamuchita. Perfecta para tus vacaciones.">
+    <meta property="og:image" content="https://www.solmosqueracabanas.com/images/cabin-details-og.jpg">
+
+    <!-- Twitter -->
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:url" content="https://www.solmosqueracabanas.com/cabin-details.html">
+    <meta name="twitter:title" content="Detalles de la Cabaña - Sol Mosquera Cabañas">
+    <meta name="twitter:description" content="Descubre los detalles de esta hermosa cabaña en el Valle de Calamuchita. Perfecta para tus vacaciones.">
+    <meta name="twitter:image" content="https://www.solmosqueracabanas.com/images/cabin-details-og.jpg">
+
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        primary: '#FF9B9B',
+                        secondary: '#000000',
+                        accent: '#FFE5E5',
+                    },
+                    fontFamily: {
+                        sans: ['Montserrat', 'sans-serif'],
+                        serif: ['Playfair Display', 'serif'],
+                    },
+                }
+            }
+        }
+    </script>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;600;700&family=Playfair+Display:wght@400;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body class="bg-white text-gray-800">
+    <div id="app">
+        <!-- El contenido se insertará aquí -->
+    </div>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/js/all.min.js"></script>
+    <script src="components/Header.js"></script>
+    <script src="components/Footer.js"></script>
+    <script src="components/PropertyDetails.js"></script>
+    <script src="components/WhatsAppButton.js"></script>
+    <script>
+        // Esperar a que todos los scripts se carguen
+        window.addEventListener('load', function() {
+            console.log('Todos los recursos cargados');
+            const app = document.getElementById('app');
+            app.innerHTML = `
+                ${Header()}
+                ${PropertyDetails()}
+                ${Footer()}
+                ${WhatsAppButton()}
+            `;
+            // Inicializar después de que el contenido se haya insertado
+            setTimeout(() => {
+                console.log('Inicializando después de la inserción del contenido');
+                if (typeof window.initializePropertyDetails === 'function') {
+                    window.initializePropertyDetails();
+                }
+            }, 100);
+        });
+    </script>
+
+    <!-- Datos estructurados para la cabaña -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org/",
+      "@type": "LodgingBusiness",
+      "name": "Cabaña Vista al Lago - Sol Mosquera Cabañas",
+      "image": "https://www.solmosqueracabanas.com/images/cabana-vista-lago.jpg",
+      "description": "Hermosa cabaña con vista panorámica al lago en Villa del Dique, Valle de Calamuchita. Ideal para familias o parejas que buscan tranquilidad y conexión con la naturaleza.",
+      "address": {
+        "@type": "PostalAddress",
+        "streetAddress": "Villa del Dique",
+        "addressLocality": "Valle de Calamuchita",
+        "addressRegion": "Córdoba",
+        "postalCode": "5862",
+        "addressCountry": "AR"
+      },
+      "geo": {
+        "@type": "GeoCoordinates",
+        "latitude": -32.1826,
+        "longitude": -64.4983
+      },
+      "telephone": "+5493546406871",
+      "priceRange": "$$",
+      "amenityFeature": [
+        {
+          "@type": "LocationFeatureSpecification",
+          "name": "Wi-Fi gratis",
+          "value": true
+        },
+        {
+          "@type": "LocationFeatureSpecification",
+          "name": "Aire acondicionado",
+          "value": true
+        },
+        {
+          "@type": "LocationFeatureSpecification",
+          "name": "Vista al lago",
+          "value": true
+        },
+        {
+          "@type": "LocationFeatureSpecification",
+          "name": "Estacionamiento privado",
+          "value": true
+        }
+      ],
+      "numberOfRooms": 2,
+      "petsAllowed": false,
+      "starRating": {
+        "@type": "Rating",
+        "ratingValue": "4.5"
+      }
+    }
+    </script>
+</body>
+</html>
