@@ -6,7 +6,7 @@ function Header() {
               <!-- Logo -->
               <div class="flex items-center">
                   <a href="/" class="flex items-center space-x-2 group" aria-label="Janneth Aguirre Bienes Raíces - Inicio">
-                      <img src="images/logo.png" 
+                      <img src="images/logo-sol-mosquera-cabañas.png" 
                            alt="Janneth Aguirre Bienes Raíces Logo" 
                            class="h-12 md:h-16 transform group-hover:scale-105 transition-transform duration-300"
                            width="64"
