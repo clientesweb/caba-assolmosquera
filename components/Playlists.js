@@ -19,7 +19,7 @@ function Playlists() {
                 <div id="video-slider" class="flex overflow-x-auto snap-x snap-mandatory scrollbar-hide space-x-4 pb-6 justify-center">
                     <div class="snap-start flex-shrink-0 w-full sm:w-1/2 lg:w-1/3">
                         <div class="aspect-w-16 aspect-h-9">
-                            <iframe src="https://www.youtube.com/embed/VIDEO_ID_1" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen class="rounded-lg shadow-lg"></iframe>
+                            <iframe src="https://www.youtube.com/embed/3JfBBp35gpY" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen class="rounded-lg shadow-lg"></iframe>
                         </div>
                         <h3 class="text-xl font-bold mt-4 mb-2">Villa del Dique: Paraíso Serrano</h3>
                         <p class="text-gray-600">Descubre la belleza natural y las actividades que ofrece Villa del Dique.</p>
