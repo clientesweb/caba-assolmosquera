@@ -124,7 +124,7 @@ function Footer() {
                             </div>
                         </li>
                         <li class="flex items-start space-x-3">
-                            <i class="fas fa-instagram mt-1 text-primary"></i>
+                            <i class="fab fa-instagram mt-1 text-primary"></i>
                             <div>
                                 <p class="text-gray-400">Instagram</p>
                                 <a href="https://www.instagram.com/solcitomosq" 
@@ -140,8 +140,8 @@ function Footer() {
             </div>
 
             <div class="border-t border-gray-800 pt-8 mt-12">
-                <div class="flex flex-col md:flex-row justify-between items-center space-y-4 md:space-y-0">
-                    <p class="text-gray-400 text-sm">
+                <div class="flex flex-col items-center space-y-4">
+                    <p class="text-gray-400 text-sm text-center">
                         &copy; ${new Date().getFullYear()} Sol Mosquera Cabañas. Todos los derechos reservados.
                     </p>
                     <div class="flex space-x-6">
@@ -152,6 +152,15 @@ function Footer() {
                             Términos y Condiciones
                         </a>
                     </div>
+                    <p class="text-gray-400 text-sm">
+                        Desarrollado por 
+                        <a href="https://dualitydomain.github.io/Dualitydomain/" 
+                           target="_blank" 
+                           rel="noopener noreferrer" 
+                           class="text-primary hover:text-white transition-colors duration-300">
+                            Duality Domain
+                        </a>
+                    </p>
                 </div>
             </div>
         </div>
@@ -168,5 +177,5 @@ function Footer() {
 }
 
 // Exportar la función Footer
-window.Footer = Footer
+window.Footer = Footer;
 
