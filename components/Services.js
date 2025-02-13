@@ -7,11 +7,11 @@ function Services() {
                     Nuestros Servicios
                 </span>
                 <h2 class="text-3xl md:text-4xl lg:text-5xl font-serif font-bold mb-6">
-                    <span class="text-primary">Soluciones Inmobiliarias</span>
-                    <span class="text-gray-800"> Integrales</span>
+                    <span class="text-primary">Comodidades y</span>
+                    <span class="text-gray-800"> Servicios</span>
                 </h2>
                 <p class="text-gray-600 text-lg">
-                    Ofrecemos una gama completa de servicios inmobiliarios diseñados para satisfacer todas tus necesidades en el mercado de bienes raíces.
+                    Disfruta de una estadía inolvidable con todos los servicios y comodidades que ofrecemos en nuestras cabañas.
                 </p>
             </div>
 
@@ -20,11 +20,11 @@ function Services() {
                     <div class="absolute top-0 left-0 w-2 h-full bg-primary transform -translate-x-full group-hover:translate-x-0 transition-transform duration-300"></div>
                     <div class="relative z-10">
                         <div class="text-primary text-4xl mb-6 group-hover:scale-110 transition-transform duration-300">
-                            <i class="fas fa-home"></i>
+                            <i class="fas fa-swimming-pool"></i>
                         </div>
-                        <h3 class="text-xl font-bold mb-4">Compra y Venta de Propiedades</h3>
-                        <p class="text-gray-600 mb-6">Asesoramiento experto en la compra y venta de propiedades residenciales y comerciales.</p>
-                        <a href="https://jannethaguirre.com/compra-venta.html" class="inline-flex items-center text-primary hover:text-primary/80 transition-colors duration-300 group-hover:translate-x-2 transform">
+                        <h3 class="text-xl font-bold mb-4">Piscina y Solárium</h3>
+                        <p class="text-gray-600 mb-6">Disfruta de nuestra piscina con solárium y reposeras para relajarte bajo el sol.</p>
+                        <a href="#contacto" class="inline-flex items-center text-primary hover:text-primary/80 transition-colors duration-300 group-hover:translate-x-2 transform">
                             Saber más <i class="fas fa-arrow-right ml-2"></i>
                         </a>
                     </div>
@@ -34,25 +34,11 @@ function Services() {
                     <div class="absolute top-0 left-0 w-2 h-full bg-primary transform -translate-x-full group-hover:translate-x-0 transition-transform duration-300"></div>
                     <div class="relative z-10">
                         <div class="text-primary text-4xl mb-6 group-hover:scale-110 transition-transform duration-300">
-                            <i class="fas fa-chart-line"></i>
+                            <i class="fas fa-utensils"></i>
                         </div>
-                        <h3 class="text-xl font-bold mb-4">Análisis de Mercado</h3>
-                        <p class="text-gray-600 mb-6">Estudios detallados del mercado inmobiliario para tomar decisiones informadas.</p>
-                        <a href="https://jannethaguirre.com/analisis-de-mercado.html" class="inline-flex items-center text-primary hover:text-primary/80 transition-colors duration-300 group-hover:translate-x-2 transform">
-                            Ver Análisis <i class="fas fa-arrow-right ml-2"></i>
-                        </a>
-                    </div>
-                </div>
-
-                <div class="group bg-white p-8 rounded-2xl shadow-lg hover:shadow-xl transition-all duration-300 relative overflow-hidden">
-                    <div class="absolute top-0 left-0 w-2 h-full bg-primary transform -translate-x-full group-hover:translate-x-0 transition-transform duration-300"></div>
-                    <div class="relative z-10">
-                        <div class="text-primary text-4xl mb-6 group-hover:scale-110 transition-transform duration-300">
-                            <i class="fas fa-handshake"></i>
-                        </div>
-                        <h3 class="text-xl font-bold mb-4">Gestión de Ventas</h3>
-                        <p class="text-gray-600 mb-6">Estrategias personalizadas para maximizar el valor de su propiedad en el mercado.</p>
-                        <a href="https://jannethaguirre.com/gestion-ventas.html" class="inline-flex items-center text-primary hover:text-primary/80 transition-colors duration-300 group-hover:translate-x-2 transform">
+                        <h3 class="text-xl font-bold mb-4">Parrilla Privada</h3>
+                        <p class="text-gray-600 mb-6">Cada cabaña cuenta con su propia parrilla para disfrutar de un asado en familia.</p>
+                        <a href="#contacto" class="inline-flex items-center text-primary hover:text-primary/80 transition-colors duration-300 group-hover:translate-x-2 transform">
                             Saber más <i class="fas fa-arrow-right ml-2"></i>
                         </a>
                     </div>
@@ -62,11 +48,11 @@ function Services() {
                     <div class="absolute top-0 left-0 w-2 h-full bg-primary transform -translate-x-full group-hover:translate-x-0 transition-transform duration-300"></div>
                     <div class="relative z-10">
                         <div class="text-primary text-4xl mb-6 group-hover:scale-110 transition-transform duration-300">
-                            <i class="fas fa-building"></i>
+                            <i class="fas fa-wifi"></i>
                         </div>
-                        <h3 class="text-xl font-bold mb-4">Venta de Proyectos en Planos</h3>
-                        <p class="text-gray-600 mb-6">Comercialización de proyectos inmobiliarios desde su fase inicial.</p>
-                        <a href="https://jannethaguirre.com/proyecto-planos.html" class="inline-flex items-center text-primary hover:text-primary/80 transition-colors duration-300 group-hover:translate-x-2 transform">
+                        <h3 class="text-xl font-bold mb-4">WiFi Gratis</h3>
+                        <p class="text-gray-600 mb-6">Conexión WiFi de alta velocidad en todas nuestras cabañas sin costo adicional.</p>
+                        <a href="#contacto" class="inline-flex items-center text-primary hover:text-primary/80 transition-colors duration-300 group-hover:translate-x-2 transform">
                             Saber más <i class="fas fa-arrow-right ml-2"></i>
                         </a>
                     </div>
@@ -76,11 +62,11 @@ function Services() {
                     <div class="absolute top-0 left-0 w-2 h-full bg-primary transform -translate-x-full group-hover:translate-x-0 transition-transform duration-300"></div>
                     <div class="relative z-10">
                         <div class="text-primary text-4xl mb-6 group-hover:scale-110 transition-transform duration-300">
-                            <i class="fas fa-key"></i>
+                            <i class="fas fa-parking"></i>
                         </div>
-                        <h3 class="text-xl font-bold mb-4">Gestión de Alquileres</h3>
-                        <p class="text-gray-600 mb-6">Administración integral de propiedades en alquiler para propietarios e inquilinos.</p>
-                        <a href="https://jannethaguirre.com/gestion-alquileres.html" class="inline-flex items-center text-primary hover:text-primary/80 transition-colors duration-300 group-hover:translate-x-2 transform">
+                        <h3 class="text-xl font-bold mb-4">Estacionamiento Privado</h3>
+                        <p class="text-gray-600 mb-6">Estacionamiento privado y techado incluido con cada cabaña.</p>
+                        <a href="#contacto" class="inline-flex items-center text-primary hover:text-primary/80 transition-colors duration-300 group-hover:translate-x-2 transform">
                             Saber más <i class="fas fa-arrow-right ml-2"></i>
                         </a>
                     </div>
@@ -90,11 +76,25 @@ function Services() {
                     <div class="absolute top-0 left-0 w-2 h-full bg-primary transform -translate-x-full group-hover:translate-x-0 transition-transform duration-300"></div>
                     <div class="relative z-10">
                         <div class="text-primary text-4xl mb-6 group-hover:scale-110 transition-transform duration-300">
-                            <i class="fas fa-globe"></i>
+                            <i class="fas fa-tv"></i>
                         </div>
-                        <h3 class="text-xl font-bold mb-4">Inversiones Internacionales</h3>
-                        <p class="text-gray-600 mb-6">Asesoramiento en inversiones inmobiliarias en mercados internacionales.</p>
-                        <a href="https://jannethaguirre.com/inversiones-internacionales.html" class="inline-flex items-center text-primary hover:text-primary/80 transition-colors duration-300 group-hover:translate-x-2 transform">
+                        <h3 class="text-xl font-bold mb-4">Smart TV</h3>
+                        <p class="text-gray-600 mb-6">Televisores Smart TV con Netflix y servicios de streaming incluidos.</p>
+                        <a href="#contacto" class="inline-flex items-center text-primary hover:text-primary/80 transition-colors duration-300 group-hover:translate-x-2 transform">
+                            Saber más <i class="fas fa-arrow-right ml-2"></i>
+                        </a>
+                    </div>
+                </div>
+
+                <div class="group bg-white p-8 rounded-2xl shadow-lg hover:shadow-xl transition-all duration-300 relative overflow-hidden">
+                    <div class="absolute top-0 left-0 w-2 h-full bg-primary transform -translate-x-full group-hover:translate-x-0 transition-transform duration-300"></div>
+                    <div class="relative z-10">
+                        <div class="text-primary text-4xl mb-6 group-hover:scale-110 transition-transform duration-300">
+                            <i class="fas fa-snowflake"></i>
+                        </div>
+                        <h3 class="text-xl font-bold mb-4">Aire Acondicionado</h3>
+                        <p class="text-gray-600 mb-6">Climatización frío/calor en todos los ambientes para tu confort.</p>
+                        <a href="#contacto" class="inline-flex items-center text-primary hover:text-primary/80 transition-colors duration-300 group-hover:translate-x-2 transform">
                             Saber más <i class="fas fa-arrow-right ml-2"></i>
                         </a>
                     </div>
@@ -109,6 +109,6 @@ function Services() {
             </div>
         </div>
     </section>
-    `
+  `
 }
 
