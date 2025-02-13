@@ -1,6 +1,7 @@
 document.addEventListener("DOMContentLoaded", () => {
   const app = document.getElementById("app")
   app.innerHTML = `
+        ${TopBanner()}
         ${Header()}
         <main>
             ${Hero()}
@@ -11,7 +12,7 @@ document.addEventListener("DOMContentLoaded", () => {
             ${OnlineMagazine()}
             ${Playlists()}
             ${Contact()}
-            ${AppDownload()} // Using AppDownload function
+            ${AppDownload()}
         </main>
         ${Footer()}
         ${BottomNavigation()}
