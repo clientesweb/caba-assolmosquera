@@ -39,11 +39,11 @@ function Hero() {
                                 <div class="text-sm text-white/80">Ubicaciones</div>
                             </div>
                             <div class="bg-white/10 backdrop-blur-sm rounded-lg p-4 text-white">
-                                <div class="text-2xl font-bold">10+</div>
+                                <div class="text-2xl font-bold">3+</div>
                                 <div class="text-sm text-white/80">Años de Experiencia</div>
                             </div>
                             <div class="hidden sm:block bg-white/10 backdrop-blur-sm rounded-lg p-4 text-white">
-                                <div class="text-2xl font-bold">500+</div>
+                                <div class="text-2xl font-bold">300+</div>
                                 <div class="text-sm text-white/80">Huéspedes Satisfechos</div>
                             </div>
                         </div>
