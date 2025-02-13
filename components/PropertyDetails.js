@@ -254,43 +254,20 @@ function PropertyDetails() {
         </div>
 
         {/* Booking Form */}
-        <div id="reserva" className="bg-white rounded-lg shadow-lg p-8">
-          <h2 className="text-2xl font-serif font-bold mb-6">Reserva tu estadía</h2>
-          <form onSubmit={handleSubmit} className="grid grid-cols-1 md:grid-cols-2 gap-6">
+        <div id="reserva" class="bg-white rounded-lg shadow-lg p-8">
+          <h2 class="text-2xl font-serif font-bold mb-6">Reserva tu estadía</h2>
+          <form id="booking-form" class="grid grid-cols-1 md:grid-cols-2 gap-6">
             <div>
-              <label htmlFor="check-in" className="block text-sm font-medium text-gray-700 mb-2">
-                Fecha de llegada
-              </label>
-              <input
-                type="date"
-                id="check-in"
-                name="check-in"
-                required
-                className="w-full px-4 py-2 rounded-lg border border-gray-300 focus:ring-2 focus:ring-primary focus:border-primary"
-              />
+              <label for="check-in" class="block text-sm font-medium text-gray-700 mb-2">Fecha de llegada</label>
+              <input type="date" id="check-in" name="check-in" required class="w-full px-4 py-2 rounded-lg border border-gray-300 focus:ring-2 focus:ring-primary focus:border-primary"/>
             </div>
             <div>
-              <label htmlFor="check-out" className="block text-sm font-medium text-gray-700 mb-2">
-                Fecha de salida
-              </label>
-              <input
-                type="date"
-                id="check-out"
-                name="check-out"
-                required
-                className="w-full px-4 py-2 rounded-lg border border-gray-300 focus:ring-2 focus:ring-primary focus:border-primary"
-              />
+              <label for="check-out" class="block text-sm font-medium text-gray-700 mb-2">Fecha de salida</label>
+              <input type="date" id="check-out" name="check-out" required class="w-full px-4 py-2 rounded-lg border border-gray-300 focus:ring-2 focus:ring-primary focus:border-primary">
             </div>
             <div>
-              <label htmlFor="guests" className="block text-sm font-medium text-gray-700 mb-2">
-                Número de huéspedes
-              </label>
-              <select
-                id="guests"
-                name="guests"
-                required
-                className="w-full px-4 py-2 rounded-lg border border-gray-300 focus:ring-2 focus:ring-primary focus:border-primary"
-              >
+              <label for="guests" class="block text-sm font-medium text-gray-700 mb-2">Número de huéspedes</label>
+              <select id="guests" name="guests" required class="w-full px-4 py-2 rounded-lg border border-gray-300 focus:ring-2 focus:ring-primary focus:border-primary">
                 <option value="">Seleccionar</option>
                 <option value="1">1 persona</option>
                 <option value="2">2 personas</option>
@@ -299,50 +276,41 @@ function PropertyDetails() {
               </select>
             </div>
             <div>
-              <label htmlFor="name" className="block text-sm font-medium text-gray-700 mb-2">
-                Nombre completo
-              </label>
-              <input
-                type="text"
-                id="name"
-                name="name"
-                required
-                className="w-full px-4 py-2 rounded-lg border border-gray-300 focus:ring-2 focus:ring-primary focus:border-primary"
-              />
+              <label for="name" class="block text-sm font-medium text-gray-700 mb-2">Nombre completo</label>
+              <input type="text" id="name" name="name" required class="w-full px-4 py-2 rounded-lg border border-gray-300 focus:ring-2 focus:ring-primary focus:border-primary">
             </div>
-            <div className="md:col-span-2">
-              <label htmlFor="email" className="block text-sm font-medium text-gray-700 mb-2">
-                Correo electrónico
-              </label>
-              <input
-                type="email"
-                id="email"
-                name="email"
-                required
-                className="w-full px-4 py-2 rounded-lg border border-gray-300 focus:ring-2 focus:ring-primary focus:border-primary"
-              />
+            <div class="md:col-span-2">
+              <label for="email" class="block text-sm font-medium text-gray-700 mb-2">Correo electrónico</label>
+              <input type="email" id="email" name="email" required class="w-full px-4 py-2 rounded-lg border border-gray-300 focus:ring-2 focus:ring-primary focus:border-primary">
             </div>
-            <div className="md:col-span-2">
-              <label htmlFor="message" className="block text-sm font-medium text-gray-700 mb-2">
-                Mensaje (opcional)
-              </label>
-              <textarea
-                id="message"
-                name="message"
-                rows="4"
-                className="w-full px-4 py-2 rounded-lg border border-gray-300 focus:ring-2 focus:ring-primary focus:border-primary"
-              ></textarea>
+            <div class="md:col-span-2">
+              <label for="message" class="block text-sm font-medium text-gray-700 mb-2">Mensaje (opcional)</label>
+              <textarea id="message" name="message" rows="4" class="w-full px-4 py-2 rounded-lg border border-gray-300 focus:ring-2 focus:ring-primary focus:border-primary"></textarea>
             </div>
-            <div className="md:col-span-2">
-              <button
-                type="submit"
-                className="w-full bg-primary hover:bg-primary/90 text-white font-bold py-3 px-4 rounded-lg transition duration-300"
-              >
+            <div class="md:col-span-2">
+              <button type="submit" class="w-full bg-primary hover:bg-primary/90 text-white font-bold py-3 px-4 rounded-lg transition duration-300">
                 Solicitar reserva
               </button>
             </div>
           </form>
         </div>
+        <script>
+          document.getElementById('booking-form').addEventListener('submit', function(event) {
+            event.preventDefault();
+            const formData = new FormData(event.target);
+            const message = `
+              *Nueva Reserva para ${cabin.title}*
+              Fecha de llegada: ${formData.get('check-in')}
+              Fecha de salida: ${formData.get('check-out')}
+              Número de huéspedes: ${formData.get('guests')}
+              Nombre: ${formData.get('name')}
+              Email: ${formData.get('email')}
+              Mensaje: ${formData.get('message')}
+            `;
+            const whatsappUrl = `https://wa.me/5493546406871?text=${encodeURIComponent(message)}`;
+            window.open(whatsappUrl, '_blank');
+          });
+        </script>
       </div>
     </main>
   )
