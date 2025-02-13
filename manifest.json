@@ -72,14 +72,14 @@
       "name": "Ver Cabañas",
       "short_name": "Cabañas",
       "description": "Ver nuestras cabañas disponibles",
-      "url": "/cabanas",
+      "url": "/propiedades.html",
       "icons": [{ "src": "images/android-icon-96x96.png", "sizes": "96x96" }]
     },
     {
       "name": "Contacto",
       "short_name": "Contacto",
       "description": "Contáctanos para reservas",
-      "url": "/contacto",
+      "url": "/#contacto",
       "icons": [{ "src": "images/android-icon-96x96.png", "sizes": "96x96" }]
     }
   ],
