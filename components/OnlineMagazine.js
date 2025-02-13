@@ -1,36 +1,36 @@
 function OnlineMagazine() {
   const articles = [
     {
-      title: "La Domotización en Bienes Raíces",
-      subtitle: "Transformando Espacios para el Futuro",
+      title: "Los 5 Mejores Senderos del Valle de Calamuchita",
+      subtitle: "Descubre la Naturaleza en su Máxima Expresión",
       description:
-        "La domotización revoluciona el mercado inmobiliario, mejorando eficiencia, seguridad y confort. Descubre su impacto y las oportunidades que ofrece.",
-      author: "Juan Carlos Solano Aguirre",
-      date: "2 Feb 2025",
-      url: "https://jannethaguirre.online/articulo/la-domotizacion-en-bienes-raices-por-juan-carlos-solano-aguirre",
-      image: "https://jannethaguirre.online/juan-solano-aguirre.jpg",
+        "Explora los senderos más impresionantes del Valle de Calamuchita, desde paseos familiares hasta desafiantes rutas para excursionistas experimentados.",
+      author: "Equipo Sol Mosquera",
+      date: "15 Feb 2024",
+      url: "https://solmosqueracabanas.com/blog/mejores-senderos-calamuchita",
+      image: "/placeholder.svg?height=400&width=600",
+      readTime: "7 min",
+    },
+    {
+      title: "Gastronomía Serrana: Sabores de Calamuchita",
+      subtitle: "Un Viaje Culinario por el Valle",
+      description:
+        "Descubre los platos típicos y los restaurantes más destacados del Valle de Calamuchita. Una guía imprescindible para los amantes de la buena comida.",
+      author: "Equipo Sol Mosquera",
+      date: "10 Feb 2024",
+      url: "https://solmosqueracabanas.com/blog/gastronomia-calamuchita",
+      image: "/placeholder.svg?height=400&width=600",
       readTime: "5 min",
     },
     {
-      title: "José Solines Aguayo",
-      subtitle: "Construyendo Sueños y Transformando Ecuador",
+      title: "Actividades Acuáticas en los Lagos de Calamuchita",
+      subtitle: "Diversión y Aventura en el Agua",
       description:
-        "Descubre la historia de uno de los constructores más emblemáticos e influyentes de Ecuador y su impacto en el desarrollo de Samborondón y Vía a la Costa.",
-      author: "Janneth Aguirre",
-      date: "1 Feb 2025",
-      url: "https://jannethaguirre.online/articulo/jose-solines-aguayo-construyendo-suenos",
-      image: "https://jannethaguirre.online/portada-jose-solines.jpg",
-      readTime: "4 min",
-    },
-    {
-      title: "Boquete Pino Alto Country Club",
-      subtitle: "Lujo y Naturaleza en Panamá",
-      description:
-        "Descubre el exclusivo desarrollo residencial en las montañas de Boquete, que combina lujo, golf y una impresionante belleza natural.",
-      author: "Janneth Aguirre",
-      date: "28 Ene 2025",
-      url: "https://jannethaguirre.online/articulo/boquete-pino-alto-country-club",
-      image: "https://jannethaguirre.online/boquete-pino-alto-country-club.jpg",
+        "Desde kayak hasta windsurf, descubre todas las actividades acuáticas que puedes disfrutar en los hermosos lagos del Valle de Calamuchita.",
+      author: "Equipo Sol Mosquera",
+      date: "5 Feb 2024",
+      url: "https://solmosqueracabanas.com/blog/actividades-acuaticas-calamuchita",
+      image: "/placeholder.svg?height=400&width=600",
       readTime: "6 min",
     },
   ]
@@ -40,14 +40,14 @@ function OnlineMagazine() {
       <div class="container mx-auto px-4">
         <div class="text-center max-w-3xl mx-auto mb-16">
           <span class="bg-primary/10 text-primary px-4 py-2 rounded-full text-sm font-semibold inline-block mb-4">
-            Revista Online
+            Blog de Viajes
           </span>
           <h2 class="text-3xl md:text-4xl lg:text-5xl font-serif font-bold mb-6">
-            <span class="text-primary">Conocimiento</span>
-            <span class="text-gray-800"> Inmobiliario</span>
+            <span class="text-primary">Explora</span>
+            <span class="text-gray-800"> Calamuchita</span>
           </h2>
           <p class="text-gray-600 text-lg">
-            Explora nuestros artículos exclusivos sobre el mercado inmobiliario, tendencias y oportunidades de inversión.
+            Descubre los secretos del Valle de Calamuchita, consejos de viaje y las mejores experiencias para tu estadía.
           </p>
         </div>
 
@@ -89,7 +89,7 @@ function OnlineMagazine() {
         </div>
 
         <div class="mt-12 text-center">
-          <a href="https://jannethaguirre.online" target="_blank" rel="noopener noreferrer" 
+          <a href="https://solmosqueracabanas.com/blog" 
              class="inline-flex items-center justify-center bg-primary hover:bg-primary/90 text-white font-bold py-4 px-8 rounded-full transition-all duration-300 group">
             Explorar Más Artículos
             <i class="fas fa-arrow-right ml-2 transform group-hover:translate-x-1 transition-transform duration-300"></i>
