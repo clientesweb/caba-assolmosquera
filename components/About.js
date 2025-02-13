@@ -54,7 +54,7 @@ function About() {
                 <div class="lg:w-1/2 relative">
                     <div class="relative">
                         <div class="absolute inset-0 bg-gradient-to-t from-primary/20 to-transparent rounded-3xl"></div>
-                        <img src="sol-mosquera.jpg" 
+                        <img src="images/sol-mosquera.jpg" 
                              alt="Cabañas en el Valle de Calamuchita" 
                              class="rounded-3xl shadow-2xl w-full relative z-10 transform hover:-rotate-2 transition-transform duration-500">
                     </div>
