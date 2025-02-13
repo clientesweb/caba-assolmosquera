@@ -1,0 +1,209 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Blog de Viajes - Sol Mosquera Cabañas</title>
+    <meta name="description" content="Descubre los secretos del Valle de Calamuchita, consejos de viaje y las mejores experiencias para tu estadía en nuestro blog.">
+    <meta name="keywords" content="blog de viajes, Valle de Calamuchita, cabañas, turismo, naturaleza, aventura">
+    
+    <!-- Favicon -->
+    <link rel="icon" type="image/png" sizes="32x32" href="/images/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="/images/favicon-16x16.png">
+    <link rel="apple-touch-icon" sizes="180x180" href="/images/apple-touch-icon.png">
+    <link rel="manifest" href="/manifest.json">
+    <meta name="theme-color" content="#FF9B9B">
+
+    <!-- Open Graph / Facebook -->
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://www.solmosqueracabanas.com/blog">
+    <meta property="og:title" content="Blog de Viajes - Sol Mosquera Cabañas">
+    <meta property="og:description" content="Descubre los secretos del Valle de Calamuchita, consejos de viaje y las mejores experiencias para tu estadía en nuestro blog.">
+    <meta property="og:image" content="https://www.solmosqueracabanas.com/images/blog-og.jpg">
+
+    <!-- Twitter -->
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:url" content="https://www.solmosqueracabanas.com/blog">
+    <meta name="twitter:title" content="Blog de Viajes - Sol Mosquera Cabañas">
+    <meta name="twitter:description" content="Descubre los secretos del Valle de Calamuchita, consejos de viaje y las mejores experiencias para tu estadía en nuestro blog.">
+    <meta name="twitter:image" content="https://www.solmosqueracabanas.com/images/blog-og.jpg">
+
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;600;700&family=Playfair+Display:wght@400;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        primary: '#FF9B9B',
+                        secondary: '#000000',
+                        accent: '#FFE5E5',
+                    },
+                    fontFamily: {
+                        sans: ['Montserrat', 'sans-serif'],
+                        serif: ['Playfair Display', 'serif'],
+                    },
+                }
+            }
+        }
+    </script>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body class="bg-white text-gray-800">
+    <div id="app">
+        <!-- El contenido se insertará aquí -->
+    </div>
+
+    <script src="components/Header.js"></script>
+    <script src="components/Footer.js"></script>
+    <script src="components/WhatsAppButton.js"></script>
+    <script>
+        document.addEventListener('DOMContentLoaded', () => {
+            const app = document.getElementById('app');
+            app.innerHTML = `
+                ${Header()}
+                <main>
+                    <section class="py-16 md:py-24 bg-gradient-to-br from-primary/5 via-white to-transparent">
+                        <div class="container mx-auto px-4">
+                            <div class="text-center max-w-3xl mx-auto mb-16">
+                                <h1 class="text-4xl md:text-5xl lg:text-6xl font-serif font-bold mb-6">
+                                    <span class="text-primary">Blog de</span>
+                                    <span class="text-gray-800"> Viajes</span>
+                                </h1>
+                                <p class="text-gray-600 text-lg">
+                                    Descubre los secretos del Valle de Calamuchita, consejos de viaje y las mejores experiencias para tu estadía.
+                                </p>
+                            </div>
+
+                            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+                                ${generateBlogPosts()}
+                            </div>
+
+                            <div class="mt-12 flex justify-center">
+                                <nav aria-label="Paginación del blog" class="inline-flex">
+                                    <a href="#" class="bg-white border border-gray-300 text-gray-500 hover:bg-gray-100 px-4 py-2 text-sm font-medium">
+                                        Anterior
+                                    </a>
+                                    <a href="#" class="bg-primary border border-primary text-white hover:bg-primary/90 px-4 py-2 text-sm font-medium">
+                                        1
+                                    </a>
+                                    <a href="#" class="bg-white border border-gray-300 text-gray-500 hover:bg-gray-100 px-4 py-2 text-sm font-medium">
+                                        2
+                                    </a>
+                                    <a href="#" class="bg-white border border-gray-300 text-gray-500 hover:bg-gray-100 px-4 py-2 text-sm font-medium">
+                                        3
+                                    </a>
+                                    <a href="#" class="bg-white border border-gray-300 text-gray-500 hover:bg-gray-100 px-4 py-2 text-sm font-medium">
+                                        Siguiente
+                                    </a>
+                                </nav>
+                            </div>
+                        </div>
+                    </section>
+                </main>
+                ${Footer()}
+                ${WhatsAppButton()}
+            `;
+        });
+
+        function generateBlogPosts() {
+            const posts = [
+                {
+                    title: "Los 5 Mejores Senderos del Valle de Calamuchita",
+                    subtitle: "Descubre la Naturaleza en su Máxima Expresión",
+                    description: "Explora los senderos más impresionantes del Valle de Calamuchita, desde paseos familiares hasta desafiantes rutas para excursionistas experimentados.",
+                    author: "Equipo Sol Mosquera",
+                    date: "15 Feb 2024",
+                    url: "/blog/mejores-senderos-calamuchita",
+                    image: "/placeholder.svg?height=400&width=600",
+                    readTime: "7 min",
+                },
+                {
+                    title: "Gastronomía Serrana: Sabores de Calamuchita",
+                    subtitle: "Un Viaje Culinario por el Valle",
+                    description: "Descubre los platos típicos y los restaurantes más destacados del Valle de Calamuchita. Una guía imprescindible para los amantes de la buena comida.",
+                    author: "Equipo Sol Mosquera",
+                    date: "10 Feb 2024",
+                    url: "/blog/gastronomia-calamuchita",
+                    image: "/placeholder.svg?height=400&width=600",
+                    readTime: "5 min",
+                },
+                {
+                    title: "Actividades Acuáticas en los Lagos de Calamuchita",
+                    subtitle: "Diversión y Aventura en el Agua",
+                    description: "Desde kayak hasta windsurf, descubre todas las actividades acuáticas que puedes disfrutar en los hermosos lagos del Valle de Calamuchita.",
+                    author: "Equipo Sol Mosquera",
+                    date: "5 Feb 2024",
+                    url: "/blog/actividades-acuaticas-calamuchita",
+                    image: "/placeholder.svg?height=400&width=600",
+                    readTime: "6 min",
+                },
+                {
+                    title: "Fauna Autóctona del Valle de Calamuchita",
+                    subtitle: "Descubre la Vida Silvestre de las Sierras",
+                    description: "Conoce las especies animales que habitan en el Valle de Calamuchita y aprende cómo observarlas respetando su hábitat natural.",
+                    author: "Equipo Sol Mosquera",
+                    date: "1 Feb 2024",
+                    url: "/blog/fauna-calamuchita",
+                    image: "/placeholder.svg?height=400&width=600",
+                    readTime: "8 min",
+                },
+                {
+                    title: "Guía de Pesca en los Ríos de Calamuchita",
+                    subtitle: "Los Mejores Spots para Pescadores",
+                    description: "Descubre los mejores lugares para practicar la pesca deportiva en los ríos del Valle de Calamuchita, técnicas recomendadas y especies más comunes.",
+                    author: "Equipo Sol Mosquera",
+                    date: "25 Ene 2024",
+                    url: "/blog/guia-pesca-calamuchita",
+                    image: "/placeholder.svg?height=400&width=600",
+                    readTime: "6 min",
+                },
+                {
+                    title: "Festivales y Eventos Anuales en Calamuchita",
+                    subtitle: "Calendario de Celebraciones Locales",
+                    description: "No te pierdas los eventos más importantes del Valle de Calamuchita. Desde festivales gastronómicos hasta celebraciones culturales tradicionales.",
+                    author: "Equipo Sol Mosquera",
+                    date: "20 Ene 2024",
+                    url: "/blog/festivales-eventos-calamuchita",
+                    image: "/placeholder.svg?height=400&width=600",
+                    readTime: "5 min",
+                },
+            ];
+
+            return posts.map(post => `
+                <article class="group bg-white rounded-2xl shadow-lg hover:shadow-xl transition-all duration-300 overflow-hidden">
+                    <div class="relative overflow-hidden">
+                        <img src="${post.image}" alt="${post.title}" 
+                             class="w-full h-48 object-cover transform group-hover:scale-110 transition-transform duration-500">
+                        <div class="absolute inset-0 bg-gradient-to-t from-black/60 to-transparent"></div>
+                        <div class="absolute bottom-4 left-4 right-4 text-white">
+                            <span class="text-sm bg-primary/90 px-3 py-1 rounded-full">${post.readTime} lectura</span>
+                        </div>
+                    </div>
+                    <div class="p-6">
+                        <div class="flex items-center mb-4 text-sm text-gray-500">
+                            <span class="flex items-center">
+                                <i class="fas fa-user-edit mr-2"></i>
+                                ${post.author}
+                            </span>
+                            <span class="mx-2">•</span>
+                            <span>${post.date}</span>
+                        </div>
+                        <h2 class="text-xl font-bold mb-2 group-hover:text-primary transition-colors duration-300">
+                            ${post.title}
+                        </h2>
+                        <h3 class="text-gray-600 font-semibold mb-3">${post.subtitle}</h3>
+                        <p class="text-gray-600 mb-4 line-clamp-2">${post.description}</p>
+                        <a href="${post.url}" class="inline-flex items-center text-primary hover:text-primary/80 transition-colors duration-300 group-hover:translate-x-2 transform">
+                            Leer artículo <i class="fas fa-arrow-right ml-2"></i>
+                        </a>
+                    </div>
+                </article>
+            `).join('');
+        }
+    </script>
+</body>
+</html>
+
