@@ -24,9 +24,6 @@ function Services() {
                         </div>
                         <h3 class="text-xl font-bold mb-4">Piscina y Solárium</h3>
                         <p class="text-gray-600 mb-6">Disfruta de nuestra piscina con solárium y reposeras para relajarte bajo el sol.</p>
-                        <a href="#contacto" class="inline-flex items-center text-primary hover:text-primary/80 transition-colors duration-300 group-hover:translate-x-2 transform">
-                            Saber más <i class="fas fa-arrow-right ml-2"></i>
-                        </a>
                     </div>
                 </div>
 
@@ -38,9 +35,6 @@ function Services() {
                         </div>
                         <h3 class="text-xl font-bold mb-4">Parrilla Privada</h3>
                         <p class="text-gray-600 mb-6">Cada cabaña cuenta con su propia parrilla para disfrutar de un asado en familia.</p>
-                        <a href="#contacto" class="inline-flex items-center text-primary hover:text-primary/80 transition-colors duration-300 group-hover:translate-x-2 transform">
-                            Saber más <i class="fas fa-arrow-right ml-2"></i>
-                        </a>
                     </div>
                 </div>
 
@@ -52,9 +46,6 @@ function Services() {
                         </div>
                         <h3 class="text-xl font-bold mb-4">WiFi Gratis</h3>
                         <p class="text-gray-600 mb-6">Conexión WiFi de alta velocidad en todas nuestras cabañas sin costo adicional.</p>
-                        <a href="#contacto" class="inline-flex items-center text-primary hover:text-primary/80 transition-colors duration-300 group-hover:translate-x-2 transform">
-                            Saber más <i class="fas fa-arrow-right ml-2"></i>
-                        </a>
                     </div>
                 </div>
 
@@ -66,9 +57,6 @@ function Services() {
                         </div>
                         <h3 class="text-xl font-bold mb-4">Estacionamiento Privado</h3>
                         <p class="text-gray-600 mb-6">Estacionamiento privado y techado incluido con cada cabaña.</p>
-                        <a href="#contacto" class="inline-flex items-center text-primary hover:text-primary/80 transition-colors duration-300 group-hover:translate-x-2 transform">
-                            Saber más <i class="fas fa-arrow-right ml-2"></i>
-                        </a>
                     </div>
                 </div>
 
@@ -80,9 +68,6 @@ function Services() {
                         </div>
                         <h3 class="text-xl font-bold mb-4">Smart TV</h3>
                         <p class="text-gray-600 mb-6">Televisores Smart TV con Netflix y servicios de streaming incluidos.</p>
-                        <a href="#contacto" class="inline-flex items-center text-primary hover:text-primary/80 transition-colors duration-300 group-hover:translate-x-2 transform">
-                            Saber más <i class="fas fa-arrow-right ml-2"></i>
-                        </a>
                     </div>
                 </div>
 
@@ -94,18 +79,8 @@ function Services() {
                         </div>
                         <h3 class="text-xl font-bold mb-4">Aire Acondicionado</h3>
                         <p class="text-gray-600 mb-6">Climatización frío/calor en todos los ambientes para tu confort.</p>
-                        <a href="#contacto" class="inline-flex items-center text-primary hover:text-primary/80 transition-colors duration-300 group-hover:translate-x-2 transform">
-                            Saber más <i class="fas fa-arrow-right ml-2"></i>
-                        </a>
                     </div>
                 </div>
-            </div>
-
-            <div class="mt-16 text-center">
-                <a href="#contacto" class="inline-flex items-center justify-center bg-primary hover:bg-primary/90 text-white font-bold py-4 px-8 rounded-full transition-all duration-300 group">
-                    Consulta Nuestros Servicios
-                    <i class="fas fa-arrow-right ml-2 transform group-hover:translate-x-1 transition-transform duration-300"></i>
-                </a>
             </div>
         </div>
     </section>
