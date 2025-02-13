@@ -2,12 +2,12 @@ function About() {
   return `
     <section id="sobre-nosotros" class="py-16 md:py-24 bg-gradient-to-br from-primary/5 to-transparent">
         <div class="container mx-auto px-4">
-            <div class="flex flex-col lg:flex-row items-center gap-12 lg:gap-16">
-                <div class="lg:w-1/2">
+            <div class="grid grid-cols-1 lg:grid-cols-2 items-center gap-12 lg:gap-16">
+                <div>
                     <div class="space-y-6">
                         <div class="inline-block">
                             <span class="bg-primary/10 text-primary px-4 py-2 rounded-full text-sm font-semibold">
-                                3+ Años de Experiencia
+                                10+ Años de Experiencia
                             </span>
                         </div>
                         <h2 class="text-3xl md:text-4xl lg:text-5xl font-bold font-serif">
@@ -32,7 +32,7 @@ function About() {
                                 <div class="text-gray-600">Huéspedes Felices</div>
                             </div>
                             <div class="text-center p-4 bg-white rounded-xl shadow-lg hover:shadow-xl transition-shadow duration-300">
-                                <div class="text-primary text-2xl font-bold">3+</div>
+                                <div class="text-primary text-2xl font-bold">10+</div>
                                 <div class="text-gray-600">Años de Experiencia</div>
                             </div>
                             <div class="text-center p-4 bg-white rounded-xl shadow-lg hover:shadow-xl transition-shadow duration-300">
@@ -51,24 +51,14 @@ function About() {
                         </div>
                     </div>
                 </div>
-                <div class="lg:w-1/2 relative">
+                <div class="relative">
                     <div class="relative">
                         <div class="absolute inset-0 bg-gradient-to-t from-primary/20 to-transparent rounded-3xl"></div>
-                        <img src="images/sol-mosquera.jpg" 
+                        <img src="/placeholder.svg?height=743&width=988" 
                              alt="Cabañas en el Valle de Calamuchita" 
-                             class="rounded-3xl shadow-2xl w-full relative z-10 transform hover:-rotate-2 transition-transform duration-500">
+                             class="rounded-3xl shadow-2xl w-full h-auto max-w-full relative z-10 transform hover:-rotate-2 transition-transform duration-500">
                     </div>
-                    <div class="absolute -bottom-6 -right-6 bg-white/90 backdrop-blur-sm p-6 rounded-xl shadow-xl max-w-xs">
-                        <div class="flex items-center space-x-4">
-                            <div class="bg-primary rounded-full p-3">
-                                <i class="fas fa-award text-white text-xl"></i>
-                            </div>
-                            <div>
-                                <p class="font-bold text-gray-800">Excelencia en Servicio</p>
-                                <p class="text-sm text-gray-600">Reconocidos por nuestra atención personalizada</p>
-                            </div>
-                        </div>
-                    </div>
+                    
                 </div>
             </div>
             
@@ -76,7 +66,7 @@ function About() {
                 <h3 class="text-2xl md:text-3xl font-bold mb-10 text-center">
                     <span class="text-primary">Nuestros</span> Servicios Destacados
                 </h3>
-                <div class="flex flex-wrap justify-center items-center gap-8 md:gap-12">
+                <div class="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-5 gap-6 justify-items-center">
                     <div class="text-center">
                         <i class="fas fa-wifi text-4xl text-primary mb-2"></i>
                         <p class="text-gray-600">WiFi Gratis</p>
