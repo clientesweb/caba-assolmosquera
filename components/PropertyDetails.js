@@ -57,7 +57,7 @@ function PropertyDetails() {
         <nav class="flex items-center space-x-2 text-sm mb-8" aria-label="Breadcrumb">
           <a href="/" class="text-gray-600 hover:text-primary transition-colors duration-300">Inicio</a>
           <span class="text-gray-400">/</span>
-          <a href="/cabanas" class="text-gray-600 hover:text-primary transition-colors duration-300">Cabañas</a>
+          <a href="/propiedades.html" class="text-gray-600 hover:text-primary transition-colors duration-300">Cabañas</a>
           <span class="text-gray-400">/</span>
           <span class="text-primary">${cabin.title}</span>
         </nav>
