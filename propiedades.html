@@ -1,0 +1,163 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Nuestras Cabañas - Sol Mosquera Cabañas</title>
+    <meta name="description" content="Descubre nuestras hermosas cabañas en el Valle de Calamuchita. Ubicaciones exclusivas en Villa del Dique, Villa Rumipal, El Torreón y Santa Rosa para unas vacaciones inolvidables.">
+    <meta name="keywords" content="cabañas, Valle de Calamuchita, Villa del Dique, Villa Rumipal, El Torreón, Santa Rosa, alquiler vacacional, Sol Mosquera">
+    <link rel="canonical" href="https://www.solmosqueracabanas.com/property-listing.html">
+    
+    <!-- Favicon -->
+    <link rel="icon" type="image/png" sizes="32x32" href="/images/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="/images/favicon-16x16.png">
+    <link rel="apple-touch-icon" sizes="180x180" href="/images/apple-touch-icon.png">
+    <link rel="manifest" href="/manifest.json">
+    <meta name="theme-color" content="#FF9B9B">
+
+    <!-- Open Graph / Facebook -->
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://www.solmosqueracabanas.com/property-listing.html">
+    <meta property="og:title" content="Nuestras Cabañas - Sol Mosquera Cabañas">
+    <meta property="og:description" content="Descubre nuestras hermosas cabañas en el Valle de Calamuchita. Ubicaciones exclusivas para unas vacaciones inolvidables.">
+    <meta property="og:image" content="https://www.solmosqueracabanas.com/images/cabanas-og.jpg">
+
+    <!-- Twitter -->
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:url" content="https://www.solmosqueracabanas.com/property-listing.html">
+    <meta name="twitter:title" content="Nuestras Cabañas - Sol Mosquera Cabañas">
+    <meta name="twitter:description" content="Descubre nuestras hermosas cabañas en el Valle de Calamuchita. Ubicaciones exclusivas para unas vacaciones inolvidables.">
+    <meta name="twitter:image" content="https://www.solmosqueracabanas.com/images/cabanas-og.jpg">
+
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        primary: '#FF9B9B',
+                        secondary: '#000000',
+                        accent: '#FFE5E5',
+                    },
+                    fontFamily: {
+                        sans: ['Montserrat', 'sans-serif'],
+                        serif: ['Playfair Display', 'serif'],
+                    },
+                }
+            }
+        }
+    </script>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;600;700&family=Playfair+Display:wght@400;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body class="bg-white text-gray-800">
+    <div id="app">
+        <!-- El contenido se insertará aquí -->
+    </div>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/js/all.min.js"></script>
+    <script src="components/Header.js"></script>
+    <script src="components/Footer.js"></script>
+    <script src="components/PropertyListing.js"></script>
+    <script src="components/WhatsAppButton.js"></script>
+    <script>
+        document.addEventListener('DOMContentLoaded', () => {
+            const app = document.getElementById('app');
+            app.innerHTML = `
+                ${Header()}
+                ${PropertyListing()}
+                ${Footer()}
+                ${WhatsAppButton()}
+            `;
+        });
+    </script>
+
+    <!-- Structured Data for Cabin Listing -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org/",
+      "@type": "ItemList",
+      "itemListElement": [
+        {
+          "@type": "ListItem",
+          "position": 1,
+          "item": {
+            "@type": "Product",
+            "name": "Cabaña Vista al Lago",
+            "url": "https://www.solmosqueracabanas.com/cabana/vista-al-lago",
+            "image": "https://www.solmosqueracabanas.com/images/cabana-vista-lago.jpg",
+            "description": "Hermosa cabaña con vista panorámica al lago, ideal para familias",
+            "offers": {
+              "@type": "Offer",
+              "priceCurrency": "ARS",
+              "price": "15000",
+              "availability": "https://schema.org/InStock",
+              "validFrom": "2023-01-01",
+              "priceValidUntil": "2023-12-31"
+            }
+          }
+        },
+        {
+          "@type": "ListItem",
+          "position": 2,
+          "item": {
+            "@type": "Product",
+            "name": "Cabaña Entre Montañas",
+            "url": "https://www.solmosqueracabanas.com/cabana/entre-montanas",
+            "image": "https://www.solmosqueracabanas.com/images/cabana-entre-montanas.jpg",
+            "description": "Espaciosa cabaña rodeada de naturaleza con increíbles vistas a las sierras",
+            "offers": {
+              "@type": "Offer",
+              "priceCurrency": "ARS",
+              "price": "18000",
+              "availability": "https://schema.org/InStock",
+              "validFrom": "2023-01-01",
+              "priceValidUntil": "2023-12-31"
+            }
+          }
+        },
+        {
+          "@type": "ListItem",
+          "position": 3,
+          "item": {
+            "@type": "Product",
+            "name": "Cabaña Familiar",
+            "url": "https://www.solmosqueracabanas.com/cabana/familiar",
+            "image": "https://www.solmosqueracabanas.com/images/cabana-familiar.jpg",
+            "description": "Amplia cabaña familiar con piscina privada y espacios verdes",
+            "offers": {
+              "@type": "Offer",
+              "priceCurrency": "ARS",
+              "price": "20000",
+              "availability": "https://schema.org/InStock",
+              "validFrom": "2023-01-01",
+              "priceValidUntil": "2023-12-31"
+            }
+          }
+        },
+        {
+          "@type": "ListItem",
+          "position": 4,
+          "item": {
+            "@type": "Product",
+            "name": "Cabaña Premium",
+            "url": "https://www.solmosqueracabanas.com/cabana/premium",
+            "image": "https://www.solmosqueracabanas.com/images/cabana-premium.jpg",
+            "description": "Cabaña premium con jacuzzi y vista panorámica al valle",
+            "offers": {
+              "@type": "Offer",
+              "priceCurrency": "ARS",
+              "price": "25000",
+              "availability": "https://schema.org/InStock",
+              "validFrom": "2023-01-01",
+              "priceValidUntil": "2023-12-31"
+            }
+          }
+        }
+      ]
+    }
+    </script>
+</body>
+</html>
+
