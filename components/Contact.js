@@ -36,7 +36,7 @@ function Contact() {
                                   </div>
                                   <div>
                                       <h3 class="font-bold text-lg">WhatsApp</h3>
-                                      <p class="text-gray-600">+54 9 3546 406871</p>
+                                      <p class="text-gray-600">+593 98 716 7782</p>
                                   </div>
                               </div>
                               
@@ -71,7 +71,7 @@ function Contact() {
                               </div>
                               <div>
                                   <h3 class="font-bold text-lg">Experiencia Comprobada</h3>
-                                  <p class="text-white/90">3+ años brindando experiencias inolvidables</p>
+                                  <p class="text-white/90">10+ años brindando experiencias inolvidables</p>
                               </div>
                           </div>
                           <div class="space-y-4">
@@ -219,7 +219,7 @@ if (contactForm) {
       `*Huéspedes:* ${formData.get("guests")}%0A` +
       `*Mensaje:* ${formData.get("message")}`
 
-    window.open(`https://wa.me/5493546406871?text=${whatsappMessage}`, "_blank")
+    window.open(`https://wa.me/593987167782?text=${whatsappMessage}`, "_blank")
     contactForm.reset()
   })
 }
