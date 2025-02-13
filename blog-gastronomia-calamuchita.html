@@ -1,0 +1,163 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Gastronomía Serrana: Sabores de Calamuchita | Sol Mosquera Cabañas</title>
+    <meta name="description" content="Descubre los platos típicos y los restaurantes más destacados del Valle de Calamuchita. Una guía imprescindible para los amantes de la buena comida.">
+    
+    <!-- Favicon -->
+    <link rel="icon" type="image/png" sizes="32x32" href="/images/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="/images/favicon-16x16.png">
+    <link rel="apple-touch-icon" sizes="180x180" href="/images/apple-touch-icon.png">
+    
+    <!-- Open Graph -->
+    <meta property="og:title" content="Gastronomía Serrana: Sabores de Calamuchita">
+    <meta property="og:description" content="Descubre los platos típicos y los restaurantes más destacados del Valle de Calamuchita. Una guía imprescindible para los amantes de la buena comida.">
+    <meta property="og:image" content="https://www.solmosqueracabanas.com/images/blog/gastronomia-calamuchita.jpg">
+    <meta property="og:url" content="https://www.solmosqueracabanas.com/blog-gastronomia-calamuchita.html">
+    <meta property="og:type" content="article">
+    
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;600;700&family=Playfair+Display:wght@400;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        primary: '#FF9B9B',
+                        secondary: '#000000',
+                        accent: '#FFE5E5',
+                    },
+                    fontFamily: {
+                        sans: ['Montserrat', 'sans-serif'],
+                        serif: ['Playfair Display', 'serif'],
+                    },
+                }
+            }
+        }
+    </script>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body class="bg-white text-gray-800">
+    <div id="app">
+        <!-- El contenido se insertará aquí -->
+    </div>
+
+    <script src="components/Header.js"></script>
+    <script src="components/Footer.js"></script>
+    <script src="components/WhatsAppButton.js"></script>
+    <script>
+        document.addEventListener('DOMContentLoaded', () => {
+            const app = document.getElementById('app');
+            app.innerHTML = `
+                ${Header()}
+                <main class="py-16 md:py-24 bg-gradient-to-br from-primary/5 via-white to-transparent">
+                    <article class="container mx-auto px-4 max-w-3xl">
+                        <h1 class="text-4xl md:text-5xl font-serif font-bold mb-6 text-primary">
+                            Gastronomía Serrana: Sabores de Calamuchita
+                        </h1>
+                        
+                        <div class="mb-6 text-gray-600">
+                            <span class="mr-4">
+                                <i class="fas fa-user-edit mr-2"></i>
+                                Equipo Sol Mosquera
+                            </span>
+                            <span class="mr-4">
+                                <i class="fas fa-calendar-alt mr-2"></i>
+                                10 Feb 2024
+                            </span>
+                            <span>
+                                <i class="fas fa-clock mr-2"></i>
+                                5 min de lectura
+                            </span>
+                        </div>
+
+                        <img 
+                            src="/placeholder.svg?height=400&width=800" 
+                            alt="Platos típicos de Calamuchita" 
+                            class="w-full h-auto rounded-lg shadow-lg mb-8"
+                        />
+
+                        <div class="prose prose-lg max-w-none">
+                            <p>
+                                El Valle de Calamuchita no solo es famoso por sus paisajes impresionantes, sino también por su rica tradición culinaria. La gastronomía serrana combina influencias criollas y centroeuropeas, creando una experiencia única para el paladar. En este artículo, te llevamos en un viaje culinario por el valle, descubriendo los platos típicos y los restaurantes más destacados.
+                            </p>
+
+                            <h2>Platos Típicos de Calamuchita</h2>
+                            
+                            <h3>1. Trucha a la Parrilla</h3>
+                            <p>
+                                La trucha, pescada en los ríos cristalinos del valle, es un manjar local. Preparada a la parrilla con hierbas serranas, es un plato imperdible.
+                            </p>
+
+                            <h3>2. Chivito Serrano</h3>
+                            <p>
+                                El chivito, cocinado lentamente en horno de barro, es una delicia que refleja la tradición gaucha de la región.
+                            </p>
+
+                            <h3>3. Spätzle</h3>
+                            <p>
+                                Este plato de origen alemán, muy popular en Villa General Belgrano, consiste en pequeños ñoquis servidos con diferentes salsas.
+                            </p>
+
+                            <h3>4. Strudel de Manzana</h3>
+                            <p>
+                                Un postre clásico de la zona, herencia de los inmigrantes centroeuropeos, perfecto para acompañar con un café serrano.
+                            </p>
+
+                            <h2>Restaurantes Destacados</h2>
+
+                            <h3>La Cumbrecita: El Viejo Molino</h3>
+                            <p>
+                                Ubicado en el pintoresco pueblo peatonal de La Cumbrecita, este restaurante ofrece platos tradicionales alemanes en un ambiente acogedor.
+                            </p>
+
+                            <h3>Villa General Belgrano: Cervecería Brunnen</h3<h3>Villa General Belgrano: Cervecería Brunnen</h3>
+                            <p>
+                                Famosa por sus cervezas artesanales y platos bávaros, es un must para los amantes de la gastronomía alemana.
+                            </p>
+
+                            <h3>Santa Rosa de Calamuchita: La Cabaña</h3>
+                            <p>
+                                Especializado en carnes a la parrilla y platos criollos, ofrece una experiencia auténtica de la cocina argentina.
+                            </p>
+
+                            <h3>Villa Rumipal: El Pejerrey</h3>
+                            <p>
+                                Con vistas al lago, este restaurante es conocido por sus exquisitos platos de pescado fresco.
+                            </p>
+
+                            <h2>Productos Regionales</h2>
+                            <p>
+                                No te vayas del valle sin probar y llevar algunos productos regionales:
+                            </p>
+                            <ul>
+                                <li>Alfajores serranos</li>
+                                <li>Dulces caseros (higo, membrillo, frutilla)</li>
+                                <li>Quesos y embutidos artesanales</li>
+                                <li>Cervezas artesanales</li>
+                                <li>Hierbas serranas</li>
+                            </ul>
+
+                            <h2>Eventos Gastronómicos</h2>
+                            <p>
+                                Si planeas tu visita en octubre, no te pierdas la Oktoberfest en Villa General Belgrano, la fiesta de la cerveza más importante de Argentina. También, durante el año se celebran diferentes fiestas gastronómicas como la Fiesta Nacional de la Masa Vienesa en La Cumbrecita o la Fiesta de la Trucha en Villa Rumipal.
+                            </p>
+
+                            <p>
+                                La gastronomía del Valle de Calamuchita es un reflejo de su rica historia y diversidad cultural. Cada bocado es una experiencia que combina tradición, sabores locales y la calidez de la gente serrana. ¿Estás listo para deleitar tu paladar con los sabores de Calamuchita?
+                            </p>
+                        </div>
+                    </article>
+                </main>
+                ${Footer()}
+                ${WhatsAppButton()}
+            `;
+        });
+    </script>
+</body>
+</html>
+
