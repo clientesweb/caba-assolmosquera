@@ -7,7 +7,7 @@ function OnlineMagazine() {
         "Explora los senderos más impresionantes del Valle de Calamuchita, desde paseos familiares hasta desafiantes rutas para excursionistas experimentados.",
       author: "Equipo Sol Mosquera",
       date: "15 Feb 2024",
-      url: "https://solmosqueracabanas.com/blog/mejores-senderos-calamuchita",
+      url: "https://www.cabañassolmosquera.com/blog-mejores-senderos-calamuchita.html",
       image: "/placeholder.svg?height=400&width=600",
       readTime: "7 min",
     },
@@ -18,7 +18,7 @@ function OnlineMagazine() {
         "Descubre los platos típicos y los restaurantes más destacados del Valle de Calamuchita. Una guía imprescindible para los amantes de la buena comida.",
       author: "Equipo Sol Mosquera",
       date: "10 Feb 2024",
-      url: "https://solmosqueracabanas.com/blog/gastronomia-calamuchita",
+      url: "https://www.cabañassolmosquera.com/blog-gastronomia-calamuchita.html",
       image: "/placeholder.svg?height=400&width=600",
       readTime: "5 min",
     },
@@ -29,7 +29,7 @@ function OnlineMagazine() {
         "Desde kayak hasta windsurf, descubre todas las actividades acuáticas que puedes disfrutar en los hermosos lagos del Valle de Calamuchita.",
       author: "Equipo Sol Mosquera",
       date: "5 Feb 2024",
-      url: "https://solmosqueracabanas.com/blog/actividades-acuaticas-calamuchita",
+      url: "https://www.cabañassolmosquera.com/blog-actividades-acuaticas-calamuchita.html",
       image: "/placeholder.svg?height=400&width=600",
       readTime: "6 min",
     },
@@ -86,14 +86,6 @@ function OnlineMagazine() {
           `,
             )
             .join("")}
-        </div>
-
-        <div class="mt-12 text-center">
-          <a href="https://solmosqueracabanas.com/blog" 
-             class="inline-flex items-center justify-center bg-primary hover:bg-primary/90 text-white font-bold py-4 px-8 rounded-full transition-all duration-300 group">
-            Explorar Más Artículos
-            <i class="fas fa-arrow-right ml-2 transform group-hover:translate-x-1 transition-transform duration-300"></i>
-          </a>
         </div>
       </div>
     </section>
