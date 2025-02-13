@@ -2,7 +2,7 @@ function Hero() {
   return `
     <section class="relative h-screen overflow-hidden">
         <div class="absolute inset-0 z-0">
-            <img src="/placeholder.svg?height=1080&width=1920" 
+            <img src="/images/valle-calamuchita-sol-mosquera.jpg" 
                  alt="Hero Background" 
                  class="w-full h-full object-cover animate-ken-burns">
             <div class="absolute inset-0 bg-black opacity-50"></div>
