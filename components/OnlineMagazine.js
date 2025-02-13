@@ -8,7 +8,7 @@ function OnlineMagazine() {
       author: "Equipo Sol Mosquera",
       date: "15 Feb 2024",
       url: "https://www.cabañassolmosquera.com/blog-mejores-senderos-calamuchita.html",
-      image: "/placeholder.svg?height=400&width=600",
+      image: "images/senderos-valle-calamuchita.jpg",
       readTime: "7 min",
     },
     {
@@ -19,7 +19,7 @@ function OnlineMagazine() {
       author: "Equipo Sol Mosquera",
       date: "10 Feb 2024",
       url: "https://www.cabañassolmosquera.com/blog-gastronomia-calamuchita.html",
-      image: "/placeholder.svg?height=400&width=600",
+      image: "images/gastronomia-cerrana-calamuchita.jpg",
       readTime: "5 min",
     },
     {
@@ -30,7 +30,7 @@ function OnlineMagazine() {
       author: "Equipo Sol Mosquera",
       date: "5 Feb 2024",
       url: "https://www.cabañassolmosquera.com/blog-actividades-acuaticas-calamuchita.html",
-      image: "/placeholder.svg?height=400&width=600",
+      image: "images/actividad-acuatica-valle-calamuchita.jpg",
       readTime: "6 min",
     },
   ]
