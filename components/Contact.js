@@ -26,7 +26,9 @@ function Contact() {
                                     </div>
                                     <div>
                                         <h3 class="font-bold text-lg">Llámanos</h3>
-                                        <p class="text-gray-600">+54 9 3546 406871</p>
+                                        <a href="tel:+5493546406871" class="text-gray-600 hover:text-primary transition-colors duration-300">
+                                            +54 9 3546 406871
+                                        </a>
                                     </div>
                                 </div>
                                 
@@ -36,7 +38,12 @@ function Contact() {
                                     </div>
                                     <div>
                                         <h3 class="font-bold text-lg">WhatsApp</h3>
-                                        <p class="text-gray-600">+54 9 3546 406871</p>
+                                        <a href="https://wa.me/5493546406871" 
+                                           target="_blank" 
+                                           rel="noopener noreferrer"
+                                           class="text-gray-600 hover:text-primary transition-colors duration-300">
+                                            +54 9 3546 406871
+                                        </a>
                                     </div>
                                 </div>
                                 
@@ -101,6 +108,7 @@ function Contact() {
                                                id="name" 
                                                name="name" 
                                                required 
+                                               placeholder="Tu nombre completo"
                                                class="w-full px-4 py-3 rounded-lg border border-gray-300 focus:ring-2 focus:ring-primary focus:border-primary transition duration-300">
                                     </div>
                                     <div class="space-y-2">
@@ -109,6 +117,7 @@ function Contact() {
                                                id="email" 
                                                name="email" 
                                                required 
+                                               placeholder="tu@email.com"
                                                class="w-full px-4 py-3 rounded-lg border border-gray-300 focus:ring-2 focus:ring-primary focus:border-primary transition duration-300">
                                     </div>
                                 </div>
@@ -119,6 +128,7 @@ function Contact() {
                                            id="phone" 
                                            name="phone" 
                                            required 
+                                           placeholder="+54 9 XXX XXXXXXX"
                                            class="w-full px-4 py-3 rounded-lg border border-gray-300 focus:ring-2 focus:ring-primary focus:border-primary transition duration-300">
                                 </div>
 
@@ -129,6 +139,7 @@ function Contact() {
                                                id="check-in" 
                                                name="check-in" 
                                                required 
+                                               min="${new Date().toISOString().split("T")[0]}"
                                                class="w-full px-4 py-3 rounded-lg border border-gray-300 focus:ring-2 focus:ring-primary focus:border-primary transition duration-300">
                                     </div>
                                     <div class="space-y-2">
@@ -137,6 +148,7 @@ function Contact() {
                                                id="check-out" 
                                                name="check-out" 
                                                required 
+                                               min="${new Date().toISOString().split("T")[0]}"
                                                class="w-full px-4 py-3 rounded-lg border border-gray-300 focus:ring-2 focus:ring-primary focus:border-primary transition duration-300">
                                     </div>
                                 </div>
@@ -145,6 +157,7 @@ function Contact() {
                                     <label for="location" class="block text-sm font-medium text-gray-700">Ubicación</label>
                                     <select id="location" 
                                             name="location" 
+                                            required
                                             class="w-full px-4 py-3 rounded-lg border border-gray-300 focus:ring-2 focus:ring-primary focus:border-primary transition duration-300">
                                         <option value="">Selecciona una ubicación</option>
                                         <option value="villa-del-dique">Villa del Dique</option>
@@ -158,6 +171,7 @@ function Contact() {
                                     <label for="guests" class="block text-sm font-medium text-gray-700">Cantidad de Huéspedes</label>
                                     <select id="guests" 
                                             name="guests" 
+                                            required
                                             class="w-full px-4 py-3 rounded-lg border border-gray-300 focus:ring-2 focus:ring-primary focus:border-primary transition duration-300">
                                         <option value="2">2 personas</option>
                                         <option value="3">3 personas</option>
@@ -174,6 +188,7 @@ function Contact() {
                                               name="message" 
                                               rows="4" 
                                               required 
+                                              placeholder="Cuéntanos más sobre tu estadía..."
                                               class="w-full px-4 py-3 rounded-lg border border-gray-300 focus:ring-2 focus:ring-primary focus:border-primary transition duration-300"></textarea>
                                 </div>
 
@@ -202,4 +217,56 @@ function Contact() {
     </section>
   `
 }
+
+// Agregar el script para manejar el envío del formulario
+document.addEventListener("DOMContentLoaded", () => {
+  const contactForm = document.getElementById("contact-form")
+  if (contactForm) {
+    // Validar fechas al cambiar
+    const checkInInput = document.getElementById("check-in")
+    const checkOutInput = document.getElementById("check-out")
+
+    checkInInput.addEventListener("change", function () {
+      checkOutInput.min = this.value
+    })
+
+    contactForm.addEventListener("submit", async (e) => {
+      e.preventDefault()
+      const formData = new FormData(contactForm)
+
+      // Formatear las fechas para mejor legibilidad
+      const checkIn = new Date(formData.get("check-in")).toLocaleDateString("es-AR")
+      const checkOut = new Date(formData.get("check-out")).toLocaleDateString("es-AR")
+
+      const whatsappMessage =
+        `*Nueva Consulta de Reserva*%0A%0A` +
+        `*👤 Nombre:* ${formData.get("name")}%0A` +
+        `*📧 Email:* ${formData.get("email")}%0A` +
+        `*📱 Teléfono:* ${formData.get("phone")}%0A` +
+        `*📅 Check-in:* ${checkIn}%0A` +
+        `*📅 Check-out:* ${checkOut}%0A` +
+        `*📍 Ubicación:* ${formData.get("location")}%0A` +
+        `*👥 Huéspedes:* ${formData.get("guests")} personas%0A` +
+        `*💬 Mensaje:* ${formData.get("message")}`
+
+      window.open(`https://wa.me/5493546406871?text=${whatsappMessage}`, "_blank")
+
+      // Mostrar mensaje de éxito
+      const successMessage = document.createElement("div")
+      successMessage.className = "fixed top-4 right-4 bg-green-500 text-white px-6 py-3 rounded-lg shadow-lg z-50"
+      successMessage.textContent = "¡Mensaje enviado con éxito!"
+      document.body.appendChild(successMessage)
+
+      // Remover mensaje después de 3 segundos
+      setTimeout(() => {
+        successMessage.remove()
+      }, 3000)
+
+      contactForm.reset()
+    })
+  }
+})
+
+// Exportar la función Contact
+window.Contact = Contact
 
