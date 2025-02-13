@@ -32,7 +32,7 @@ function About() {
                                 <div class="text-gray-600">Huéspedes Felices</div>
                             </div>
                             <div class="text-center p-4 bg-white rounded-xl shadow-lg hover:shadow-xl transition-shadow duration-300">
-                                <div class="text-primary text-2xl font-bold">10+</div>
+                                <div class="text-primary text-2xl font-bold">3+</div>
                                 <div class="text-gray-600">Años de Experiencia</div>
                             </div>
                             <div class="text-center p-4 bg-white rounded-xl shadow-lg hover:shadow-xl transition-shadow duration-300">
