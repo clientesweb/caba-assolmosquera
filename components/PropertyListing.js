@@ -56,6 +56,15 @@ function PropertyListing() {
 
   return `
     <section id="cabanas-destacadas" class="py-16 md:py-24 bg-gradient-to-br from-primary/5 via-white to-transparent">
+      <div className="mb-6">
+        <button
+          onClick={() => window.history.back()}
+          className="inline-flex items-center justify-center bg-primary hover:bg-primary/90 text-white font-bold py-2 px-4 rounded-full transition-all duration-300"
+        >
+          <i className="fas fa-arrow-left mr-2"></i>
+          Volver
+        </button>
+      </div>
       <div class="container mx-auto px-4">
         <div class="text-center max-w-3xl mx-auto mb-16">
           <span class="bg-primary/10 text-primary px-4 py-2 rounded-full text-sm font-semibold inline-block mb-4">
