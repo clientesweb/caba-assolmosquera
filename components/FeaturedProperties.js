@@ -5,7 +5,8 @@ function FeaturedProperties() {
       title: "Cabaña Villa del Dique - Vista al Lago",
       price: "Desde $15,000/noche",
       location: "Villa del Dique, Valle de Calamuchita",
-      image: "/placeholder.svg?height=400&width=600",
+      image:
+        "https://images.unsplash.com/photo-1587061949409-02df41d5e562?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2070&q=80",
       bedrooms: "2",
       bathrooms: "1",
       area: "80 m²",
@@ -20,7 +21,8 @@ function FeaturedProperties() {
       title: "Cabaña Villa Rumipal - Entre Montañas",
       price: "Desde $18,000/noche",
       location: "Villa Rumipal, Valle de Calamuchita",
-      image: "/placeholder.svg?height=400&width=600",
+      image:
+        "https://images.unsplash.com/photo-1542718610-a1d656d1884c?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2070&q=80",
       bedrooms: "3",
       bathrooms: "2",
       area: "100 m²",
@@ -35,7 +37,8 @@ function FeaturedProperties() {
       title: "Cabaña El Torreón - Familiar",
       price: "Desde $20,000/noche",
       location: "El Torreón, Valle de Calamuchita",
-      image: "/placeholder.svg?height=400&width=600",
+      image:
+        "https://images.unsplash.com/photo-1604609165678-096d0b36e5b5?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2070&q=80",
       bedrooms: "4",
       bathrooms: "2",
       area: "120 m²",
@@ -50,7 +53,8 @@ function FeaturedProperties() {
       title: "Cabaña Santa Rosa - Premium",
       price: "Desde $25,000/noche",
       location: "Santa Rosa, Valle de Calamuchita",
-      image: "/placeholder.svg?height=400&width=600",
+      image:
+        "https://images.unsplash.com/photo-1510798831971-661eb04b3739?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2072&q=80",
       bedrooms: "3",
       bathrooms: "2",
       area: "110 m²",
@@ -142,7 +146,7 @@ function FeaturedProperties() {
         </div>
 
         <div class="mt-12 text-center">
-          <a href="https://cabañassolmosquera.com/propiedades.html" 
+          <a href="#todas-cabanas" 
              class="inline-flex items-center justify-center bg-primary hover:bg-primary/90 text-white font-bold py-4 px-8 rounded-full transition-all duration-300 group">
             Ver Todas las Cabañas
             <i class="fas fa-arrow-right ml-2 transform group-hover:translate-x-1 transition-transform duration-300"></i>
